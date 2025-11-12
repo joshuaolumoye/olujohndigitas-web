@@ -1455,8 +1455,20 @@
   padding: 20px;
 }
 
-.cf-mb-20 {
+.brandid {
   margin-bottom: 20px;
+  width: 50%
+  height: 50%
+}
+.pmc {
+  margin-bottom: 20px;
+  width: 50%
+  height: 50%
+}
+.media {
+  margin-bottom: 20px;
+  width: 50%
+  height: 50%
 }
 
 .cf-mt-20 {

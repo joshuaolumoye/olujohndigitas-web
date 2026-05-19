@@ -1,751 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/metech-icon.css" />
-  <link rel="stylesheet" href="css/lib/bs/css/bootstrap.css" />
-  <link rel="stylesheet" href="css/fonts/font-awesome.css" />
-  <link rel="stylesheet" href="css/lib/magnific-popup.css" />
-  <link rel="stylesheet" href="css/lib/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon" />
-  <title>
-    OLUJOHN DIGITALS - The most optimal branding agency
-  </title>
-  </head>
-  <body class="dark-bg">
-    <!--================================
-        PRELOADER START
-    =================================-->
-    <!-- <div class="preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-        <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
-      <h5 class="preloader-text">Loading</h5>
-    </div> -->
-    <!--================================
-        PRELOADER END
-    =================================-->
-    <!--============================
-     =            Header            =   
-     =============================-->
-    <header class="main-header fixed-header header-5">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="logo">
-            <a href="index.html">
-              <img src="img/olujohn-digitas-logo.png"
-                  alt="Logo"
-                  style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-            </a>
-          </div>
-          <div class="d-none d-xl-block main-menu">
-            <nav class="navbar-nav m-auto" id="navbarNav">
-              <ul>
-                <li class="">
-                  <li class="dropdown-nav"></li>
-                  <a href="index.html">Home</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="index.html">Home 1</a></li>
-                    <li><a href="index-2.html">Home 2</a></li>
-                    <li><a href="index-3.html">Home 3</a></li>
-                    <li><a href="index-4.html">Home 4</a></li>
-                    <li><a href="index-5.html">Home 5</a></li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="services.html">Services</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown-nav">
-                      <a href="#services">Services</a>
-                      <ul class="submenu">
-                        <li><a href="services.html">Services</a></li>
-                        <li>
-                          <a href="service-details.html">Service Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="team.html">Team</a></li>
-                     <li><a href="faq.html">Faq</a></li> 
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="projects.html">Projects</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="projects.html">Portfolio</a></li>
-                    <li>
-                      <a href="project-details.html">Portfolio Details</a>
-                    </li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="about.html">About Us</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="blog.html">About Us</a></li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul> -->
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — OluJohn Digitals</title>
+<meta name="description" content="We are a modern branding and digital solutions company committed to helping businesses define, refine, and elevate their brand identities."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#040404;
+  --white:#F8F6F2;
+  --red:#C41E1E;
+  --red-dark:#8B1212;
+  --gray:#5C5C5C;
+  --gray-light:#B0ADA8;
+  --border:rgba(248,246,242,.08);
+  --nav-h:68px;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-sub:'Chakra Petch',sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+html,body{width:100%;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
 
-          <div class="d-flex align-items-center">
-            <a href="#" class="search-btn cf-ml-50"
-              ><i class="fa-regular fa-magnifying-glass"></i
-            ></a>
-            <a href="#" class="btn-5 cf-ml-30 d-none d-lg-block"
-              >WhatsApp: (234) 8180695247</a
-            >
-            <a href="#" class="toggle-sidebar cf-ml-20">
-              <div class="toggle">
-                <span></span>
-                <span></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+/* ══════════════════
+   NAV
+══════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;
+  border-bottom:1px solid var(--border);
+  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);
+}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
+.nav-brand-text em{color:var(--red);font-style:normal}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{
+  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.52rem 1.4rem;border:1px solid var(--red);
+  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
+}
+.nav-cta:hover{background:var(--red);color:var(--white)}
 
-    <div class="mobile-menu">
-      <div class="menu-backdrop"></div>
-      <div class="main-menu-mobile">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="nav-logo">
-            <a href="index.html"><img src="img/olujohn-digitas-logo.png" alt="" title="" /></a>
-          </div>
-          <div class="close-btn"><span class="far fa-times fa-fw"></span></div>
-        </div>
-        <div id="mobile-nav"></div>
-      </div>
-    </div>
-    <!-- Search Popup -->
-    <div class="search-popup">
-      <div class="search-popup-overlay"></div>
-      <div class="search-popup-content">
-        <a href="#" class="close-search">
-          <i class="fa-regular fa-times"></i>
-        </a>
-        <div class="search-popup-form-container">
-          <form>
-            <input type="text" placeholder="Search Here" />
-            <button><i class="fa-regular fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-      </div>
-    </div>
+/* ══════════════════
+   PAGE HERO
+══════════════════ */
+.page-hero{
+  padding-top:calc(var(--nav-h) + 5rem);
+  padding-bottom:4rem;
+  padding-left:3rem;padding-right:3rem;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+  min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;
+}
+.hero-lines{
+  position:absolute;inset:0;pointer-events:none;
+  display:flex;justify-content:space-evenly;
+}
+.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.12) 50%,transparent)}
+.page-eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:block;
+}
+.page-hl{
+  font-family:var(--font-display);
+  font-size:clamp(4rem,10vw,11rem);
+  line-height:.88;letter-spacing:.04em;color:var(--white);
+  position:relative;z-index:2;
+}
+.page-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+.page-hl .accent{color:var(--red)}
+.hero-foot{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;
+  border-top:1px solid var(--border);padding-top:2rem;margin-top:3rem;
+  position:relative;z-index:2;
+}
+.hero-foot-desc{max-width:480px;font-size:.92rem;color:var(--gray-light);line-height:1.75;font-weight:300}
+.hero-tag{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);
+  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
+  white-space:nowrap;flex-shrink:0;
+}
 
-    <div id="scrollsmoother-container">
-      <!-- breadcrumbs -->
-      <div class="breadcrumb">
-        <div class="container">
-          <div class="breadcrum-content">
-            <ul
-              data-animation="fade"
-              data-animation-delay="1.5"
-              data-animation-direction="bottom"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li>/</li>
-              <li>About Company</li>
-            </ul>
-            <h1 data-text-animation="slide" data-animation-delay="1.7">
-              About Our Company
-            </h1>
-          </div>
-        </div>
-      </div>
-      <!-- About -->
-      <section class="mt-200 mb-200">
-        <div class="container position-relative">
-          <div class="row cf-gap-xl-30">
-            <div class="col-xl-3">
-              <h4
-                class="sub-title cf-mt-15"
-                data-text-animation="slide"
-                data-split="words"
-              >
-                About Our Company
-              </h4>
-            </div>
-            <div class="col-xl-9">
-              <div data-animation="move">
-                <h2 class="section-title">
-                   We are modern branding and digital solutions company .
-                    <span
-                      >committed to helping businesses, entrepreneurs, and organizations define, refine, and elevate</span
-                    >
-                     their brand identities
-                  </h2>
-              </div>
-              <div class="row align-items-center cf-mt-38">
-                <div class="col-lg-6 d-none d-lg-block">
-                  <img src="img/about-5.png" class="w-100 img-fluid" alt="" />
-                </div>
-                <div class="col-lg-6">
-                  <div
-                    class="about-5-content cf-pl-100 cf-pl-lg-0"
-                    data-animation="fade"
-                    data-animation-direction="bottom"
-                  >
-                    <div
-                      class="d-flex justify-content-between align-items-center flex-wrap cf-gap-30"
-                    >
-                      <div class="counter-item">
-                        <h4><span class="count">20</span>+</h4>
-                        <p>Awesome clients</p>
-                      </div>
-                      <!-- <div class="counter-item">
-                        <h4><span class="count">20</span>M+</h4>
-                        <p>We earnings a year</p>
-                      </div> -->
-                    </div>
-                    <div class="flex-lg-end mt-200 cf-mt-100">
-                      <a href="contact.html" class="btn-2"
-                        >Get In Touch <i class="metech-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-5-text" data-speed=".9">
-                We specialize in offering creative and strategic branding services that foster visibility, trust, and growth in both digital and traditional marketplaces. Our brand is rooted in innovation, excellence, and personalized service.
+/* ══════════════════
+   SECTION BASE
+══════════════════ */
+.section{padding:6rem 3rem}
+.section-alt{background:#050505}
+.eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
+}
+.s-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,4.8vw,5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.92;
+}
+.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
 
-          </div>
-        </div>
-      </section>
-      <!-- Marquee -->
-      <section
-        class="marquee overflow-hidden"
-        data-animation="fade"
-        data-animation-direction="bottom"
-      >
-        <div class="marquee-container overflow-hidden">
-          <div class="marquee_animi">
-            <h4 class="text-stroke">Branding and Identity Design</h4>
-            <i class="metech-star"></i>
-            <h4 class="text-stroke">Mobile Development</h4>
-            <i class="metech-star"></i>
-            <h4 class="text-stroke">Web Development</h4>
-            <i class="metech-star"></i>
-            <h4 class="text-stroke">Digital Marketing</h4>
-            <i class="metech-star"></i>
-            <h4 class="text-stroke">Graphics and UI/UX Design</h4>
-            <i class="metech-star"></i>
-          </div>
-        </div>
-      </section>
-      <!-- Our Projects -->
-      <!-- <section class="mt-200">
-        <div class="container">
-          <h4 class="sub-title" data-text-animation="slide" data-split="words">
-            Our Projects
-          </h4>
-          <div class="row align-items-center cf-gap-lg-30">
-            <div class="col-xxxl-5 col-lg-7" data-animation="move">
-              <h2 class="section-title">
-                What we create <span>for our Customer</span>
-              </h2>
-            </div>
-            <div
-              class="col-xxxl-7 col-lg-5 flex-lg-end"
-              data-animation="fade"
-              data-animation-direction="bottom"
-            >
-              <div class="pricing-content-container mt-0">
-                <a href="projects.html">
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  More Work
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-6">
-              <div
-                class="project-5-items"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.01/</span>IOS and Android App Design</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/connecta.jpg" alt="" />
-                </a>
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.02/</span> Android Mobile Application</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/6.png" alt="" />
-                </a>
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.03/</span> Web Design &amp; Development</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/6.png" alt="" />
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-6">
-              <div
-                class="project-5-items cf-pl-35 cf-pl-xl-0"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.04/</span> App Design With IOS</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/6.png" alt="" />
-                </a>
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.05/</span> Android Mobile Application</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/6.png" alt="" />
-                </a>
-                <a href="project-details.html" class="project-5-item">
-                  <h4><span>.06/</span> Web Design &amp; Development</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/project/6.png" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Brand Slider -->
-      <div
-        class="brand-slider-container text-center overflow-hidden mt-200"
-        data-animation="fade"
-        data-animation-direction="bottom"
-      >
-        <div class="brand-slider">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="img/borderless_banking_logo.png" style="height: 80px; " alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/simi_craft.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/nite.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/data_wise.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/dan_mart.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/abbey_wears.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/clype.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/borderless_banking_logo.png" style="height: 80px; " alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/simi_craft.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/nite.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/data_wise.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/dan_mart.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/abbey_wears.png" style="height: 80px;" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/clype.png" style="height: 80px;" alt="" />
-              </div>
-              <!-- <div class="swiper-slide">
-                <img src="img/brand/light/1.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/2.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/3.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/4.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/5.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/6.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/brand/light/7.png" alt="" />
-              </div> -->
-          </div>
-        </div>
-      </div>
+/* ══════════════════
+   STORY SECTION
+══════════════════ */
+.story-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
+  align-items:center;
+}
+.story-img{
+  width:100%;aspect-ratio:4/5;
+  background:linear-gradient(135deg,#141410,#0a0a08);
+  border:1px solid var(--border);
+  overflow:hidden;position:relative;
+}
+.story-img img{width:100%;height:100%;object-fit:cover;display:block}
+.story-img-tag{
+  position:absolute;bottom:1.5rem;left:1.5rem;
+  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;background:var(--red);color:var(--white);
+  padding:.35rem .8rem;
+}
+.story-body{}
+.story-body .s-title{margin-bottom:2rem}
+.story-p{font-size:.92rem;color:var(--gray-light);line-height:1.8;font-weight:300;margin-bottom:1.4rem}
+.story-p:last-of-type{margin-bottom:0}
 
-      <!-- </div> -->
-      <!-- Why Us For You -->
-      <section class="mt-200">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-6 d-none d-xl-block overflow-hidden">
-              <img
-                data-speed=".8"
-                src="img/olujohndigitals-certificate.jpg"
-                class="w-100 img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="col-xl-6">
-              <div class="cf-pl-60 cf-pl-xl-0" data-animation="move">
-                <h4 class="sub-title">Why Us For You</h4>
-                <h2 class="section-title">
-                  Branding agency
-                  <span>working with brands building insightful strategy</span>
-                </h2>
-              </div>
-              <div
-                class="why-us-lists"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <div class="why-list-item">
-                  <img class="svg-icon" src="svg/rates.svg" alt="" />
-                  <h4>Competitive rates</h4>
-                  <p>
-                    We create mind-blowing visual and digital products that help startup, individuals
-                     and innovative companies gain visibility, digital presence, and attract more sales.
-                  </p>
-                </div>
-                <div class="why-list-item">
-                  <img class="svg-icon" src="svg/team-work.svg" alt="" />
-                  <h4>Effective Teamwork</h4>
-                  <p>
-                    At our agency, collaboration drives everything we do. With years of experience,
-                    we’ve helped businesses and startups build powerful brands, stunning visuals,
-                    and engaging websites that leave lasting impressions. Together, we turn ideas
-                    into impactful identities that stand the test of time.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Counter -->
-      <section class="mt-200">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-7 offset-xl-3">
-              <div data-animation="move">
-                <p class="cf-fs-32 cf-lh-44 color-gray-3">
-                  Dive into our studio's core -
-                  <span class="color-white"
-                    >numbers that mirror our dedication, creativity, and pursuit
-                    of excellence.</span
-                  >
-                  These stats offer a glimpse into our design prowess and its
-                  real-world impact.
-                </p>
-              </div>
-            </div>
-          </div>
+/* ══════════════════
+   STATS ROW
+══════════════════ */
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+}
+.stat-cell{
+  padding:3rem 2.5rem;border-right:1px solid var(--border);
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{background:rgba(196,30,30,.05)}
+.stat-cell::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--red);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.stat-cell:hover::before{transform:scaleX(1)}
+.stat-num{
+  font-family:var(--font-display);font-size:4.5rem;
+  letter-spacing:.04em;color:var(--white);line-height:1;
+}
+.stat-num em{color:var(--red);font-style:normal}
+.stat-lbl{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gray-light);margin-top:.6rem;
+}
 
-          <div
-            class="counter-row justify-content-center cf-mt-53"
-            data-animation="fade"
-            data-animation-direction="bottom"
-          >
-            <div class="counter-item-container">
-              <div class="counter-item">
-                <h4><span class="count">70</span>%</h4>
-                <p>Satisfied Clients</p>
-              </div>
-            </div>
-            <div class="counter-item-container">
-              <div class="counter-item">
-                <h4><span class="count">20</span>+</h4>
-                <p>Project Completed</p>
-              </div>
-            </div>
-            <!-- <div class="counter-item-container">
-              <div class="counter-item">
-                <h4><span class="count">77</span>+</h4>
-                <p>Award Recognitions</p>
-              </div>
-            </div> -->
-            <div class="counter-item-container">
-              <div class="counter-item">
-                <h4><span class="count">5</span>+</h4>
-                <p>Experience</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Testimonial -->
-      <section
-        class="mt-200"
-        data-animation="fade"
-        data-animation-direction="bottom"
-      >
-      <div class="testimonial-5-slider swiper">
-        <div class="swiper-wrapper">
-  <div class="testimonial-5-item swiper-slide">
-    <i class="metech-quote"></i>
-    <p>
-      “Working with OLUJOHNDIGITALS has been transformative. From strategy to execution, the team consistently delivers excellence and creativity.”
-    </p>
-    <div class="testimonial-bottom">
-      <ul>
-        <li><p>John Olumoye</p></li>
-        <li><p>CEO at OLUJOHNDIGITALS</p></li>
-      </ul>
-    </div>
+/* ══════════════════
+   TICKER MARQUEE
+══════════════════ */
+.ticker-wrap{
+  overflow:hidden;border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);padding:.9rem 0;
+  background:rgba(196,30,30,.03);
+}
+.ticker-track{display:flex;animation:ticker 22s linear infinite;width:max-content}
+.ticker-item{
+  font-family:var(--font-sub);font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gray-light);
+  padding:0 2.5rem;white-space:nowrap;
+}
+.ticker-dot{color:var(--red);margin:0 .3rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══════════════════
+   VALUES
+══════════════════ */
+.values-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:4rem;
+}
+.value-card{
+  background:var(--black);padding:2.8rem 2.5rem;
+  transition:background .3s;
+}
+.value-card:hover{background:#0a0808}
+.value-card:hover .value-ico{border-color:rgba(196,30,30,.5);color:var(--red)}
+.value-ico{
+  width:44px;height:44px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray-light);margin-bottom:1.5rem;
+  transition:border-color .3s,color .3s;
+}
+.value-name{
+  font-family:var(--font-sub);font-size:.82rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
+  margin-bottom:.6rem;
+}
+.value-desc{font-size:.82rem;color:var(--gray-light);line-height:1.7;font-weight:300}
+
+/* ══════════════════
+   WHY US
+══════════════════ */
+.why-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
+  align-items:center;
+}
+.why-img{
+  width:100%;aspect-ratio:1;
+  border:1px solid var(--border);overflow:hidden;
+}
+.why-img img{width:100%;height:100%;object-fit:cover;display:block}
+.why-list{display:flex;flex-direction:column;gap:0}
+.why-item{
+  display:flex;gap:1.2rem;align-items:flex-start;
+  padding:1.8rem 0;border-bottom:1px solid var(--border);
+}
+.why-item:first-child{padding-top:0}
+.why-item:last-child{border-bottom:none;padding-bottom:0}
+.why-ico{
+  width:32px;height:32px;border:1px solid rgba(196,30,30,.3);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);flex-shrink:0;margin-top:.1rem;
+}
+.why-title{
+  font-family:var(--font-sub);font-size:.78rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
+  margin-bottom:.3rem;
+}
+.why-desc{font-size:.82rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+
+/* ══════════════════
+   TEAM
+══════════════════ */
+.team-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:4rem;
+}
+.team-card{
+  background:var(--black);padding:2.5rem;
+  transition:background .3s;
+}
+.team-card:hover{background:#0a0808}
+.team-img{
+  width:100%;aspect-ratio:1;
+  background:linear-gradient(135deg,#141410,#0a0a08);
+  border:1px solid var(--border);margin-bottom:1.5rem;
+  overflow:hidden;
+}
+.team-img img{width:100%;height:100%;object-fit:cover;display:block}
+.team-name{
+  font-family:var(--font-display);font-size:1.6rem;letter-spacing:.04em;
+  color:var(--white);margin-bottom:.3rem;
+}
+.team-role{
+  font-family:var(--font-sub);font-size:.65rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--red);margin-bottom:.8rem;
+}
+.team-bio{font-size:.8rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+
+/* ══════════════════
+   CLIENTS TICKER
+══════════════════ */
+.clients-section{padding:5rem 3rem;border-top:1px solid var(--border)}
+.clients-label{
+  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gray);text-align:center;margin-bottom:3rem;
+}
+.clients-row{
+  display:flex;overflow:hidden;
+}
+.clients-track{
+  display:flex;align-items:center;gap:4rem;
+  animation:ticker 20s linear infinite;width:max-content;
+}
+.client-logo{
+  height:50px;width:auto;object-fit:contain;
+  filter:brightness(0) invert(1);opacity:.25;
+  transition:opacity .3s;flex-shrink:0;
+}
+.client-logo:hover{opacity:.6}
+
+/* ══════════════════
+   TESTIMONIALS
+══════════════════ */
+.test-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:4rem;
+}
+.test-card{background:#060404;padding:2rem 2rem}
+.test-q{font-family:Georgia,serif;font-size:2.6rem;color:var(--red);opacity:.4;line-height:.8;margin-bottom:.8rem}
+.test-body{font-size:.82rem;color:var(--gray-light);line-height:1.8;font-style:italic;font-weight:300}
+.test-auth{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.test-name{font-family:var(--font-sub);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--white)}
+.test-role{font-size:.68rem;color:var(--red);letter-spacing:.08em;margin-top:.2rem}
+
+/* ══════════════════
+   CTA STRIP
+══════════════════ */
+.cta-strip{
+  border-top:1px solid var(--border);
+  padding:5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+  background:rgba(196,30,30,.03);
+}
+.cta-strip-hl{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4vw,4.5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.95;
+}
+.cta-strip-sub{
+  font-size:.88rem;color:var(--gray-light);margin-top:.8rem;
+  font-weight:300;line-height:1.7;max-width:440px;
+}
+.cta-btns{display:flex;gap:.8rem;flex-shrink:0}
+.btn-red{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
+  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
+}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
+  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+
+/* ══════════════════
+   FOOTER
+══════════════════ */
+footer{
+  border-top:1px solid var(--border);
+  padding:2.8rem 3rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
+  justify-content:space-between;
+}
+.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
+.ft-brand-text em{color:var(--red);font-style:normal}
+.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
+.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
+.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
+.ft-links a:hover{color:var(--white)}
+.ft-social{display:flex;gap:.55rem}
+.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
+.soc:hover{border-color:var(--red);color:var(--red)}
+.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+
+/* ══════════════════
+   REVEAL
+══════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}
+.reveal.d2{transition-delay:.22s}
+.reveal.d3{transition-delay:.34s}
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media(max-width:1024px){
+  nav{padding:0 1.2rem}
+  .nav-links,.nav-cta{display:none}
+  .page-hero,.section,.clients-section,.cta-strip,footer{padding-left:1.5rem;padding-right:1.5rem}
+  .story-grid,.why-grid{grid-template-columns:1fr;gap:3rem}
+  .story-img{aspect-ratio:16/9}
+  .why-img{display:none}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat-cell{border-bottom:1px solid var(--border)}
+  .values-grid,.team-row,.test-grid{grid-template-columns:1fr}
+  .cta-strip{flex-direction:column;align-items:flex-start}
+  .cta-btns{flex-direction:column}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:1.2rem}
+  .page-hero{min-height:auto;padding-top:calc(var(--nav-h) + 3rem)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <img src="img/olujohn-digitals-logo.png" style="height:26px;width:26px;" alt="OluJohn Digitals Logo"/>
+    <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Work</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-lines">
+    <div class="vl"></div><div class="vl"></div>
+    <div class="vl"></div><div class="vl"></div>
   </div>
-
-  <div class="testimonial-5-item swiper-slide">
-    <i class="metech-quote"></i>
-    <p>
-      “OLUJOHNDIGITALS crafted a brand identity that truly reflects our vision. Their professionalism and innovative approach set them apart.”
-    </p>
-    <div class="testimonial-bottom">
-      <ul>
-        <li><p>Joshua Olumoye</p></li>
-        <li><p>Co-Founder at OLUJOHNDIGITALS</p></li>
-      </ul>
-    </div>
+  <span class="page-eyebrow reveal">Who We Are</span>
+  <h1 class="page-hl reveal d1">
+    BUILDING<br/>BRANDS THAT<br/><span class="outline">LAST.</span>
+  </h1>
+  <div class="hero-foot">
+    <p class="hero-foot-desc reveal d2">We are a modern branding and digital solutions company committed to helping businesses, entrepreneurs, and organizations define, refine, and elevate their brand identities — from Lagos to the world.</p>
+    <span class="hero-tag reveal d3">Lagos, Nigeria &mdash; Est. 2019</span>
   </div>
+</div>
 
-  <div class="testimonial-5-item swiper-slide">
-    <i class="metech-quote"></i>
-    <p>
-      “The app we built with OLUJOHNDIGITALS blends functionality with elegant design. Their technical expertise is unmatched.”
-    </p>
-    <div class="testimonial-bottom">
-      <ul>
-        <li><p>Daniel Oguniyi</p></li>
-        <li><p>Lead Mobile App Developer</p></li>
-      </ul>
+<!-- STATS -->
+<div class="section" style="padding-top:5rem;padding-bottom:5rem;">
+  <div class="stats-row reveal">
+    <div class="stat-cell">
+      <div class="stat-num">20<em>+</em></div>
+      <div class="stat-lbl">Projects Delivered</div>
     </div>
-  </div>
-
-  <div class="testimonial-5-item swiper-slide">
-    <i class="metech-quote"></i>
-    <p>
-      “Designing with OLUJOHNDIGITALS is about creating seamless user experiences. Every interface we craft is intuitive, engaging, and aligned with the client’s brand vision.”
-    </p>
-    <div class="testimonial-bottom">
-      <ul>
-        <li><p>Timileyin Oyewale</p></li>
-        <li><p>Lead UI/UX Designer</p></li>
-      </ul>
+    <div class="stat-cell">
+      <div class="stat-num">5<em>+</em></div>
+      <div class="stat-lbl">Years of Experience</div>
     </div>
-  </div>
-
-
-  <div class="testimonial-5-item swiper-slide">
-    <i class="metech-quote"></i>
-    <p>
-      “At OLUJOHNDIGITALS, creativity is celebrated. Every project becomes a masterpiece through bold, innovative design.”
-    </p>
-    <div class="testimonial-bottom">
-      <ul>
-        <li><p>Ayomide</p></li>
-        <li><p>Lead Graphics Designer</p></li>
-      </ul>
+    <div class="stat-cell">
+      <div class="stat-num">100<em>%</em></div>
+      <div class="stat-lbl">Client Satisfaction</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">24<em>h</em></div>
+      <div class="stat-lbl">Service Availability</div>
     </div>
   </div>
 </div>
 
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Branding & Identity Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Branding & Identity Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="section">
+  <div class="story-grid">
+    <div class="story-img reveal">
+      <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye — CEO, OluJohn Digitals"/>
+      <div class="story-img-tag">John Olumoye — Founder & CEO</div>
+    </div>
+    <div class="story-body reveal d1">
+      <span class="eyebrow">Our Story</span>
+      <h2 class="s-title" style="margin-bottom:2rem">WE STARTED<br/>WITH ONE<br/><span class="ol">BIG IDEA.</span></h2>
+      <p class="story-p">OluJohn Digitals was founded on a simple but powerful belief — that every business, no matter its size or stage, deserves a world-class brand and digital presence. We started in Lagos, Nigeria with a team of creatives, strategists, and engineers who were tired of watching great businesses go unnoticed because of weak branding and poor digital execution.</p>
+      <p class="story-p">Over five years, we've grown from a small branding studio into a full-service digital agency serving clients across Nigeria, Africa, the UK, Canada, and beyond. We've built SaaS platforms that were sold, launched fintech apps that process real transactions daily, and created brand identities that made businesses impossible to ignore.</p>
+      <p class="story-p">We specialize in offering creative and strategic services that foster visibility, trust, and growth in both digital and traditional marketplaces. Our work is rooted in innovation, excellence, and deeply personalized service — because we treat every client's business like it's our own.</p>
+      <div style="margin-top:2.5rem">
+        <a href="projects.html" class="btn-ghost">See Our Work <i class="fa-regular fa-arrow-right" style="margin-left:.4rem"></i></a>
       </div>
-      </section>
-      <!-- Blog -->
-      <!-- <section class="mt-200">
-        <div class="container">
-          <h4 class="sub-title" data-text-animation="slide" data-split="words">
-            Our Latest Insights
-          </h4>
-          <div class="row align-items-center">
-            <div class="col-xxxl-6 col-lg-8">
-              <div data-animation="move">
-                <h2 class="section-title">
-                  Update with us
-                  <span>and know our latest insights, blog and news</span>
-                </h2>
-              </div>
-            </div>
-            <div
-              class="col-xxxl-6 col-lg-4 flex-lg-end"
-              data-animation="fade"
-              data-animation-direction="bottom"
-            >
-              <a
-                href="blog.html"
-                class="btn-2 cf-mt-100 color-theme-1 border-color-theme-1"
-                >News Overview <i class="metech-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-          <div
-            class="row cf-mt-26 cf-gap-lg-30"
-            data-animation="fade"
-            data-animation-direction="bottom"
-          >
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/3.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    How can you choose the better option for you
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/4.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Find out your best policy for that your best reasons
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/5.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Top 10 better tips to grow your digital marketing services
-                    in web
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Footer -->
-      <footer class="mt-200">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-xxxl-6 col-xl-8 col-md-9">
-            <h2>Let’s Talk</h2>
-          </div>
-          <div class="col-md-3 offset-xl-1 d-none d-md-block">
-            <a href="contact.html" class="btn-3"> Contact Us </a>
-          </div>
-        </div>
-        <div class="row cf-pb-77 cf-pt-100 align-items-center cf-gap-lg-30">
-          <div class="col-xl-6 col-lg-7">
-            <div class="d-flex flex-column flex-sm-row cf-gap-66 align-items-sm-center">
-              <a href="index.html">
-                <a href="index.html">
-                  <img src="img/olujohn-digitas-logo.png" alt="Logo"
-                    style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-                </a>
-              </a>
-              <!-- <form class="w-100">
-                  <input type="text" placeholder="Your Email" />
-                  <a href="#" class="btn-2 color-theme-1 border-color-theme-1"
-                    >Read More <i class="metech-arrow-right"></i
-                  ></a>
-                </form> -->
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-5 flex-lg-end">
-            <ul class="icon-list">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61578561470869"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/olujohn_digitals/"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="https://x.com/olujohndigitals?s=09"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/olujohndigitals/"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="footer-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">ABOUT AGENCY</a></li>
-          <li><a href="projects.html">OUR WORK</a></li>
-          <!-- <li><a href="team.html">TEAM MEMBER</a></li> -->
-          <li><a href="services.html">SERVICES</a></li>
-          <li><a href="contact.html">CONTACT US</a></li>
-          <!-- <li><a href="faq.html">FAQ’s</a></li>
-          <li><a href="#">OUR INSIGHTS</a></li> -->
-        </ul>
-        <p class="text-center copyright">
-          © 2025 All rights reserved by OLUJOHNDIGITALS
-        </p>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<div class="section section-alt">
+  <span class="eyebrow reveal">What Drives Us</span>
+  <h2 class="s-title reveal d1">OUR CORE<br/><span class="ol">VALUES.</span></h2>
+  <div class="values-grid">
+
+    <div class="value-card reveal">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
       </div>
-    </footer>
+      <div class="value-name">Excellence First</div>
+      <p class="value-desc">We don't ship mediocre work. Every deliverable — from a logo to a production-grade SaaS — goes through the same relentless standard of quality before it leaves our hands.</p>
     </div>
 
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/bootstrap.bundle.min.js"></script>
-    <script src="js/lib/waypoints.min.js"></script>
-    <script src="js/lib/jquery.counterup.min.js"></script>
-    <script src="js/lib/swiper-bundle.min.js"></script>
-    <script src="js/lib/imagesloaded.js"></script>
-    <script src="js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="js/lib/isotope.js"></script>
-    <script src="js/lib/jquery.lettering.min.js"></script>
-    <script src="js/lib/circletype.min.js"></script>
-    <script src="js/lib/marquee.min.js"></script>
+    <div class="value-card reveal d1">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M7 10.5L9 12.5L13 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="value-name">Radical Honesty</div>
+      <p class="value-desc">We tell clients what they need to hear, not what they want to hear. If a strategy won't work, we say so — and we propose something better. Trust is built on truth.</p>
+    </div>
 
-    <!-- Gsap -->
-    <script src="js/gsap/gsap.min.js"></script>
-    <script src="js/gsap/SplitText.min.js"></script>
-    <script src="js/gsap/ScrollTrigger.min.js"></script>
-    <script src="js/gsap/ScrollSmoother.min.js"></script>
-    <!--  -->
-    <script src="js/animation.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <div class="value-card reveal d2">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 10C3 6.13 6.13 3 10 3C12.5 3 14.7 4.28 16 6.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M17 10C17 13.87 13.87 17 10 17C7.5 17 5.3 15.72 4 13.78" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M16 3.5V6.5H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 16.5V13.5H7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="value-name">Continuous Growth</div>
+      <p class="value-desc">The digital landscape never stops evolving, and neither do we. We invest in learning, experimenting, and upgrading our craft so our clients always get the current best — not last year's playbook.</p>
+    </div>
+
+    <div class="value-card reveal">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="1.5" y="1.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <rect x="11.5" y="1.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <rect x="1.5" y="11.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M11.5 15.5H18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M15 12V19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="value-name">Full Ownership</div>
+      <p class="value-desc">When we take on a project, we own it completely — from strategy through to post-launch support. We don't vanish after delivery. Our clients know we're always reachable.</p>
+    </div>
+
+    <div class="value-card reveal d1">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 2C10 2 4 5 4 10.5C4 13.5 6.7 16 10 16C13.3 16 16 13.5 16 10.5C16 5 10 2 10 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M10 16V18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M7 18H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="value-name">Creative Courage</div>
+      <p class="value-desc">We push past the safe and expected. Our best work happens when we take creative risks on behalf of our clients — and those risks consistently pay off with results that stand out.</p>
+    </div>
+
+    <div class="value-card reveal d2">
+      <div class="value-ico">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="7" cy="7" r="4" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="14" cy="13" r="4" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M10.5 9.5L11.5 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="value-name">Partnership Over Transaction</div>
+      <p class="value-desc">We don't want one-off clients. We want long-term partners whose growth we can contribute to again and again. Our best relationships span years, not weeks.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+  <div class="why-grid">
+    <div class="why-img reveal">
+      <img src="img/olujohndigitals-certificate.jpg" alt="OluJohn Digitals — Why Us"/>
+    </div>
+    <div class="reveal d1">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="s-title" style="margin-bottom:2.5rem">THE AGENCY<br/>THAT THINKS<br/><span class="ol">LIKE AN OWNER.</span></h2>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-ico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M4 8H12M8 4V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="why-title">Full-Stack In-House</div>
+            <p class="why-desc">Design, development, SEO, hosting — all under one roof. No handoffs to third parties, no communication gaps, no delays from misaligned teams.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 12L5.5 7.5L8 9.5L11 5.5L14 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="14" cy="3" r="1.2" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="why-title">Founder-Level Thinking</div>
+            <p class="why-desc">Our lead engineer built and sold a SaaS company. We think about your product like owners — every decision is made with growth and sustainability in mind, not just aesthetics.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M8 1.5V8L11 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="why-title">Global Standards</div>
+            <p class="why-desc">Based in Lagos, serving clients in Mauritius, Canada, the UK, and across Africa. We know how to build for global audiences while staying grounded in African market realities.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 8C2 4.7 4.7 2 8 2C10 2 11.8 3 13 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M14 8C14 11.3 11.3 14 8 14C6 14 4.2 13 3 11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M13 2V5H10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 14V11H6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="why-title">Long-Term Partnership</div>
+            <p class="why-desc">We offer ongoing maintenance, feature updates, and growth support. Our clients don't leave because they don't need to — everything they need is right here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<div class="section section-alt">
+  <span class="eyebrow reveal">The People</span>
+  <h2 class="s-title reveal d1">MEET THE TEAM<br/><span class="ol">BEHIND THE WORK.</span></h2>
+  <div class="team-row">
+    <div class="team-card reveal">
+      <div class="team-img">
+        <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye"/>
+      </div>
+      <div class="team-name">John Olumoye</div>
+      <div class="team-role">Founder & CEO</div>
+      <p class="team-bio">Full-stack engineer, brand strategist, and founder. John has built and sold a SaaS company, architected production systems for fintech clients, and led the agency from a solo studio to a multi-disciplinary team.</p>
+    </div>
+    <div class="team-card reveal d2">
+      <div class="team-img" style="background:linear-gradient(135deg,#141410,#0a0a08);display:flex;align-items:center;justify-content:center;">
+        <img src="img/co-founder-joshua-olumoye.jpg" alt="Joshua Olumoye"/>
+      </div>
+      <div class="team-name">Joshua Olumoye</div>
+      <div class="team-role">Co-Founder &amp; Solutions Architect</div>
+      <p class="team-bio">Joshua architects scalable digital solutions that bridge business goals with robust engineering. From system design and backend infrastructure to product strategy and deployment, he leads the technical vision behind every platform, ensuring performance, security, and long-term growth.</p>
+    </div>
+    <div class="team-card reveal d1">
+      <div class="team-img" style="background:linear-gradient(135deg,#141410,#0a0a08);display:flex;align-items:center;justify-content:center;">
+        <img src="img/daniel.png" alt="Daniel Oguniyi"/>
+      </div>
+      <div class="team-name">Daniel Oguniyi</div>
+      <div class="team-role">Lead Mobile Developer</div>
+      <p class="team-bio">Specialist in React Native and cross-platform mobile development. Daniel leads all mobile app builds — from architecture to App Store deployment — with a focus on performance and native feel.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENT LOGOS -->
+<div class="clients-section">
+  <p class="clients-label">Brands we've worked with</p>
+  <div class="clients-row">
+    <div class="clients-track">
+      <img src="img/borderless_banking_logo.png" class="client-logo" alt="BorderlessBanking"/>
+      <img src="img/simi_craft.png" class="client-logo" alt="Simi Craft"/>
+      <img src="img/nite.png" class="client-logo" alt="Nite"/>
+      <img src="img/data_wise.png" class="client-logo" alt="DataWise"/>
+      <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart"/>
+      <img src="img/abbey_wears.png" class="client-logo" alt="Abbey Wears"/>
+      <img src="img/clype.png" class="client-logo" alt="Clype"/>
+      <img src="img/borderless_banking_logo.png" class="client-logo" alt="BorderlessBanking"/>
+      <img src="img/simi_craft.png" class="client-logo" alt="Simi Craft"/>
+      <img src="img/nite.png" class="client-logo" alt="Nite"/>
+      <img src="img/data_wise.png" class="client-logo" alt="DataWise"/>
+      <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart"/>
+      <img src="img/abbey_wears.png" class="client-logo" alt="Abbey Wears"/>
+      <img src="img/clype.png" class="client-logo" alt="Clype"/>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section section-alt">
+  <span class="eyebrow reveal">Client Testimonials</span>
+  <h2 class="s-title reveal d1">WHAT OUR<br/><span class="ol">CLIENTS SAY.</span></h2>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-q">&ldquo;</div>
+      <p class="test-body">OluJohn Digitals took my idea and turned it into reality. They built a professional and user-friendly web app where people can buy virtual cards and access financial services seamlessly. The journey from concept to launch was handled with excellence.</p>
+      <div class="test-auth">
+        <div class="test-name">Colibrie</div>
+        <div class="test-role">CEO, BorderlessBanking</div>
+      </div>
+    </div>
+    <div class="test-card reveal d1">
+      <div class="test-q">&ldquo;</div>
+      <p class="test-body">I wanted my footwear brand to stand out, and OluJohn Digitals delivered beyond expectations. From designing my logo to developing a consistent brand identity, their creativity and professionalism brought Simi Footwear to life.</p>
+      <div class="test-auth">
+        <div class="test-name">Simi</div>
+        <div class="test-role">CEO, Simi Footwear</div>
+      </div>
+    </div>
+    <div class="test-card reveal d2">
+      <div class="test-q">&ldquo;</div>
+      <p class="test-body">Starting a brand from scratch can be overwhelming, but OluJohn Digitals made it effortless. They built my brand identity and successfully developed both the web and mobile app for Owlist. Truly a top-notch experience.</p>
+      <div class="test-auth">
+        <div class="test-name">Ola</div>
+        <div class="test-role">CEO, Owlist</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div>
+    <div class="cta-strip-hl reveal">READY TO BUILD<br/>SOMETHING GREAT?</div>
+    <p class="cta-strip-sub reveal d1">Tell us what you're working on. We'll handle design, development, and everything in between.</p>
+  </div>
+  <div class="cta-btns reveal d2">
+    <a href="https://wa.me/2348180695247" class="btn-red">Start on WhatsApp</a>
+    <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost">Schedule a Call</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-brand">
+      <img src="img/olujohn-digitals-logo.png" style="height:32px;width:32px;" alt="OluJohn Digitals Logo"/>
+    <div>
+      <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
+      <div class="ft-brand-sub">Full-Service Digital Agency</div>
+    </div>
+  </div>
+  <ul class="ft-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Agency</a></li>
+    <li><a href="projects.html">Our Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+  <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1});
+reveals.forEach(r=>obs.observe(r));
+</script>
+</body>
 </html>

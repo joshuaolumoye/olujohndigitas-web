@@ -1,945 +1,842 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/metech-icon.css" />
-  <link rel="stylesheet" href="css/lib/bs/css/bootstrap.css" />
-  <link rel="stylesheet" href="css/fonts/font-awesome.css" />
-  <link rel="stylesheet" href="css/lib/magnific-popup.css" />
-  <link rel="stylesheet" href="css/lib/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon" />
-  <title>
-    OLUJOHN DIGITALS - The most optimal branding agency
-  </title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OluJohn Digitals — Full-Service Digital Agency, Lagos</title>
+<meta name="description" content="OluJohn Digitals is a full-service digital agency in Lagos — UI/UX design, web development, mobile apps, SEO, branding, and cloud hosting."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#040404;
+  --white:#F8F6F2;
+  --red:#C41E1E;
+  --red-dark:#8B1212;
+  --gray:#5C5C5C;
+  --gray-light:#B0ADA8;
+  --border:rgba(248,246,242,.08);
+  --nav-h:68px;
+  --track-w:28px;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-sub:'Chakra Petch',sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
+
+/* ══════════════════
+   PRELOADER
+══════════════════ */
+#preloader{
+  position:fixed;inset:0;z-index:9999;background:var(--black);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+#preloader .ct,#preloader .cb{
+  position:absolute;left:0;right:0;height:50%;background:var(--black);
+  transition:transform 1.1s cubic-bezier(.76,0,.24,1);z-index:2;
+}
+#preloader .ct{top:0}
+#preloader .cb{bottom:0}
+#preloader.exit .ct{transform:translateY(-100%)}
+#preloader.exit .cb{transform:translateY(100%)}
+.pl-logo{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.pl-icon{opacity:0;transform:scale(.75);animation:plUp .7s cubic-bezier(.16,1,.3,1) .2s forwards}
+.pl-name{
+  font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.5rem);
+  letter-spacing:.14em;color:var(--white);line-height:1;
+  opacity:0;transform:translateY(16px);
+  animation:plUp .9s cubic-bezier(.16,1,.3,1) .45s forwards;
+}
+.pl-name .dot{color:var(--red)}
+.pl-line{width:0;height:2px;background:var(--red);animation:plLine .8s cubic-bezier(.16,1,.3,1) .7s forwards}
+.pl-tag{
+  font-family:var(--font-sub);font-size:.58rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--gray-light);
+  opacity:0;animation:plUp .6s ease .9s forwards;
+}
+.pl-bar-wrap{width:160px;height:1px;background:rgba(248,246,242,.1);overflow:hidden;opacity:0;animation:plUp .4s ease 1.05s forwards}
+.pl-bar{height:100%;background:var(--red);width:0;animation:plFill 1.3s cubic-bezier(.4,0,.2,1) 1.1s forwards}
+@keyframes plUp{to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes plLine{to{width:100%}}
+@keyframes plFill{to{width:100%}}
+
+/* ══════════════════
+   SITE
+══════════════════ */
+#site{opacity:0;transition:opacity .7s ease .15s;width:100%;height:100%}
+#site.visible{opacity:1}
+
+/* ══════════════════
+   NAV
+══════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;
+  border-bottom:1px solid var(--border);
+  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);
+}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
+.nav-brand-text em{color:var(--red);font-style:normal}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.52rem 1.4rem;border:1px solid var(--red);
+  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
+}
+.nav-cta:hover{background:var(--red);color:var(--white)}
+
+/* ══════════════════
+   SCROLL TRACK
+══════════════════ */
+#scroll-track{
+  position:fixed;right:0;top:var(--nav-h);bottom:0;width:var(--track-w);z-index:997;
+  display:flex;flex-direction:column;align-items:center;
+  background:rgba(4,4,4,.7);border-left:1px solid var(--border);
+}
+#scroll-rail{
+  flex:1;width:1px;background:rgba(248,246,242,.1);
+  position:relative;margin:.8rem 0;cursor:pointer;
+}
+#scroll-thumb{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:3px;background:var(--red);border-radius:2px;
+  min-height:30px;transition:top .1s linear;
+  cursor:grab;
+}
+#scroll-thumb:active{cursor:grabbing}
+
+/* ══════════════════
+   FULLPAGE
+══════════════════ */
+#fp{
+  position:fixed;
+  top:var(--nav-h);left:0;
+  right:var(--track-w);bottom:0;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;
+}
+#fp::-webkit-scrollbar{display:none}
+#fp{-ms-overflow-style:none;scrollbar-width:none}
+
+/* ══════════════════
+   PANEL
+══════════════════ */
+.panel{
+  width:100%;
+  height:calc(100vh - var(--nav-h));
+  scroll-snap-align:start;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+
+/* ══════════════════
+   HERO
+══════════════════ */
+#hero{background:var(--black)}
+.hero-lines{
+  position:absolute;inset:0;pointer-events:none;
+  display:flex;justify-content:space-evenly;
+}
+.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.14) 40%,rgba(196,30,30,.14) 60%,transparent)}
+.hero-meta{
+  position:absolute;top:1.8rem;left:3rem;right:3rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.hero-tag{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);
+  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
+}
+.hero-loc{font-family:var(--font-sub);font-size:.65rem;color:var(--gray);letter-spacing:.1em}
+.hero-body{padding:0 3rem;position:relative;z-index:2}
+.hero-hl{
+  font-family:var(--font-display);
+  font-size:clamp(3.5rem,9.5vw,10.5rem);
+  line-height:.9;letter-spacing:.04em;color:var(--white);
+}
+.hero-hl .accent{color:var(--red)}
+.hero-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.22);color:transparent}
+.hero-foot{
+  position:absolute;bottom:1.8rem;left:3rem;right:3rem;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;
+  border-top:1px solid var(--border);padding-top:1.4rem;
+}
+.hero-desc{max-width:340px;font-size:.88rem;color:var(--gray-light);line-height:1.75;font-weight:300}
+.hero-ctas{display:flex;gap:.75rem;flex-shrink:0}
+
+/* ══════════════════
+   BTNS
+══════════════════ */
+.btn-red{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
+  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
+}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
+  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+
+/* ══════════════════
+   TICKER
+══════════════════ */
+#ticker{background:var(--red);overflow:hidden}
+.ticker-bg{
+  position:absolute;bottom:-1rem;left:0;right:0;text-align:center;
+  font-family:var(--font-display);font-size:18vw;color:rgba(255,255,255,.04);
+  line-height:1;pointer-events:none;white-space:nowrap;
+}
+.ticker-row{
+  display:flex;overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.13);
+  border-bottom:1px solid rgba(255,255,255,.13);
+  padding:1.1rem 0;
+}
+.ticker-row+.ticker-row{margin-top:2.5rem}
+.ticker-track{display:flex;animation:scroll 18s linear infinite;width:max-content}
+.ticker-item{
+  font-family:var(--font-display);
+  font-size:clamp(2.5rem,4.5vw,4.5rem);
+  letter-spacing:.05em;color:var(--white);white-space:nowrap;padding:0 1.8rem;opacity:.9;
+}
+.t-sep{color:rgba(255,255,255,.3);margin:0 .2rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══════════════════
+   INNER LAYOUT
+══════════════════ */
+.s-inner{
+  padding:0 3rem;height:100%;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
+}
+.s-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,4.8vw,5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.92;margin-bottom:2rem;
+}
+.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+
+/* ══════════════════
+   SERVICES
+══════════════════ */
+#services{background:var(--black)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border)}
+.svc-grid+.svc-grid{margin-top:1px;border-top:none}
+.svc-card{padding:1.4rem 1.3rem;border-right:1px solid var(--border);transition:background .3s}
+.svc-card:last-child{border-right:none}
+.svc-card:hover{background:rgba(196,30,30,.06)}
+.svc-card:hover .svc-n{color:var(--red)}
+.svc-n{font-family:var(--font-display);font-size:1rem;color:rgba(248,246,242,.13);margin-bottom:.8rem;transition:color .3s}
+.svc-ico{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);color:var(--gray-light);font-size:.85rem;margin-bottom:.8rem}
+.svc-lbl{font-family:var(--font-sub);font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:.4rem}
+.svc-lbl a{color:inherit;text-decoration:none}
+.svc-desc{font-size:.73rem;color:var(--gray-light);line-height:1.6;font-weight:300}
+
+/* ══════════════════
+   WORK
+══════════════════ */
+#work{background:#050505}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.8rem}
+.proj{background:#050505;padding:1.6rem 1.5rem;transition:background .3s;position:relative;overflow:hidden}
+.proj::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.proj:hover{background:#0c0808}
+.proj:hover::after{transform:scaleX(1)}
+.proj-cat{font-family:var(--font-sub);font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+.proj-name{font-family:var(--font-display);font-size:1.7rem;letter-spacing:.04em;color:var(--white);margin-bottom:.4rem}
+.proj-desc{font-size:.73rem;color:var(--gray-light);line-height:1.6;font-weight:300}
+.proj-lnk{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-sub);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);text-decoration:none;margin-top:.9rem}
+.proj-lnk i{font-size:.62rem;transition:transform .3s}
+.proj-lnk:hover i{transform:translate(2px,-2px)}
+
+/* ══════════════════
+   ABOUT
+══════════════════ */
+#about{background:var(--black)}
+.about-wrap{padding:0 3rem;height:100%;display:flex;align-items:center;gap:4.5rem}
+.a-left{flex:1;min-width:0}
+.a-right{flex:0 0 310px;border:1px solid var(--border);padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem}
+.a-stat{border-bottom:1px solid var(--border);padding-bottom:1.4rem}
+.a-stat:last-child{border-bottom:none;padding-bottom:0}
+.a-num{font-family:var(--font-display);font-size:3.5rem;letter-spacing:.04em;color:var(--white);line-height:1}
+.a-num em{color:var(--red);font-style:normal}
+.a-lbl{font-family:var(--font-sub);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-light);margin-top:.25rem}
+.why-list{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.6rem}
+.why-row{display:flex;gap:.9rem;align-items:flex-start}
+.why-ico{width:28px;height:28px;border:1px solid rgba(196,30,30,.3);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:.82rem;flex-shrink:0;margin-top:.1rem}
+.why-title{font-family:var(--font-sub);font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:.2rem}
+.why-desc{font-size:.75rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+
+/* ══════════════════
+   TESTIMONIALS
+══════════════════ */
+#testimonials{background:#060404}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.8rem}
+.test-card{background:#060404;padding:1.8rem 1.8rem}
+.test-q{font-family:Georgia,serif;font-size:2.6rem;color:var(--red);opacity:.4;line-height:.8;margin-bottom:.7rem}
+.test-body{font-size:.8rem;color:var(--gray-light);line-height:1.8;font-style:italic;font-weight:300}
+.test-auth{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--border)}
+.test-name{font-family:var(--font-sub);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--white)}
+.test-role{font-size:.68rem;color:var(--red);letter-spacing:.08em;margin-top:.18rem}
+
+/* ══════════════════
+   CTA
+══════════════════ */
+#cta{background:var(--red);flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.cta-bg{position:absolute;font-family:var(--font-display);font-size:26vw;color:rgba(0,0,0,.1);line-height:1;pointer-events:none;white-space:nowrap;top:50%;transform:translateY(-50%);z-index:0}
+.cta-hl{font-family:var(--font-display);font-size:clamp(2.8rem,7.5vw,8.5rem);letter-spacing:.04em;color:var(--white);line-height:.9;position:relative;z-index:1}
+.cta-sub{font-size:.9rem;color:rgba(255,255,255,.74);max-width:440px;margin:1.6rem auto 2.2rem;line-height:1.75;font-weight:300;position:relative;z-index:1}
+.cta-btns{display:flex;gap:.9rem;justify-content:center;position:relative;z-index:1}
+.btn-white{font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 1.8rem;background:var(--white);color:var(--red);text-decoration:none;display:inline-block;transition:opacity .25s}
+.btn-white:hover{opacity:.9}
+.btn-outline-white{font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(255,255,255,.5);color:var(--white);text-decoration:none;display:inline-block;transition:background .25s}
+.btn-outline-white:hover{background:rgba(255,255,255,.12)}
+.cta-email{font-size:.74rem;color:rgba(255,255,255,.6);margin-top:1.6rem;position:relative;z-index:1;font-family:var(--font-sub);letter-spacing:.04em}
+.cta-email a{color:rgba(255,255,255,.88);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+
+/* ══════════════════
+   FOOTER
+══════════════════ */
+#footer{
+  scroll-snap-align:start;background:var(--black);
+  min-height:calc(100vh - var(--nav-h));
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ft-inner{
+  padding:2.8rem 3rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
+  justify-content:space-between;
+  border-top:1px solid var(--border);
+}
+.ft-brand{display:flex;align-items:center;gap:.6rem}
+.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
+.ft-brand-text em{color:var(--red);font-style:normal}
+.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
+.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
+.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
+.ft-links a:hover{color:var(--white)}
+.ft-social{display:flex;gap:.55rem}
+.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
+.soc:hover{border-color:var(--red);color:var(--red)}
+.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+
+/* ══════════════════
+   PANEL REVEAL
+══════════════════ */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.in-view .reveal{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}
+.reveal.d2{transition-delay:.22s}
+.reveal.d3{transition-delay:.34s}
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media(max-width:1024px){
+  html,body{overflow:auto}
+  #site{height:auto}
+  #fp{position:static;height:auto;right:0;overflow:visible;scroll-snap-type:none}
+  nav{padding:0 1.2rem}
+  .nav-links,.nav-cta{display:none}
+  #scroll-track{display:none}
+  .panel{height:auto;min-height:100svh;scroll-snap-align:none}
+  #hero{padding-bottom:1.5rem}
+  .hero-body{padding:2.5rem 1.5rem 1rem}
+  .hero-meta{display:none}
+  .hero-foot{position:static;flex-direction:column;align-items:flex-start;gap:1.2rem;margin:0 1.5rem 2rem;padding-top:1.4rem}
+  .hero-lines{display:none}
+  .s-inner,.about-wrap{padding:3rem 1.5rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-card{border-bottom:1px solid var(--border)}
+  .proj-grid,.test-grid{grid-template-columns:1fr}
+  .about-wrap{flex-direction:column;gap:2.5rem}
+  .a-right{flex:none;width:100%}
+  .cta-btns{flex-direction:column;align-items:center}
+  .ft-inner{padding:2.2rem 1.5rem}
+  #footer{min-height:auto}
+}
+</style>
 </head>
+<body>
 
-<body class="dark-bg">
-  <!--================================
-        PRELOADER START
-    =================================-->
-  <!-- <div class="preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-        <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
-      <h5 class="preloader-text">OLUJONDIGITAS</h5>
-    </div> -->
-  <!--================================
-        PRELOADER END
-    =================================-->
-  <!--============================
-     =            Header            =   
-     =============================-->
-  <div class="header-1-topbar d-none d-xl-block">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <p>
-            OLUJOHN DIGITALS - The most optimal branding agency
-            <a href="https://wa.me/2348180695247?text=Hello%2C%20I%20am%20interested%20in%20working%20with%20OluJohnDigitals%20for%20my%20website%2C%20app%2C%20branding%2C%20or%20my%20brand%20design.%20Please%20share%20more%20details%20on%20how%20we%20can%20get%20started.">Hire Us</a>.
-          </p>
-        </div>
-        <div class="col-md-7 flex-end">
-          <div class="header-1-topbar-list">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="fa-regular fa-envelope"></i>
-                  olujohndigitals@gmail.com
-                </a>
-              </li>
-              <li>
-                <p>
-                  <i class="fa-regular fa-clock"></i>
-                  24 hours service
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i class="fa-regular fa-map-pin"></i>
-                  Lagos, Nigeria
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="ct"></div>
+  <div class="cb"></div>
+  <div class="pl-logo">
+    <div class="pl-icon">
+      <img src="img/olujohn-digitals-logo.png" style="height: 56px; width: 56px;" alt="OluJohn Digitals Logo">
     </div>
+    <div class="pl-name">OLUJOHN<span class="dot">.</span>DIGITALS</div>
+    <div class="pl-line"></div>
+    <div class="pl-tag">Full-Service Digital Agency — Lagos, Nigeria</div>
+    <div class="pl-bar-wrap"><div class="pl-bar"></div></div>
   </div>
-  <header class="main-header fixed-header header-1">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/olujohn-digitas-logo.png" alt="Logo"
-              style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-          </a>
-        </div>
+</div>
 
+<!-- SITE -->
+<div id="site">
 
-        <div class="d-flex align-items-center">
-          <div class="d-none d-xl-block main-menu">
-            <nav class="navbar-nav m-auto" id="navbarNav">
-              <ul>
-                <li class="">
-                  <a href="#">Home</a>
-                  <!--<ul class="submenu">
-                      <li><a href="index.html">Home 1</a></li>
-                      <li><a href="index-2.html">Home 2</a></li>
-                      <li><a href="index-3.html">Home 3</a></li>
-                      <li><a href="index-4.html">Home 4</a></li>
-                      <li><a href="index-5.html">Home 5</a></li>
-                    </ul> -->
-                </li>
-                <li class="">
-                  <a href="services.html">Services</a>
-                  <!-- <ul class="submenu">
-                      <li><a href="about.html">About Us</a></li>
-                      <li class="dropdown-nav">
-                        <a href="#services">Services</a>
-                        <ul class="submenu">
-                          <li><a href="services.html">Services</a></li>
-                          <li>
-                            <a href="service-details.html">Service Details</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="team.html">Team</a></li>
-                      <li><a href="faq.html">Faq</a></li> 
-                    </ul> -->
-                </li>
-                <li class="">
-                  <a href="projects.html">Projects</a>
-                  <!-- <ul class="submenu">
-                      <li><a href="projects.html">Portfolio</a></li>
-                      <li>
-                        <a href="project-details.html">Portfolio Details</a>
-                      </li>
-                    </ul> -->
-                </li>
-                <li class="">
-                  <a href="about.html">About Us</a>
-                  <!-- <ul class="submenu">
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul> -->
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <a href="#" class="search-btn cf-ml-50"><i class="fa-regular fa-magnifying-glass"></i></a>
-          <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-1 cf-ml-30 d-none d-sm-flex">Schedule
-            Meeting <i class="fa-regular fa-arrow-up-right"></i></a>
-          <a href="#" class="toggle-sidebar cf-ml-20">
-            <div class="toggle">
-              <span></span>
-              <span></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <!-- if the file is in an img/ folder -->
+<img src="img/olujohn-digitals-logo.png" style="height: 26px; width: 26px;" alt="OluJohn Digitals Logo">
+      <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
+  </nav>
 
-  <div class="mobile-menu">
-    <div class="menu-backdrop"></div>
-    <div class="main-menu-mobile">
-      <div class="d-flex align-items-center justify-content-between">
-        <div class="nav-logo">
-          <a href="index.html"><img src="img/olujohn-digitas-logo.png" alt="" title="" /></a>
-        </div>
-        <div class="close-btn"><span class="far fa-times fa-fw"></span></div>
-      </div>
-      <div id="mobile-nav"></div>
-    </div>
-  </div>
-  <!-- Search Popup -->
-  <div class="search-popup">
-    <div class="search-popup-overlay"></div>
-    <div class="search-popup-content">
-      <a href="#" class="close-search">
-        <i class="fa-regular fa-times"></i>
-      </a>
-      <div class="search-popup-form-container">
-        <form>
-          <input type="text" placeholder="Search Here" />
-          <button><i class="fa-regular fa-magnifying-glass"></i></button>
-        </form>
-      </div>
+  <!-- SCROLL TRACK -->
+  <div id="scroll-track">
+    <div id="scroll-rail">
+      <div id="scroll-thumb"></div>
     </div>
   </div>
 
-  <div id="scrollsmoother-container">
-    <!-- Banner -->
-    <section class="banner-1">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="banner-1-content" data-animation="move" data-animation-delay="1.5">
-              <h2>BRANDING</h2>
-              <div class="d-flex align-items-center cf-mt-sm-20 cf-mt-50">
-                <img src="img/arrow-top-icon.png" class="banner-1-icon" alt="" />
-                <h1>Agency</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 flex-end">
-            <div class="banner-1-play" data-animation-delay="2">
-              <video autoplay muted loop playsinline>
-                <source src="img/hero-bg.mp4" />
-              </video>
+  <!-- FULLPAGE -->
+  <div id="fp">
 
-              <!-- Correct wa.me format: no spaces -->
-              <a href="https://wa.me/2348180695247?text=Hello%2C%20I%20am%20interested%20in%20working%20with%20OluJohnDigitals%20for%20my%20website%2C%20app%2C%20branding%2C%20or%20my%20brand%20design.%20Please%20share%20more%20details%20on%20how%20we%20can%20get%20started."
-                target="_blank" rel="noopener noreferrer">
-                Live Chat
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="banner-1-footer" data-animation="move" data-animation-delay="1.8">
-          <div class="row align-items-center cf-gap-md-20">
-            <div class="col-xxl-4 col-md-7">
-              <p>
-                We embody unwavering expertise, garnered through years of
-                industry mastery. Our team’s extensive knowledge
-              </p>
-            </div>
-            <div class="col-xxl-8 col-md-5 flex-md-end">
-              <div>
-                <a href="about.html" class="btn-2">Learn More <i class="metech-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
+    <!-- HERO -->
+    <div class="panel" id="hero">
+      <div class="hero-lines">
+        <div class="vl"></div><div class="vl"></div>
+        <div class="vl"></div><div class="vl"></div>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-tag">Full-Service Digital Agency</span>
+        <span class="hero-loc">Lagos, Nigeria — Serving Worldwide</span>
+      </div>
+      <div class="hero-body">
+        <div class="reveal">
+          <h1 class="hero-hl">WE BUILD<br/><span class="accent">DIGITAL</span><br/><span class="outline">PRODUCTS</span><br/>THAT WIN.</h1>
         </div>
       </div>
-    </section>
-    <!-- About -->
-    <section class="mt-200 pb-200">
-      <div class="container">
-        <div class="row">
-          <div class="col-xxl-4 col-lg-3">
-            <img src="img/arrow-top-icon-2.png" class="about-icon d-none d-lg-block" alt="" />
-          </div>
-          <div class="col-xxl-7 col-lg-9 flex-end">
-            <div>
-              <h6 class="sub-title" data-text-animation="slide" data-split="words">
-                About Our Company
-              </h6>
-              <div data-animation="fade" data-animation-direction="bottom">
-                <h2 class="section-title">
-                  We are modern branding and digital solutions company .
-                  <span>committed to helping businesses, entrepreneurs, and organizations define, refine, and
-                    elevate</span>
-                  their brand identities
-                </h2>
-              </div>
-            </div>
-          </div>
+      <div class="hero-foot">
+        <div class="reveal d1">
+          <!-- <p class="hero-desc">From brand identity to full-stack platforms — we design, build, and launch digital experiences that attract premium clients and drive real business growth.</p> -->
         </div>
-        <div class="row cf-mt-80 cf-gap-lg-30">
-          <div class="col-lg-5" data-animation="fade" data-animation-direction="bottom">
-            <p>
-              We specialize in offering creative and strategic branding services that foster visibility, trust, and
-              growth in both digital and traditional marketplaces. Our brand is rooted in innovation, excellence, and
-              personalized service.
-            </p>
+        <div class="reveal d2">
+          <div class="hero-ctas">
+            <a href="https://wa.me/2348180695247" class="btn-red">Start a Project</a>
+            <a href="projects.html" class="btn-ghost">View Our Work</a>
           </div>
-          <div class="col-lg-7">
-            <div class="about-counter-container" data-animation="fade" data-animation-direction="bottom">
-              <div class="counter-item">
-                <h4><span class="count">20</span>+</h4>
-                <p>Awesome clients</p>
-              </div>
-              <div class="counter-item">
-                <h4><span class="count">20</span>M+</h4>
-                <p>Earnings a year</p>
-              </div>
-              <a href="about.html" class="btn-2">About Agency <i class="metech-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Brand Slider -->
-    <div class="brand-slider-container text-center overflow-hidden" data-animation="fade"
-      data-animation-direction="bottom">
-      <div class="brand-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/borderless_banking_logo.png" style="height: 80px; " alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/simi_craft.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/nite.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/data_wise.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/dan_mart.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/abbey_wears.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/clype.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/borderless_banking_logo.png" style="height: 80px; " alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/simi_craft.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/nite.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/data_wise.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/dan_mart.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/abbey_wears.png" style="height: 80px;" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/clype.png" style="height: 80px;" alt="" />
-          </div>
-          <!-- <div class="swiper-slide">
-            <img src="img/brand/light/1.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/2.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/4.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/5.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/6.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="img/brand/light/7.png" alt="" />
-          </div> -->
         </div>
       </div>
     </div>
-    <!-- Services -->
-    <section class="mt-200 pb-200">
-      <div class="container">
-        <div class="row cf-gap-xxl-30">
-          <div class="col-xxl-4">
-            <h4 class="sub-title overflow-hidden" data-text-animation="slide" data-split="lines">
-              What Services We Provide
-            </h4>
-            <h2 class="section-title" data-text-animation="slide" data-split="words">
-              Branding services that transform bold ideas into <span> visible, impactful brands across the globe.</span>
-            </h2>
-            <div data-animation="fade" data-animation-direction="bottom">
-              <a href="services.html" class="btn-2 cf-mt-88">View All Services <i class="metech-arrow-right"></i></a>
-            </div>
-            <div class="cf-mt-80 cf-ml-100 d-none d-xxl-block" data-animation="fade" data-animation-direction="bottom">
-              <svg xmlns="http://www.w3.org/2000/svg" width="308" height="309" viewBox="0 0 308 309" fill="none">
-                <path
-                  d="M252.5 95.9083V94.6987L251.646 95.5552L39.5981 308.214L0.706044 269.196L212.756 56.5349L213.607 55.6818H212.402H0.5V0.5H307.5V308.5H252.5V95.9083Z"
-                  stroke="white" stroke-opacity="0.29" />
+
+    <!-- TICKER -->
+    <div class="panel" id="ticker" style="margin-bottom: 30px;">
+      <div class="ticker-bg">DIGITAL</div>
+      <div class="ticker-row">
+        <div class="ticker-track">
+          <span class="ticker-item">UI/UX Design <span class="t-sep">/</span></span>
+          <span class="ticker-item">Web Development <span class="t-sep">/</span></span>
+          <span class="ticker-item">Mobile Apps <span class="t-sep">/</span></span>
+          <span class="ticker-item">Backend Systems <span class="t-sep">/</span></span>
+          <span class="ticker-item">Brand Identity <span class="t-sep">/</span></span>
+          <span class="ticker-item">SEO Strategy <span class="t-sep">/</span></span>
+          <span class="ticker-item">UI/UX Design <span class="t-sep">/</span></span>
+          <span class="ticker-item">Web Development <span class="t-sep">/</span></span>
+          <span class="ticker-item">Mobile Apps <span class="t-sep">/</span></span>
+          <span class="ticker-item">Backend Systems <span class="t-sep">/</span></span>
+          <span class="ticker-item">Brand Identity <span class="t-sep">/</span></span>
+          <span class="ticker-item">SEO Strategy <span class="t-sep">/</span></span>
+        </div>
+      </div>
+      <div class="ticker-row">
+        <div class="ticker-track" style="animation-direction:reverse">
+          <span class="ticker-item">Cloud Hosting <span class="t-sep">/</span></span>
+          <span class="ticker-item">Digital Marketing <span class="t-sep">/</span></span>
+          <span class="ticker-item">Rebranding <span class="t-sep">/</span></span>
+          <span class="ticker-item">Project Management <span class="t-sep">/</span></span>
+          <span class="ticker-item">Media Production <span class="t-sep">/</span></span>
+          <span class="ticker-item">Cloud Hosting <span class="t-sep">/</span></span>
+          <span class="ticker-item">Digital Marketing <span class="t-sep">/</span></span>
+          <span class="ticker-item">Rebranding <span class="t-sep">/</span></span>
+          <span class="ticker-item">Project Management <span class="t-sep">/</span></span>
+          <span class="ticker-item">Media Production <span class="t-sep">/</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="panel" id="services">
+      <div class="s-inner" style="margin: 100px 0;">
+        <div class="reveal" style="margin-top: 80px;">
+          <span class="eyebrow">What We Do</span>
+          <h2 class="s-title">EVERYTHING YOUR<br/>BUSINESS NEEDS<br/><span class="ol">TO GROW.</span></h2>
+        </div>
+        <div class="svc-grid reveal d1">
+
+          <!-- 01 Brand Identity Design -->
+          <div class="svc-card">
+            <div class="svc-n">01</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M7 15L10.5 7L14 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.2 12.5H12.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
               </svg>
             </div>
+            <div class="svc-lbl"><a href="servicebrand-id.html">Brand Identity Design</a></div>
+            <p class="svc-desc">Logos, fonts, colors, and brand systems that make your business impossible to forget.</p>
           </div>
-          <div class="col-xxl-8 col-xxxl-7 offset-xxxl-1">
-            <div class="service-items" data-animation="fade" data-animation-direction="bottom">
-              <div class="service-item">
-                <i class="metech-service-1"></i>
-                <h4>
-                  <a href="servicebrand-id.html">Brand Identity Design</a>
-                </h4>
-                <p>
-                  We craft distinct
-                  logos, fonts, colors, and brand systems that
-                  make your business unforgettable.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-2"></i>
-                <h4>
-                  <a href="servicebusiness.html">Business Rebranding</a>
-                </h4>
-                <p>
-                  We help breathe new life into your business with a complete visual and strategic identity overhaul.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-3"></i>
-                <h4>
-                  <a href="servicedms.html">Digital Marketing Strategy</a>
-                </h4>
-                <p>
-                  We grow your online presence through smart social media, email, and content strategies.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-4"></i>
-                <h4>
-                  <a href="serviceweb.html">Web Design & Development</a>
-                </h4>
-                <p>
-                  We build sleek, responsive websites tailored to convert and impress your target audience.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-3"></i>
-                <h4>
-                  <a href="serviceuiux.html">UI/UX and Graphics Design</a>
-                </h4>
-                <p>
-                  We create high quality user interface/experience visuals for web and app development. We also create
-                  eye-catching visuals like flyers, posters, and digital ads that amplify your message.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-4"></i>
-                <h4>
-                  <a href="servicepmc.html">Project Management & Consulting</a>
-                </h4>
-                <p>
-                  We provide structured guidance to launch, manage, and scale your business projects effectively.
-                </p>
-              </div>
-              <div class="service-item">
-                <i class="metech-service-4"></i>
-                <h4>
-                  <a href="servicemedia.html">Media Production</a>
-                </h4>
-                <p>
-                  We produce engaging short videos and brand stories that boost visibility and connect
-                  with your audience.
-                </p>
-              </div>
+
+          <!-- 02 Web Design & Development -->
+          <div class="svc-card">
+            <div class="svc-n">02</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="3.5" width="19" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M7 18.5H15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M11 16.5V18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M6 9L8.5 11L6 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5 13H14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
             </div>
+            <div class="svc-lbl"><a href="serviceweb.html">Web Design & Development</a></div>
+            <p class="svc-desc">Sleek, responsive websites tailored to convert and impress your target audience.</p>
+          </div>
+
+          <!-- 03 UI/UX & Graphics Design -->
+          <div class="svc-card">
+            <div class="svc-n">03</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="1.5" width="10" height="14" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="9" y="6.5" width="10" height="14" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M6 5.5H10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                <path d="M6 8H9" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                <path d="M12 10.5H16" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                <path d="M12 13H15" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="svc-lbl"><a href="serviceuiux.html">UI/UX & Graphics Design</a></div>
+            <p class="svc-desc">High-quality user interface visuals for web and app — eye-catching graphics that amplify your brand.</p>
+          </div>
+
+          <!-- 04 Digital Marketing Strategy -->
+          <div class="svc-card">
+            <div class="svc-n">04</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 16L7 10.5L10.5 13.5L14.5 8L20 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="5" r="1.5" fill="currentColor"/>
+                <path d="M2 19.5H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+              </svg>
+            </div>
+            <div class="svc-lbl"><a href="servicedms.html">Digital Marketing Strategy</a></div>
+            <p class="svc-desc">Growing your online presence through smart social media, email, and content strategies.</p>
+          </div>
+
+        </div>
+        <div class="svc-grid reveal d2">
+
+          <!-- 05 Business Rebranding -->
+          <div class="svc-card">
+            <div class="svc-n">05</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 11C4 7.13 7.13 4 11 4C13.5 4 15.7 5.28 17 7.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M18 11C18 14.87 14.87 18 11 18C8.5 18 6.3 16.72 5 14.78" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M17 4.5V7.5H14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 17.5V14.5H8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="svc-lbl"><a href="servicebusiness.html">Business Rebranding</a></div>
+            <p class="svc-desc">Breathe new life into your business with a complete visual and strategic identity overhaul.</p>
+          </div>
+
+          <!-- 06 Project Management & Consulting -->
+          <div class="svc-card">
+            <div class="svc-n">06</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="12.5" y="1.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="1.5" y="12.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M12.5 16.5H20.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M16.5 12.5V20.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="svc-lbl"><a href="servicepmc.html">Project Management & Consulting</a></div>
+            <p class="svc-desc">Structured guidance to launch, manage, and scale your business projects effectively.</p>
+          </div>
+
+          <!-- 07 Media Production -->
+          <div class="svc-card">
+            <div class="svc-n">07</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="4.5" width="13" height="13" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M14.5 8.5L20 6V16L14.5 13.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="7" cy="11" r="2" stroke="currentColor" stroke-width="1.1"/>
+              </svg>
+            </div>
+            <div class="svc-lbl"><a href="servicemedia.html">Media Production</a></div>
+            <p class="svc-desc">Engaging short videos and brand stories that boost visibility and connect with your audience.</p>
+          </div>
+
+          <!-- 08 Cloud Hosting & DevOps -->
+          <div class="svc-card">
+            <div class="svc-n">08</div>
+            <div class="svc-ico">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 15.5C3.8 15.5 2 13.7 2 11.5C2 9.5 3.5 7.8 5.4 7.55C5.8 5.6 7.5 4 9.6 4C11.4 4 12.9 5.1 13.6 6.6C13.9 6.55 14.2 6.5 14.5 6.5C16.9 6.5 18.9 8.3 19 10.7C19.5 11 20 11.7 20 12.5C20 13.9 18.9 15 17.5 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M11 12V19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M8.5 14.5L11 12L13.5 14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="svc-lbl">Cloud Hosting & DevOps</div>
+            <p class="svc-desc">Deploy, configure, and manage your infrastructure — fast, secure, and always online.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <div class="panel" id="work" style="height:auto;min-height:calc(100vh - var(--nav-h));overflow:visible;">
+      <div class="s-inner" style="padding-top:2.5rem;padding-bottom:2.5rem;justify-content:flex-start;">
+        <div class="reveal">
+          <span class="eyebrow">Selected Work</span>
+          <h2 class="s-title" style="margin-bottom:0">PRODUCTS WE'VE BUILT.<br/><span class="ol">BUSINESSES WE'VE GROWN.</span></h2>
+        </div>
+        <div class="proj-grid reveal d1">
+          <div class="proj"><div class="proj-cat">Fintech · Crypto Platform</div><div class="proj-name">BBanking</div><p class="proj-desc">Simplified crypto and borderless banking — clean, fast interface designed for users who want financial tools without complexity.</p><a href="https://bbanking.capital" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
+          <div class="proj"><div class="proj-cat">Fintech · Payments</div><div class="proj-name">Apollo Pay</div><p class="proj-desc">A streamlined payment platform designed for simplicity and trust — users transact quickly with full confidence.</p><a href="https://apollopay.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
+          <div class="proj"><div class="proj-cat">SaaS · Social Platform</div><div class="proj-name">Companiox</div><p class="proj-desc">A social media SaaS platform in final stages — built for teams who want focused, distraction-free collaboration.</p><a href="projects.html" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
+          <div class="proj"><div class="proj-cat">WEB & Mobile App</div><div class="proj-name">Kwiikpos</div><p class="proj-desc">POS & inventory system that works 100% offline. Record sales, track stock, manage staff — with automatic cloud sync the moment you're back online.</p><a href="https://kwiikpos.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
+          <div class="proj"><div class="proj-cat">Loan Management System</div><div class="proj-name">BOAAUTOMATE</div><p class="proj-desc">Branch Operation Automation. Sign in. The all in one ultimate website for your savings and loans.</p><a href="https://boaautomate.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
+          <div class="proj"><div class="proj-cat">Project Management</div><div class="proj-name">Companiox PM</div><p class="proj-desc">End-to-end project management consultation that brought this SaaS from concept to production-ready launch.</p><a href="projects.html" target="_blank" class="proj-lnk">View Project <i class("fa-regular fa-arrow-up-right"></i></a></div>
+        </div>
+        <div class="reveal d2" style="margin-top:1.4rem">
+          <a href="projects.html" class="btn-ghost" style="font-size:.62rem">View All Projects <i class="fa-regular fa-arrow-right" style="margin-left:.35rem"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="panel" id="about">
+      <div class="about-wrap">
+        <div class="a-left reveal">
+          <span class="eyebrow">Why OluJohn Digitals</span>
+          <h2 class="s-title" style="margin-bottom:1.6rem">WE DON'T JUST<br/>BUILD WEBSITES.<br/><span class="ol">WE BUILD BUSINESSES.</span></h2>
+          <div class="why-list">
+            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-layer-group"></i></div><div><div class="why-title">Full-Stack In-House</div><p class="why-desc">Design, development, SEO, and hosting — all under one roof. No handoffs, no delays.</p></div></div>
+            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-rocket-launch"></i></div><div><div class="why-title">Founder-Level Thinking</div><p class="why-desc">We think about your product like owners, not contractors. Strategy first, execution always.</p></div></div>
+            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-globe"></i></div><div><div class="why-title">Global Standards, African Roots</div><p class="why-desc">Based in Lagos. Delivering to clients across Africa, UK, Canada, and beyond.</p></div></div>
+            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-handshake"></i></div><div><div class="why-title">Long-Term Partnership</div><p class="why-desc">Ongoing maintenance, feature updates, and growth support. Our clients don't leave.</p></div></div>
+          </div>
+        </div>
+        <div class="a-right reveal d1">
+          <div class="a-stat"><div class="a-num">20<em>+</em></div><div class="a-lbl">Projects Delivered</div></div>
+          <div class="a-stat"><div class="a-num">5<em>+</em></div><div class="a-lbl">Years of Experience</div></div>
+          <div class="a-stat"><div class="a-num">100<em>%</em></div><div class="a-lbl">Client Satisfaction</div></div>
+          <div style="padding-top:1.4rem;border-top:1px solid var(--border)">
+            <p style="font-size:.78rem;color:var(--gray-light);line-height:1.75;font-style:italic;font-weight:300">"From branding to production-grade SaaS — OluJohn Digitals is the agency we wish we'd found sooner."</p>
+            <p style="font-size:.68rem;color:var(--red);margin-top:.65rem;font-family:var(--font-sub);letter-spacing:.08em">— CEO, BorderlessBanking</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Video BG -->
-    <!-- <section class="video-bg overflow-hidden" data-animation="fade" data-animation-direction="bottom">
-      <img src="img/video-bg.png" data-speed=".9" class="w-100" alt="" />
-      <div class="video-bg-content">
-        <div class="video-play" data-mouse-move>
-          <a href="https://www.youtube.com/watch?v=pNje3bWz7V8">Play Now</a>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="panel" id="testimonials">
+      <div class="s-inner">
+        <div class="reveal">
+          <span class="eyebrow">Client Testimonials</span>
+          <h2 class="s-title" style="margin-bottom:0">TRUSTED BY FOUNDERS<br/><span class="ol">ACROSS INDUSTRIES.</span></h2>
+        </div>
+        <div class="test-grid reveal d1">
+          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">OluJohn Digitals took my idea and turned it into reality. They built a professional and user-friendly web app where people can buy virtual cards and access financial services seamlessly. The journey from concept to launch was handled with excellence.</p><div class="test-auth"><div class="test-name">Colibrie</div><div class="test-role">CEO, BorderlessBanking</div></div></div>
+          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">I wanted my footwear brand to stand out, and OluJohn Digitals delivered beyond expectations. From designing my logo to developing a consistent brand identity, their creativity and professionalism brought Simi Footwear to life.</p><div class="test-auth"><div class="test-name">Simi</div><div class="test-role">CEO, Simi Footwear</div></div></div>
+          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">Starting a brand from scratch can be overwhelming, but OluJohn Digitals made it effortless. They built my brand identity and successfully developed both the web and mobile app for Owlist. Truly a top-notch experience.</p><div class="test-auth"><div class="test-name">Ola</div><div class="test-role">CEO, Owlist</div></div></div>
+        </div>
+        <div class="reveal d2" style="margin-top:1.8rem">
+          <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost" style="font-size:.62rem">Schedule a Meeting <i class="fa-regular fa-calendar" style="margin-left:.35rem"></i></a>
         </div>
       </div>
-    </section> -->
-    <!-- Marquee -->
-    <section class="marquee pt-200 pb-200 overflow-hidden" data-animation="fade" data-animation-direction="bottom">
-      <div class="marquee-container overflow-hidden">
-        <div class="marquee_animi">
-          <h4 class="text-stroke">Client Work</h4>
-          <i class="metech-star"></i>
-          <h4 class="text-stroke">Our Project</h4>
-          <i class="metech-star"></i>
-          <h4 class="text-stroke">Our Portfolio</h4>
-          <i class="metech-star"></i>
-        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="panel" id="cta">
+      <div class="cta-bg">TALK</div>
+      <h2 class="cta-hl reveal">READY TO<br/>BUILD SOMETHING<br/>GREAT?</h2>
+      <p class="cta-sub reveal d1">Tell us what you're building. We'll handle everything from design to deployment — and make sure it's done right.</p>
+      <div class="cta-btns reveal d2">
+        <a href="https://wa.me/2348180695247" class="btn-white">Start on WhatsApp</a>
+        <a href="https://calendly.com/olumoyepelumi1" class="btn-outline-white" target="_blank">Schedule a Call</a>
       </div>
-    </section>
-    <!-- Project -->
-    <section>
-      <div class="container">
-        <div class="row cf-gap-lg-30">
-          <div class="col-lg-6">
-            <div class="project-content-container project-content-container-1" data-animation="fade"
-              data-animation-direction="bottom">
-              <img src="img/myservicepics/ViletteFoods.jpg" class="w-100 object-fit-cover h-100" alt="" />
-              <div class="project-centent">
-                <h4>
-                  <a >
-                    Vilette Foods
-                    <i class="fa-regular fa-arrow-up-right"></i></a>
-                </h4>
-                <p>Mobile App</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xxl-5 col-lg-6 offset-xxl-1" data-animation="fade" data-animation-direction="bottom">
-            <h4 class="sub-title">Our Projects</h4>
-            <h2 class="section-title cf-mb-40">
-              What we create <span>for our customers</span>
-            </h2>
-            <p>
-              Contents and websites that help individuals and businesses turn their visions into powerful brand
-              experiences. We are experts in crafting innovative design, strategic branding, and digital solutions that
-              ensure visibility, engagement, and growth.
-            </p>
-          </div>
-        </div>
-        <div class="row cf-mt-80">
-          <div class="col-xxl-5 col-lg-6">
-            <div class="project-content-container project-content-bg-white cf-ml-xxl-0 cf-ml-38 cf-mt-38"
-              data-animation="fade" data-animation-direction="bottom">
-              <img src="img/bbanking.jpg" class="w-100 object-fit-cover" alt="" />
-              <div class="project-centent">
-                <h4>
-                  <a href="bbanking.capital">
-                    Borderless Banking
-                    <i class="fa-regular fa-arrow-up-right"></i></a>
-                </h4>
-                <p>Web app</p>
-              </div>
-            </div>
-            <div class="cf-mt-30">
-              <div class="project-content-container project-content-bg-white cf-mt-xl-30 cf-mt-100 cf-mb-100"
-                data-animation="fade" data-animation-direction="bottom">
-                <img src="img/apollopay.jpg" class="w-100 object-fit-cover" alt="" />
-                <div class="project-centent">
-                  <h4>
-                    <a href="#">
-                      Apollo pay
-                      <i class="fa-regular fa-arrow-up-right"></i></a>
-                  </h4>
-                  <p>Website Design and development</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <p class="cta-email reveal d3">Or email us at <a href="mailto:olujohndigitals@gmail.com">olujohndigitals@gmail.com</a></p>
+    </div>
 
-          
-          <div class="col-lg-6 offset-xxl-1">
-            <div class="project-content-container project-content-bg-white" data-animation="fade"
-              data-animation-direction="bottom">
-              <img src="img/myservicepics/Estate Rental.jpg" class="w-100 object-fit-cover" alt="" />
-              <div class="project-centent">
-                <h4>
-                  <a href="#">
-                    EstateRental
-                    <i class="fa-regular fa-arrow-up-right"></i></a>
-                </h4>
-                <p>Mobile App</p>
-              </div>
-            </div>
-       
-                  <div class="cf-mt-80">
-    <div class="project-content-container project-content-bg-white" data-animation="fade"
-              data-animation-direction="bottom">
-              <img src="img/myservicepics/companioxlogo.jpg" class="w-100 object-fit-cover" alt="" />
-              <div class="project-centent">
-                 <h4>
-                  <a href="#">
-                    Companiox Project
-                    <i class="fa-regular fa-arrow-up-right"></i></a>
-                </h4>
-                <p>Project Management</p>
-                </div>
-
-      
-            <!-- <div class="d-flex justify-content-center cf-mt-40" data-animation="fade" data-animation-direction="bottom">
-              <a href="projects.html" class="btn-2 cf-mt-100 color-theme-1 border-color-theme-1">View All Project <i
-                  class="metech-arrow-right"></i></a>
-            </div> -->
+    <!-- FOOTER -->
+    <div id="footer">
+      <div class="ft-inner">
+        <div class="ft-brand">
+            <img src="img/olujohn-digitals-logo.png" style="height:35px;width:35px;" alt="OluJohn Digitals Logo"/>
+          <div>
+            <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
+            <div class="ft-brand-sub">Full-Service Digital Agency</div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Counter -->
-    <section class="mt-200 pb-200 pt-200 dark-5-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-7 offset-xl-3" data-animation="fade" data-animation-direction="bottom">
-            <p class="cf-fs-32 cf-lh-44 color-gray-3">
-              Dive into our studio's core -
-              <span class="color-white">numbers that mirror our dedication, creativity, and pursuit
-                of excellence.</span>
-              These stats offer a glimpse into our design prowess and its
-              real-world impact.
-            </p>
-          </div>
-        </div>
-
-        <div class="counter-row cf-mt-53 justify-content-center" data-animation="fade" data-animation-direction="bottom">
-          <div class="counter-item-container">
-            <div class="counter-item">
-              <h4><span class="count">70</span>%</h4>
-              <p>Satisfied Clients</p>
-            </div>
-          </div>
-          <div class="counter-item-container">
-            <div class="counter-item">
-              <h4><span class="count">20</span>+</h4>
-              <p>Project Completed</p>
-            </div>
-          </div>
-          <!-- <div class="counter-item-container">
-            <div class="counter-item">
-              <h4><span class="count">86</span>+</h4>
-              <p>Award Recognitions</p>
-            </div>
-          </div> -->
-          <div class="counter-item-container">
-            <div class="counter-item">
-              <h4><span class="count">5</span>+</h4>
-              <p>Our Experience</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Team member -->
-    <section class="mt-200">
-      <div class="container">
-        <div class="row align-items-center cf-gap-lg-30">
-          <div class="col-xxxl-5 col-lg-7 position-relative z-2" data-animation="fade"
-            data-animation-direction="bottom">
-            <h4 class="sub-title">Our Team Member</h4>
-            <h2 class="section-title">
-              Meet the talented
-              <span>individuals who form the heartbeat.</span>
-            </h2>
-            <a href="team.html" class="btn-2 cf-mt-100 color-theme-1 border-color-theme-1">View All Member <i
-                class="metech-arrow-right"></i></a>
-          </div>
-          <div class="col-xxxl-6 col-lg-5 position-relative">
-            <div data-image-animation="reveal" data-image-animation-direction="right" class="team-img w-100">
-              <img class="w-100" src="img/ceo-john-olumoye.jpg" alt="" />
-            </div>
-            <div data-animation="fade" data-animation-direction="bottom">
-              <p class="team-content">
-                Websites, products and digital services that help startups & innovative
-                companies gain more exposure. We are experts crafting bold
-                visuals, distinctive brand identities, innovative products,
-                and immersive websites.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- <div
-            class="row cf-mt-90 cf-gap-md-30"
-            data-animation="fade"
-            data-animation-direction="bottom"
-          >
-            <div class="col-md-4">
-              <div class="team-item">
-                <img src="img/team/1.png" class="w-100" alt="" />
-                <div class="team-item-content">
-                  <h4>
-                    <a href="#">William John</a>
-                  </h4>
-                  <p>Graphics Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-item">
-                <img src="img/team/2.png" class="w-100" alt="" />
-                <div class="team-item-content">
-                  <h4>
-                    <a href="#">Jessica Clark</a>
-                  </h4>
-                  <p>Digital Marketer</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-item">
-                <img src="img/team/3.png" class="w-100" alt="" />
-                <div class="team-item-content">
-                  <h4>
-                    <a href="#">James Harris</a>
-                  </h4>
-                  <p>Web Designer</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-      </div>
-    </section>
-    <!-- Testimonial -->
-    <section class="mt-200" data-animation="fade" data-animation-direction="bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 offset-xl-2">
-            <h4 class="sub-title">Customer Reviews</h4>
-            <div class="testimonial-slider swiper">
-              <div class="swiper-wrapper">
-
-                <!-- First Client -->
-                <div class="swiper-slide">
-                  <h2 class="section-title">
-                    “Olujohndigitals took my idea and turned it into reality.
-                    <span>They built a professional and user-friendly web app where people can buy virtual cards and
-                      access other financial services seamlessly.</span>
-                    The entire journey from concept to launch was handled with excellence.”
-                  </h2>
-                  <div class="testimonial-bottom">
-                    <ul>
-                      <li>
-                        <p>Colibrie</p>
-                      </li>
-                      <li>
-                        <p>CEO at BorderlessBanking</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Second Client -->
-                <div class="swiper-slide">
-                  <h2 class="section-title">
-                    “I wanted my footwear brand to stand out, and
-                    <span>Olujohndigitals delivered beyond expectations</span>.
-                    From designing my logo to developing a consistent brand identity, their creativity and
-                    professionalism brought Simi Footwear to life.”
-                  </h2>
-                  <div class="testimonial-bottom">
-                    <ul>
-                      <li>
-                        <p>Simi</p>
-                      </li>
-                      <li>
-                        <p>CEO at Simi Footwear</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Third Client -->
-                <div class="swiper-slide">
-                  <h2 class="section-title">
-                    “Starting a brand from scratch can be overwhelming,
-                    but <span>Olujohndigitals made it effortless</span>.
-                    They built my brand identity and successfully developed both the web and mobile app for Owlist.
-                    Truly a top-notch experience.”
-                  </h2>
-                  <div class="testimonial-bottom">
-                    <ul>
-                      <li>
-                        <p>Ola</p>
-                      </li>
-                      <li>
-                        <p>CEO at Owlist</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12 cf-mt-65">
-            <div class="testimonial-slider-bottom">
-              <div class="testimonial-images-container">
-                <div class="testimonial-images"></div>
-              </div>
-              <div class="testimonial-pagination-container">
-                <div class="testimonial-pagination"></div>
-              </div>
-              <div class="d-flex cf-gap-20">
-                <div class="testimonial-next">
-                  <i class="metech-long-arrow"></i>
-                </div>
-                <div class="testimonial-prev">
-                  <i class="metech-long-arrow-next"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Marquee -->
-    <section class="marquee pt-200 pb-200 overflow-hidden" data-animation="fade" data-animation-direction="bottom">
-      <div class="marquee-container overflow-hidden">
-        <div class="marquee_animi">
-          <h4 class="text-stroke">Our Insights</h4>
-          <i class="metech-star"></i>
-          <h4 class="text-stroke">Our News</h4>
-          <i class="metech-star"></i>
-          <h4 class="text-stroke">Our Blog</h4>
-          <i class="metech-star"></i>
-          <h4 class="text-stroke">Our Trends</h4>
-          <i class="metech-star"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Blog -->
-    <!-- <section>
-      <div class="container">
-        <div data-animation="fade" data-animation-direction="bottom">
-          <h4 class="sub-title">Our Latest Insights</h4>
-        </div>
-        <div class="row align-items-center cf-gap-lg-20">
-          <div class="col-xxxl-6 col-lg-8" data-animation="fade" data-animation-direction="bottom">
-            <h2 class="section-title">
-              Update with us
-              <span>and know our latest insights, blog and news</span>
-            </h2>
-          </div>
-          <div class="col-xxxl-6 col-lg-4 flex-lg-end" data-animation="fade" data-animation-direction="bottom">
-            <a href="blog.html" class="btn-2 color-theme-1 border-color-theme-1">View All Blog <i
-                class="metech-arrow-right"></i></a>
-          </div>
-
-          <div class="blog-items" data-animation="fade" data-animation-direction="bottom">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="blog-item cf-mt-26">
-                  <div class="row align-items-center cf-gap-xxxl-20">
-                    <div class="col-xxxl-6">
-                      <img src="img/blog/1.png" class="w-100" alt="" />
-                    </div>
-                    <div class="col-xxxl-6">
-                      <div class="blog-item-content">
-                        <ul class="blog-meta">
-                          <li>Admin</li>
-                          <li>23 January 2024</li>
-                        </ul>
-                        <h4 class="blog-title">
-                          <a href="blog-details.html">
-                            How can you choose the better option for you
-                          </a>
-                        </h4>
-                        <p>
-                          We create mind-blowing visuals, brands, websites and
-                          products that help startups and innovative
-                          companies.
-                        </p>
-                        <a href="#" class="btn-2 color-theme-1 border-color-theme-1">Read More <i
-                            class="metech-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="blog-item cf-mt-26">
-                  <div class="row align-items-center cf-gap-xxxl-20">
-                    <div class="col-xxxl-6">
-                      <img src="img/blog/2.png" class="w-100" alt="" />
-                    </div>
-                    <div class="col-xxxl-6">
-                      <div class="blog-item-content">
-                        <ul class="blog-meta">
-                          <li>Admin</li>
-                          <li>23 January 2024</li>
-                        </ul>
-                        <h4 class="blog-title">
-                          <a href="blog-details.html">
-                            Start up idea your own business for next project
-                          </a>
-                        </h4>
-                        <p>
-                          We create mind-blowing visuals, brands, websites and
-                          products that help startups and innovative
-                          companies.
-                        </p>
-                        <a href="#" class="btn-2 color-theme-1 border-color-theme-1">Read More <i
-                            class="metech-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- Footer -->
-    <footer class="mt-200">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-xxxl-6 col-xl-8 col-md-9">
-            <h2>Let’s Talk</h2>
-          </div>
-          <div class="col-md-3 offset-xl-1 d-none d-md-block">
-            <a href="contact.html" class="btn-3"> Contact Us </a>
-          </div>
-        </div>
-        <div class="row cf-pb-77 cf-pt-100 align-items-center cf-gap-lg-30">
-          <div class="col-xl-6 col-lg-7">
-            <div class="d-flex flex-column flex-sm-row cf-gap-66 align-items-sm-center">
-              <a href="index.html">
-                <a href="index.html">
-                  <img src="img/olujohn-digitas-logo.png" alt="Logo"
-                    style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-                </a>
-              </a>
-              <!-- <form class="w-100">
-                  <input type="text" placeholder="Your Email" />
-                  <a href="#" class="btn-2 color-theme-1 border-color-theme-1"
-                    >Read More <i class="metech-arrow-right"></i
-                  ></a>
-                </form> -->
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-5 flex-lg-end">
-            <ul class="icon-list">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61578561470869"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/olujohn_digitals/"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="https://x.com/olujohndigitals?s=09"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/olujohndigitals/"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="footer-menu">
+        <ul class="ft-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">ABOUT AGENCY</a></li>
-          <li><a href="projects.html">OUR WORK</a></li>
-          <!-- <li><a href="team.html">TEAM MEMBER</a></li> -->
-          <li><a href="services.html">SERVICES</a></li>
-          <li><a href="contact.html">CONTACT US</a></li>
-          <!-- <li><a href="faq.html">FAQ’s</a></li>
-          <li><a href="#">OUR INSIGHTS</a></li> -->
+          <li><a href="about.html">About Agency</a></li>
+          <li><a href="projects.html">Our Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <p class="text-center copyright">
-          © 2025 All rights reserved by OLUJOHNDIGITALS
-        </p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
       </div>
-    </footer>
-  </div>
+    </div>
 
-  <script src="js/lib/jquery.min.js"></script>
-  <script src="js/lib/bootstrap.bundle.min.js"></script>
-  <script src="js/lib/waypoints.min.js"></script>
-  <script src="js/lib/jquery.counterup.min.js"></script>
-  <script src="js/lib/swiper-bundle.min.js"></script>
-  <script src="js/lib/imagesloaded.js"></script>
-  <script src="js/lib/jquery.magnific-popup.min.js"></script>
-  <script src="js/lib/isotope.js"></script>
-  <script src="js/lib/jquery.lettering.min.js"></script>
-  <script src="js/lib/circletype.min.js"></script>
-  <script src="js/lib/marquee.min.js"></script>
+  </div><!-- /#fp -->
+</div><!-- /#site -->
 
-  <!-- Gsap -->
-  <script src="js/gsap/gsap.min.js"></script>
-  <script src="js/gsap/SplitText.min.js"></script>
-  <script src="js/gsap/ScrollTrigger.min.js"></script>
-  <script src="js/gsap/ScrollSmoother.min.js"></script>
-  <!--  -->
-  <script src="js/animation.js"></script>
-  <script src="js/main.js"></script>
+<script>
+/* ── PRELOADER ── */
+(function(){
+  const pre  = document.getElementById('preloader');
+  const site = document.getElementById('site');
+
+  function launch(){
+    pre.classList.add('exit');
+    setTimeout(()=>{ site.classList.add('visible'); }, 500);
+    setTimeout(()=>{
+      pre.style.display = 'none';
+      activatePanel(document.getElementById('hero'));
+      initScroll();
+    }, 1300);
+  }
+
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(()=> setTimeout(launch, 2700));
+  } else {
+    setTimeout(launch, 2700);
+  }
+})();
+
+/* ── ACTIVATE PANEL ── */
+function activatePanel(el){
+  if(!el) return;
+  el.classList.add('in-view');
+}
+
+/* ── SCROLL ENGINE ── */
+function initScroll(){
+  const fp    = document.getElementById('fp');
+  const rail  = document.getElementById('scroll-rail');
+  const thumb = document.getElementById('scroll-thumb');
+  if(!fp || !rail || !thumb) return;
+
+  /* Thumb sizing & position */
+  function syncThumb(){
+    const sH = fp.scrollHeight, cH = fp.clientHeight, rH = rail.clientHeight;
+    if(sH <= cH) return;
+    const tH  = Math.max(32, (cH/sH)*rH);
+    const top = (fp.scrollTop/(sH-cH))*(rH-tH);
+    thumb.style.height = tH+'px';
+    thumb.style.top    = top+'px';
+  }
+  fp.addEventListener('scroll', syncThumb, {passive:true});
+  window.addEventListener('resize', syncThumb);
+  syncThumb();
+
+  /* Click rail */
+  rail.addEventListener('click', e=>{
+    if(e.target===thumb) return;
+    const r     = rail.getBoundingClientRect();
+    const ratio = (e.clientY - r.top) / rail.clientHeight;
+    fp.scrollTo({top: ratio*(fp.scrollHeight-fp.clientHeight), behavior:'smooth'});
+  });
+
+  /* Drag thumb */
+  let drag=false, sy=0, ss=0;
+  thumb.addEventListener('mousedown', e=>{
+    drag=true; sy=e.clientY; ss=fp.scrollTop;
+    document.body.style.userSelect='none'; e.preventDefault();
+  });
+  document.addEventListener('mousemove', e=>{
+    if(!drag) return;
+    const rH=rail.clientHeight, tH=parseFloat(thumb.style.height)||40;
+    fp.scrollTop = ss + ((e.clientY-sy)/(rH-tH))*(fp.scrollHeight-fp.clientHeight);
+  });
+  document.addEventListener('mouseup',()=>{ drag=false; document.body.style.userSelect=''; });
+
+  /* Touch drag */
+  thumb.addEventListener('touchstart', e=>{
+    drag=true; sy=e.touches[0].clientY; ss=fp.scrollTop; e.preventDefault();
+  },{passive:false});
+  document.addEventListener('touchmove', e=>{
+    if(!drag) return;
+    const rH=rail.clientHeight, tH=parseFloat(thumb.style.height)||40;
+    fp.scrollTop = ss + ((e.touches[0].clientY-sy)/(rH-tH))*(fp.scrollHeight-fp.clientHeight);
+  },{passive:true});
+  document.addEventListener('touchend',()=>{ drag=false; });
+
+  /* IntersectionObserver for reveals */
+  const allPanels = [...document.querySelectorAll('.panel, #footer')];
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) activatePanel(e.target); });
+  },{root: fp, threshold:.3});
+  allPanels.forEach(p=>obs.observe(p));
+
+  /* Keyboard nav */
+  const snaps = ['hero','ticker','services','work','about','testimonials','cta','footer']
+    .map(id=>document.getElementById(id)).filter(Boolean);
+  let ci = 0;
+  document.addEventListener('keydown', e=>{
+    if(e.key==='ArrowDown'||e.key==='PageDown'){
+      e.preventDefault(); ci=Math.min(ci+1,snaps.length-1);
+      snaps[ci].scrollIntoView({behavior:'smooth'});
+    } else if(e.key==='ArrowUp'||e.key==='PageUp'){
+      e.preventDefault(); ci=Math.max(ci-1,0);
+      snaps[ci].scrollIntoView({behavior:'smooth'});
+    }
+  });
+
+  /* Track current section for keyboard index */
+  fp.addEventListener('scroll',()=>{
+    const mid = fp.scrollTop + fp.clientHeight/2;
+    snaps.forEach((s,i)=>{
+      if(s.offsetTop<=mid) ci=i;
+    });
+    syncThumb();
+  },{passive:true});
+}
+</script>
 </body>
-
 </html>

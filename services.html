@@ -1,465 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/metech-icon.css" />
-  <link rel="stylesheet" href="css/lib/bs/css/bootstrap.css" />
-  <link rel="stylesheet" href="css/fonts/font-awesome.css" />
-  <link rel="stylesheet" href="css/lib/magnific-popup.css" />
-  <link rel="stylesheet" href="css/lib/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon" />
-  <title>
-    OLUJOHN DIGITALS - The most optimal branding agency
-  </title>
-  </head>
-  <body class="dark-bg">
-    <!--================================
-        PRELOADER START
-    =================================-->
-    <!-- <div class="preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-        <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
-      <h5 class="preloader-text">Loading</h5>
-    </div> -->
-    <!--================================
-        PRELOADER END
-    =================================-->
-    <!--============================
-     =            Header            =   
-     =============================-->
-    <header class="main-header fixed-header header-5">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="logo">
-            <a href="index.html">
-              <img src="img/olujohn-digitas-logo.png"
-                  alt="Logo"
-                  style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-            </a>
-          </div>
-          <div class="d-none d-xl-block main-menu">
-            <nav class="navbar-nav m-auto" id="navbarNav">
-              <ul>
-                <li class="">
-                  <li class="dropdown-nav"></li>
-                  <a href="index.html">Home</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="index.html">Home 1</a></li>
-                    <li><a href="index-2.html">Home 2</a></li>
-                    <li><a href="index-3.html">Home 3</a></li>
-                    <li><a href="index-4.html">Home 4</a></li>
-                    <li><a href="index-5.html">Home 5</a></li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="services.html">Services</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown-nav">
-                      <a href="#services">Services</a>
-                      <ul class="submenu">
-                        <li><a href="services.html">Services</a></li>
-                        <li>
-                          <a href="service-details.html">Service Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="team.html">Team</a></li>
-                     <li><a href="faq.html">Faq</a></li> 
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="projects.html">Projects</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="projects.html">Portfolio</a></li>
-                    <li>
-                      <a href="project-details.html">Portfolio Details</a>
-                    </li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="about.html">About Us</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="blog.html">About Us</a></li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul> -->
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — OluJohn Digitals</title>
+<meta name="description" content="Full-service digital agency offering brand identity, web development, UI/UX, mobile apps, digital marketing, rebranding, media production, and cloud hosting."/>
 
-          <div class="d-flex align-items-center">
-            <a href="#" class="search-btn cf-ml-50"
-              ><i class="fa-regular fa-magnifying-glass"></i
-            ></a>
-            <a href="#" class="btn-5 cf-ml-30 d-none d-lg-block"
-              >WhatsApp: (234) 8180695247</a
-            >
-            <a href="#" class="toggle-sidebar cf-ml-20">
-              <div class="toggle">
-                <span></span>
-                <span></span>
-              </div>
-            </a>
-          </div>
+<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#040404;
+  --white:#F8F6F2;
+  --red:#C41E1E;
+  --red-dark:#8B1212;
+  --gray:#5C5C5C;
+  --gray-light:#B0ADA8;
+  --border:rgba(248,246,242,.08);
+  --nav-h:68px;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-sub:'Chakra Petch',sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+html,body{width:100%;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
+
+/* ══════════════════
+   NAV
+══════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;
+  border-bottom:1px solid var(--border);
+  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
+.nav-brand-text em{color:var(--red);font-style:normal}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{
+  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.52rem 1.4rem;border:1px solid var(--red);
+  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
+}
+.nav-cta:hover{background:var(--red);color:var(--white)}
+
+/* ══════════════════
+   PAGE HERO
+══════════════════ */
+.page-hero{
+  padding-top:calc(var(--nav-h) + 5rem);
+  padding-bottom:4rem;
+  padding-left:3rem;padding-right:3rem;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+  min-height:68vh;display:flex;flex-direction:column;justify-content:flex-end;
+}
+.hero-lines{
+  position:absolute;inset:0;pointer-events:none;
+  display:flex;justify-content:space-evenly;
+}
+.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.12) 50%,transparent)}
+.page-eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:block;
+}
+.page-hl{
+  font-family:var(--font-display);
+  font-size:clamp(4rem,10vw,11rem);
+  line-height:.88;letter-spacing:.04em;color:var(--white);
+  position:relative;z-index:2;
+}
+.page-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+.page-hl .accent{color:var(--red)}
+.hero-foot{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;
+  border-top:1px solid var(--border);padding-top:2rem;margin-top:3rem;
+  position:relative;z-index:2;
+}
+.hero-foot-desc{max-width:480px;font-size:.92rem;color:var(--gray-light);line-height:1.75;font-weight:300}
+.hero-tag{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);
+  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
+  white-space:nowrap;flex-shrink:0;
+}
+
+/* ══════════════════
+   SECTION BASE
+══════════════════ */
+.section{padding:6rem 3rem}
+.section-alt{background:#050505}
+.eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
+}
+.s-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,4.8vw,5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.92;
+}
+.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+
+/* ══════════════════
+   TICKER
+══════════════════ */
+.ticker-wrap{
+  overflow:hidden;border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);padding:.9rem 0;
+  background:rgba(196,30,30,.03);
+}
+.ticker-track{display:flex;animation:ticker 22s linear infinite;width:max-content}
+.ticker-item{
+  font-family:var(--font-sub);font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gray-light);
+  padding:0 2.5rem;white-space:nowrap;
+}
+.ticker-dot{color:var(--red);margin:0 .3rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══════════════════
+   SERVICES MAIN LIST
+   (numbered full-width rows like an editorial list)
+══════════════════ */
+.svc-list{
+  display:flex;flex-direction:column;
+  border:1px solid var(--border);
+  margin-top:4rem;
+}
+.svc-row{
+  display:grid;
+  grid-template-columns:80px 1fr auto;
+  align-items:center;
+  gap:2.5rem;
+  padding:2.8rem 3rem;
+  border-bottom:1px solid var(--border);
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+  transition:background .3s;
+  cursor:pointer;
+}
+.svc-row:last-child{border-bottom:none}
+.svc-row::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--red);
+  transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.svc-row:hover{background:rgba(196,30,30,.04)}
+.svc-row:hover::after{transform:scaleX(1)}
+.svc-row:hover .svc-row-num{color:var(--red)}
+.svc-row:hover .svc-row-arrow{transform:translate(4px,-4px)}
+.svc-row:hover .svc-row-name{color:var(--white)}
+
+.svc-row-num{
+  font-family:var(--font-display);font-size:3.5rem;letter-spacing:.06em;
+  color:rgba(248,246,242,.1);line-height:1;transition:color .3s;
+  flex-shrink:0;
+}
+.svc-row-body{min-width:0}
+.svc-row-name{
+  font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3rem);
+  letter-spacing:.04em;color:var(--gray-light);line-height:1;
+  transition:color .3s;margin-bottom:.6rem;
+}
+.svc-row-desc{
+  font-size:.82rem;color:var(--gray-light);line-height:1.7;
+  font-weight:300;max-width:680px;
+}
+.svc-row-tags{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem;
+}
+.svc-tag{
+  font-family:var(--font-sub);font-size:.56rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gray);
+  border:1px solid var(--border);padding:.22rem .7rem;
+}
+.svc-row:hover .svc-tag{border-color:rgba(196,30,30,.2);color:var(--gray-light)}
+.svc-row-right{
+  display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0;
+}
+.svc-row-icon{
+  width:48px;height:48px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray-light);font-size:1.1rem;
+  transition:border-color .3s,color .3s;
+}
+.svc-row:hover .svc-row-icon{border-color:rgba(196,30,30,.4);color:var(--red)}
+.svc-row-arrow{
+  color:var(--red);font-size:.75rem;
+  transition:transform .3s;
+}
+
+/* ══════════════════
+   HOW WE WORK  (3-column process cards, like values-grid)
+══════════════════ */
+.process-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:4rem;
+}
+.process-card{
+  background:#050505;padding:2.8rem 2.5rem;
+  position:relative;overflow:hidden;transition:background .3s;
+}
+.process-card:hover{background:#0c0808}
+.process-num{
+  font-family:var(--font-display);font-size:5rem;letter-spacing:.04em;
+  color:rgba(248,246,242,.05);line-height:1;
+  position:absolute;top:1.5rem;right:2rem;
+  pointer-events:none;
+}
+.process-ico{
+  width:44px;height:44px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray-light);margin-bottom:1.5rem;font-size:1rem;
+  transition:border-color .3s,color .3s;
+}
+.process-card:hover .process-ico{border-color:rgba(196,30,30,.4);color:var(--red)}
+.process-name{
+  font-family:var(--font-sub);font-size:.82rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:.6rem;
+}
+.process-desc{font-size:.82rem;color:var(--gray-light);line-height:1.7;font-weight:300}
+
+/* ══════════════════
+   WHY US STATS  (mirrors stats-row)
+══════════════════ */
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+}
+.stat-cell{
+  padding:3rem 2.5rem;border-right:1px solid var(--border);
+  position:relative;overflow:hidden;transition:background .3s;
+}
+.stat-cell:last-child{border-right:none}
+.stat-cell:hover{background:rgba(196,30,30,.05)}
+.stat-cell::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--red);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.stat-cell:hover::before{transform:scaleX(1)}
+.stat-num{font-family:var(--font-display);font-size:4.5rem;letter-spacing:.04em;color:var(--white);line-height:1}
+.stat-num em{color:var(--red);font-style:normal}
+.stat-lbl{font-family:var(--font-sub);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-light);margin-top:.6rem}
+
+/* ══════════════════
+   PRICING TIER CARDS
+══════════════════ */
+.pricing-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:4rem;
+}
+.pricing-card{
+  background:var(--black);padding:2.8rem 2.5rem;
+  display:flex;flex-direction:column;gap:0;
+  position:relative;transition:background .3s;
+}
+.pricing-card.featured{background:var(--red)}
+.pricing-card:not(.featured):hover{background:#0c0808}
+.pricing-badge{
+  font-family:var(--font-sub);font-size:.56rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--white);
+  background:rgba(255,255,255,.15);padding:.25rem .7rem;
+  display:inline-block;margin-bottom:1.2rem;align-self:flex-start;
+}
+.pricing-card:not(.featured) .pricing-badge{color:var(--red);background:rgba(196,30,30,.1)}
+.pricing-name{
+  font-family:var(--font-display);font-size:2.5rem;letter-spacing:.04em;
+  color:var(--white);line-height:1;margin-bottom:.5rem;
+}
+.pricing-desc{
+  font-size:.8rem;line-height:1.7;font-weight:300;
+  margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(248,246,242,.1);
+}
+.pricing-card:not(.featured) .pricing-desc{color:var(--gray-light)}
+.pricing-card.featured .pricing-desc{color:rgba(255,255,255,.75)}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:.85rem;flex:1}
+.pricing-feature{
+  display:flex;align-items:flex-start;gap:.7rem;
+  font-size:.8rem;font-weight:300;line-height:1.5;
+}
+.pricing-card:not(.featured) .pricing-feature{color:var(--gray-light)}
+.pricing-card.featured .pricing-feature{color:rgba(255,255,255,.85)}
+.pricing-feature i{font-size:.65rem;margin-top:.2rem;flex-shrink:0}
+.pricing-card:not(.featured) .pricing-feature i{color:var(--red)}
+.pricing-card.featured .pricing-feature i{color:rgba(255,255,255,.7)}
+.pricing-cta{
+  margin-top:2rem;font-family:var(--font-sub);font-size:.66rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.75rem 1.6rem;text-decoration:none;display:inline-block;
+  transition:background .25s,color .25s,transform .2s;align-self:flex-start;
+}
+.pricing-card:not(.featured) .pricing-cta{
+  border:1px solid rgba(248,246,242,.2);color:var(--white);
+}
+.pricing-card:not(.featured) .pricing-cta:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+.pricing-card.featured .pricing-cta{
+  background:var(--white);color:var(--red);
+}
+.pricing-card.featured .pricing-cta:hover{opacity:.9;transform:translateY(-2px)}
+
+/* ══════════════════
+   CTA STRIP
+══════════════════ */
+.cta-strip{
+  border-top:1px solid var(--border);padding:5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;background:rgba(196,30,30,.03);
+}
+.cta-strip-hl{
+  font-family:var(--font-display);font-size:clamp(2rem,4vw,4.5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.95;
+}
+.cta-strip-sub{
+  font-size:.88rem;color:var(--gray-light);margin-top:.8rem;
+  font-weight:300;line-height:1.7;max-width:440px;
+}
+.cta-btns{display:flex;gap:.8rem;flex-shrink:0}
+.btn-red{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
+  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
+}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
+  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+
+/* ══════════════════
+   FOOTER
+══════════════════ */
+footer{
+  border-top:1px solid var(--border);padding:2.8rem 3rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
+  justify-content:space-between;
+}
+.ft-brand{display:flex;align-items:center;gap:.6rem}
+.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
+.ft-brand-text em{color:var(--red);font-style:normal}
+.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
+.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
+.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
+.ft-links a:hover{color:var(--white)}
+.ft-social{display:flex;gap:.55rem}
+.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
+.soc:hover{border-color:var(--red);color:var(--red)}
+.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+
+/* ══════════════════
+   REVEAL
+══════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}
+.reveal.d2{transition-delay:.22s}
+.reveal.d3{transition-delay:.34s}
+.reveal.d4{transition-delay:.46s}
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media(max-width:1100px){
+  nav{padding:0 1.2rem}
+  .nav-links,.nav-cta{display:none}
+  .page-hero,.section,.cta-strip,footer{padding-left:1.5rem;padding-right:1.5rem}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:1.2rem}
+  .page-hero{min-height:auto;padding-top:calc(var(--nav-h) + 3rem)}
+  .svc-row{grid-template-columns:50px 1fr;gap:1.2rem;padding:2rem 1.5rem}
+  .svc-row-right{display:none}
+  .svc-row-num{font-size:2.2rem}
+  .svc-row-name{font-size:1.6rem}
+  .process-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat-cell{border-bottom:1px solid var(--border)}
+  .pricing-grid{grid-template-columns:1fr}
+  .cta-strip{flex-direction:column;align-items:flex-start}
+  .cta-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">
+      <img src="img/olujohn-digitals-logo.png" style="height:26px;width:26px;" alt="OluJohn Digitals Logo"/>
+    <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="projects.html">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-lines">
+    <div class="vl"></div><div class="vl"></div>
+    <div class="vl"></div><div class="vl"></div>
+  </div>
+  <span class="page-eyebrow reveal">What We Do</span>
+  <h1 class="page-hl reveal d1">
+    SERVICES<br/>ALIGNED WITH<br/><span class="outline">YOUR GOALS.</span>
+  </h1>
+  <div class="hero-foot">
+    <p class="hero-foot-desc reveal d2">From a brand's first logo to a production-grade SaaS — we provide every digital service your business needs to compete, grow, and win. One agency. One team. Zero handoffs.</p>
+    <span class="hero-tag reveal d3">8 Core Services</span>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Brand Identity Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Business Rebranding <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Brand Identity Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Business Rebranding <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ══════════════════
+     SERVICES LIST
+══════════════════ -->
+<div class="section">
+  <span class="eyebrow reveal">Our Services</span>
+  <h2 class="s-title reveal d1">EVERYTHING YOUR<br/>BUSINESS <span class="ol">NEEDS TO GROW.</span></h2>
+
+  <div class="svc-list reveal d2">
+
+    <!-- 01 Brand Identity -->
+    <a href="servicebrand-id.html" class="svc-row">
+      <div class="svc-row-num">01</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Brand Identity Design</div>
+        <p class="svc-row-desc">We craft distinct logos, typography systems, color palettes, and full brand guidelines that make your business impossible to forget — and instantly recognizable across every touchpoint.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">Logo Design</span>
+          <span class="svc-tag">Brand Guidelines</span>
+          <span class="svc-tag">Typography</span>
+          <span class="svc-tag">Color Systems</span>
+          <span class="svc-tag">Brand Collateral</span>
         </div>
       </div>
-    </header>
-
-    <div class="mobile-menu">
-      <div class="menu-backdrop"></div>
-      <div class="main-menu-mobile">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="nav-logo">
-            <a href="index.html"><img src="img/olujohn-digitas-logo.png" alt="" title="" /></a>
-          </div>
-          <div class="close-btn"><span class="far fa-times fa-fw"></span></div>
-        </div>
-        <div id="mobile-nav"></div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-pen-nib"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
       </div>
+    </a>
+
+    <!-- 02 Web Design & Development -->
+    <a href="serviceweb.html" class="svc-row">
+      <div class="svc-row-num">02</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Web Design & Development</div>
+        <p class="svc-row-desc">Sleek, responsive, and conversion-focused websites built from scratch. We handle every layer — from design and UX through to deployment, hosting, and ongoing maintenance.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">UI Design</span>
+          <span class="svc-tag">Frontend Dev</span>
+          <span class="svc-tag">Backend Systems</span>
+          <span class="svc-tag">CMS</span>
+          <span class="svc-tag">E-Commerce</span>
+          <span class="svc-tag">SEO-Ready</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-display"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 03 UI/UX & Graphics -->
+    <a href="serviceuiux.html" class="svc-row">
+      <div class="svc-row-num">03</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">UI/UX & Graphics Design</div>
+        <p class="svc-row-desc">High-fidelity user interfaces and experience design for web and mobile platforms. We also create print and digital graphics — flyers, posters, social ads, and marketing visuals that stop the scroll.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">Wireframing</span>
+          <span class="svc-tag">Prototyping</span>
+          <span class="svc-tag">Design Systems</span>
+          <span class="svc-tag">Social Creatives</span>
+          <span class="svc-tag">Print Materials</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-mobile-screen"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 04 Mobile App Development -->
+    <a href="serviceuiux.html" class="svc-row">
+      <div class="svc-row-num">04</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Mobile App Development</div>
+        <p class="svc-row-desc">Cross-platform iOS and Android apps built with React Native — native feel, fast performance, and a seamless user journey from onboarding to checkout. We take apps from concept to App Store.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">React Native</span>
+          <span class="svc-tag">iOS & Android</span>
+          <span class="svc-tag">App Store Deployment</span>
+          <span class="svc-tag">API Integration</span>
+          <span class="svc-tag">Push Notifications</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-tablet-screen-button"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 05 Digital Marketing -->
+    <a href="servicedms.html" class="svc-row">
+      <div class="svc-row-num">05</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Digital Marketing Strategy</div>
+        <p class="svc-row-desc">We grow your online presence through smart content strategy, SEO, social media management, email campaigns, and paid advertising — all built around your specific business goals.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">SEO</span>
+          <span class="svc-tag">Social Media</span>
+          <span class="svc-tag">Email Campaigns</span>
+          <span class="svc-tag">Paid Ads</span>
+          <span class="svc-tag">Content Strategy</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-chart-mixed"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 06 Business Rebranding -->
+    <a href="servicebusiness.html" class="svc-row">
+      <div class="svc-row-num">06</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Business Rebranding</div>
+        <p class="svc-row-desc">Your brand has evolved — your visuals and positioning should too. We lead complete brand overhauls: new identity, updated messaging, redesigned digital presence, and a clear rollout plan.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">Brand Audit</span>
+          <span class="svc-tag">New Identity</span>
+          <span class="svc-tag">Messaging Strategy</span>
+          <span class="svc-tag">Digital Rollout</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-rotate"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 07 Project Management -->
+    <a href="servicepmc.html" class="svc-row">
+      <div class="svc-row-num">07</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Project Management & Consulting</div>
+        <p class="svc-row-desc">We provide structured end-to-end project guidance — from scoping and planning through to delivery and post-launch. Our consulting arm helps founders make smart product and business decisions fast.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">Product Strategy</span>
+          <span class="svc-tag">Sprint Planning</span>
+          <span class="svc-tag">Stakeholder Comms</span>
+          <span class="svc-tag">Launch Support</span>
+          <span class="svc-tag">Post-Launch Review</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-diagram-project"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 08 Media Production -->
+    <a href="servicemedia.html" class="svc-row">
+      <div class="svc-row-num">08</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Media Production</div>
+        <p class="svc-row-desc">Engaging short-form videos, brand reels, testimonial edits, and motion graphics that drive attention and tell your story. We produce content built for social, ads, and YouTube — optimized for every platform.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">Brand Videos</span>
+          <span class="svc-tag">Short-Form Reels</span>
+          <span class="svc-tag">Motion Graphics</span>
+          <span class="svc-tag">Social Content</span>
+          <span class="svc-tag">Video Editing</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-clapperboard-play"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+    <!-- 09 Cloud Hosting & DevOps -->
+    <a href="#" class="svc-row">
+      <div class="svc-row-num">09</div>
+      <div class="svc-row-body">
+        <div class="svc-row-name">Cloud Hosting & DevOps</div>
+        <p class="svc-row-desc">We deploy, configure, and manage your infrastructure on AWS, DigitalOcean, or Vercel — ensuring your product is fast, secure, and always online. CI/CD pipelines, backups, SSL, and monitoring included.</p>
+        <div class="svc-row-tags">
+          <span class="svc-tag">AWS / DigitalOcean</span>
+          <span class="svc-tag">CI/CD</span>
+          <span class="svc-tag">SSL & Security</span>
+          <span class="svc-tag">Uptime Monitoring</span>
+          <span class="svc-tag">Backups</span>
+        </div>
+      </div>
+      <div class="svc-row-right">
+        <div class="svc-row-icon"><i class="fa-regular fa-cloud"></i></div>
+        <i class="fa-regular fa-arrow-up-right svc-row-arrow"></i>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ══════════════════
+     HOW WE WORK
+══════════════════ -->
+<div class="section section-alt">
+  <span class="eyebrow reveal">Our Process</span>
+  <h2 class="s-title reveal d1">HOW WE TURN<br/><span class="ol">IDEAS INTO PRODUCTS.</span></h2>
+  <div class="process-grid">
+    <div class="process-card reveal">
+      <div class="process-num">01</div>
+      <div class="process-ico"><i class="fa-regular fa-magnifying-glass"></i></div>
+      <div class="process-name">Discovery & Strategy</div>
+      <p class="process-desc">We start by deeply understanding your business, your users, and your goals. Every engagement begins with a strategy session — no assumptions, no templates.</p>
     </div>
-    <!-- Search Popup -->
-    <div class="search-popup">
-      <div class="search-popup-overlay"></div>
-      <div class="search-popup-content">
-        <a href="#" class="close-search">
-          <i class="fa-regular fa-times"></i>
-        </a>
-        <div class="search-popup-form-container">
-          <form>
-            <input type="text" placeholder="Search Here" />
-            <button><i class="fa-regular fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-      </div>
+    <div class="process-card reveal d1">
+      <div class="process-num">02</div>
+      <div class="process-ico"><i class="fa-regular fa-pen-ruler"></i></div>
+      <div class="process-name">Design & Prototype</div>
+      <p class="process-desc">Before a single line of code is written, we design and prototype your product. You see exactly what you're getting before we build it — fully interactive mockups, reviewed and approved by you.</p>
+    </div>
+    <div class="process-card reveal d2">
+      <div class="process-num">03</div>
+      <div class="process-ico"><i class="fa-regular fa-code"></i></div>
+      <div class="process-name">Build & Develop</div>
+      <p class="process-desc">Our engineering team builds on a proven tech stack — React, Next.js, Node.js, React Native. We work in structured sprints with regular check-ins and milestone deliverables.</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-num">04</div>
+      <div class="process-ico"><i class="fa-regular fa-vials"></i></div>
+      <div class="process-name">Test & Review</div>
+      <p class="process-desc">Nothing ships without thorough QA. We test across devices, browsers, and edge cases. Every revision round is structured so feedback is captured cleanly and acted on fast.</p>
+    </div>
+    <div class="process-card reveal d1">
+      <div class="process-num">05</div>
+      <div class="process-ico"><i class="fa-regular fa-rocket-launch"></i></div>
+      <div class="process-name">Launch</div>
+      <p class="process-desc">Deployment is handled entirely by us — server configuration, DNS, SSL, performance optimization, and launch monitoring. Your product goes live without you lifting a finger on the technical side.</p>
+    </div>
+    <div class="process-card reveal d2">
+      <div class="process-num">06</div>
+      <div class="process-ico"><i class="fa-regular fa-handshake"></i></div>
+      <div class="process-name">Ongoing Support</div>
+      <p class="process-desc">We don't disappear after launch. We offer maintenance retainers, feature updates, performance monitoring, and growth consulting — because the real work starts after you go live.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════
+     STATS
+══════════════════ -->
+<div class="section" style="padding-top:5rem;padding-bottom:5rem">
+  <div class="stats-row reveal">
+    <div class="stat-cell">
+      <div class="stat-num">20<em>+</em></div>
+      <div class="stat-lbl">Projects Delivered</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">5<em>+</em></div>
+      <div class="stat-lbl">Years of Experience</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">100<em>%</em></div>
+      <div class="stat-lbl">Client Satisfaction</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">9</div>
+      <div class="stat-lbl">Core Service Areas</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════
+     PRICING PACKAGES
+══════════════════ -->
+<div class="section section-alt">
+  <span class="eyebrow reveal">Packages</span>
+  <h2 class="s-title reveal d1">CHOOSE YOUR<br/><span class="ol">STARTING POINT.</span></h2>
+  <p class="reveal d2" style="font-size:.88rem;color:var(--gray-light);line-height:1.8;font-weight:300;max-width:560px;margin-top:1rem">Every project is custom-scoped — these packages give you a starting framework. Final pricing is confirmed after your discovery call.</p>
+  <div class="pricing-grid">
+
+    <div class="pricing-card reveal">
+      <span class="pricing-badge">Starter</span>
+      <div class="pricing-name">Brand Essentials</div>
+      <p class="pricing-desc">For new businesses and solopreneurs who need a solid brand foundation to launch with confidence.</p>
+      <ul class="pricing-features">
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Logo design (3 concepts)</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Brand color & typography system</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Business card & letterhead</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Brand guidelines document</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>2 revision rounds</li>
+      </ul>
+      <a href="https://wa.me/2348180695247" class="pricing-cta">Get a Quote <i class="fa-regular fa-arrow-right" style="margin-left:.35rem"></i></a>
     </div>
 
-    <div id="scrollsmoother-container">
-      <!-- breadcrumbs -->
-      <div class="breadcrumb">
-        <div class="container">
-          <div class="breadcrum-content">
-            <ul
-              data-animation="fade"
-              data-animation-delay="1.5"
-              data-animation-direction="bottom"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li>/</li>
-              <li>Our Services</li>
-            </ul>
-            <h1 data-text-animation="slide" data-animation-delay="1.7">
-              Our Services
-            </h1>
-          </div>
-        </div>
-      </div>
-      <!-- Services -->
-      <section class="mt-200">
-        <div class="container">
-          <div class="row cf-gap-xxl-30">
-            <div class="col-xxl-4">
-              <div data-animation="move">
-                <h4 class="sub-title">What Services We Provide</h4>
-                <h2 class="section-title">
-                  Branding
-                  <span>services aligned with your goals</span>
-                </h2>
-              </div>
-              <div
-                class="cf-mt-80 cf-ml-100 d-none d-xxl-block"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="308"
-                  height="309"
-                  viewBox="0 0 308 309"
-                  fill="none"
-                >
-                  <path
-                    d="M252.5 95.9083V94.6987L251.646 95.5552L39.5981 308.214L0.706044 269.196L212.756 56.5349L213.607 55.6818H212.402H0.5V0.5H307.5V308.5H252.5V95.9083Z"
-                    stroke="white"
-                    stroke-opacity="0.29"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div class="col-xxl-8 col-xxxl-7 offset-xxxl-1">
-              <div
-                class="service-items"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <div class="service-item">
-                  <i class="metech-service-1"></i>
-                  <h4>
-                    <a href="servicebrand-id.html"
-                      >Brand Identity Design</a
-                    >
-                  </h4>
-                  <p>
-                    We craft distinct
-                    logos, fonts, colors, and brand systems that
-                    make your business unforgettable.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-2"></i>
-                  <h4>
-                    <a href="servicebusiness.html"
-                      >Business Rebranding</a
-                    >
-                  </h4>
-                  <p>
-                    We help breathe new life into your business with a complete visual and strategic identity overhaul.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-3"></i>
-                  <h4>
-                    <a href="servicedms.html"
-                      >Digital Marketing Strategy</a
-                    >
-                  </h4>
-                  <p>
-                    We grow your online presence through smart social media, email, and content strategies.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-4"></i>
-                  <h4>
-                    <a href="serviceweb.html"
-                      >Web Design & Development</a
-                    >
-                  </h4>
-                  <p>
-                    We build sleek, responsive websites tailored to convert and impress your target audience.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-3"></i>
-                  <h4>
-                    <a href="serviceuiux.html"
-                      >UI/UX and Graphics Design</a
-                    >
-                  </h4>
-                  <p>
-                    We create high quality user interface/experience visuals for web and app development. We also create eye-catching visuals like flyers, posters, and digital ads that amplify your message.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-4"></i>
-                  <h4>
-                    <a href="servicepmc.html"
-                      >Project Management & Consulting</a
-                    >
-                  </h4>
-                  <p>
-                    We provide structured guidance to launch, manage, and scale your business projects effectively.
-                  </p>
-                </div>
-                <div class="service-item">
-                  <i class="metech-service-4"></i>
-                  <h4>
-                    <a href="servicemedia.html"
-                      >Media Production</a
-                    >
-                  </h4>
-                  <p>
-                    We produce engaging short videos and brand stories that boost visibility and connect with your audience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Blog -->
-      <!-- <section class="mt-200">
-        <div class="container">
-          <h4 class="sub-title" data-text-animation="slide" data-split="words">
-            Our Latest Insights
-          </h4>
-          <div class="row align-items-center">
-            <div class="col-xxxl-6 col-lg-8">
-              <div data-animation="move">
-                <h2 class="section-title">
-                  Update with us
-                  <span>and know our latest insights, blog and news</span>
-                </h2>
-              </div>
-            </div>
-            <div
-              class="col-xxxl-6 col-lg-4 flex-lg-end"
-              data-animation="fade"
-              data-animation-direction="bottom"
-            >
-              <a
-                href="blog.html"
-                class="btn-2 cf-mt-100 color-theme-1 border-color-theme-1"
-                >News Overview <i class="metech-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-          <div
-            class="row cf-mt-26 cf-gap-lg-30"
-            data-animation="fade"
-            data-animation-direction="bottom"
-          >
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/3.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    How can you choose the better option for you
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/4.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Find out your best policy for that your best reasons
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/5.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Top 10 better tips to grow your digital marketing services
-                    in web
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Footer -->
-     <footer class="mt-200">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-xxxl-6 col-xl-8 col-md-9">
-            <h2>Let’s Talk</h2>
-          </div>
-          <div class="col-md-3 offset-xl-1 d-none d-md-block">
-            <a href="contact.html" class="btn-3"> Contact Us </a>
-          </div>
-        </div>
-        <div class="row cf-pb-77 cf-pt-100 align-items-center cf-gap-lg-30">
-          <div class="col-xl-6 col-lg-7">
-            <div class="d-flex flex-column flex-sm-row cf-gap-66 align-items-sm-center">
-              <a href="index.html">
-                <a href="index.html">
-                  <img src="img/olujohn-digitas-logo.png" alt="Logo"
-                    style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-                </a>
-              </a>
-              <!-- <form class="w-100">
-                  <input type="text" placeholder="Your Email" />
-                  <a href="#" class="btn-2 color-theme-1 border-color-theme-1"
-                    >Read More <i class="metech-arrow-right"></i
-                  ></a>
-                </form> -->
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-5 flex-lg-end">
-            <ul class="icon-list">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61578561470869"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/olujohn_digitals/"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="https://x.com/olujohndigitals?s=09"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/olujohndigitals/"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="footer-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">ABOUT AGENCY</a></li>
-          <li><a href="projects.html">OUR WORK</a></li>
-          <!-- <li><a href="team.html">TEAM MEMBER</a></li> -->
-          <li><a href="services.html">SERVICES</a></li>
-          <li><a href="contact.html">CONTACT US</a></li>
-          <!-- <li><a href="faq.html">FAQ’s</a></li>
-          <li><a href="#">OUR INSIGHTS</a></li> -->
-        </ul>
-        <p class="text-center copyright">
-          © 2025 All rights reserved by OLUJOHNDIGITALS
-        </p>
-      </div>
-    </footer>
+    <div class="pricing-card featured reveal d1">
+      <span class="pricing-badge">Most Popular</span>
+      <div class="pricing-name">Digital Growth</div>
+      <p class="pricing-desc">For growing businesses ready for a full digital presence — brand, web, and marketing all handled in one engagement.</p>
+      <ul class="pricing-features">
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Full brand identity package</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>5–8 page responsive website</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>SEO setup & optimization</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Social media graphics kit</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>1 month post-launch support</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Cloud hosting & SSL</li>
+      </ul>
+      <a href="https://wa.me/2348180695247" class="pricing-cta">Get a Quote <i class="fa-regular fa-arrow-right" style="margin-left:.35rem"></i></a>
     </div>
 
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/bootstrap.bundle.min.js"></script>
-    <script src="js/lib/waypoints.min.js"></script>
-    <script src="js/lib/jquery.counterup.min.js"></script>
-    <script src="js/lib/swiper-bundle.min.js"></script>
-    <script src="js/lib/imagesloaded.js"></script>
-    <script src="js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="js/lib/isotope.js"></script>
-    <script src="js/lib/jquery.lettering.min.js"></script>
-    <script src="js/lib/circletype.min.js"></script>
-    <script src="js/lib/marquee.min.js"></script>
+    <div class="pricing-card reveal d2">
+      <span class="pricing-badge">Enterprise</span>
+      <div class="pricing-name">Full Product Build</div>
+      <p class="pricing-desc">For founders and businesses building a scalable digital product — app, platform, or SaaS — from the ground up.</p>
+      <ul class="pricing-features">
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Product strategy & roadmap</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Full UI/UX design system</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Web + mobile app development</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>Backend API & database</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>DevOps & cloud infrastructure</li>
+        <li class="pricing-feature"><i class="fa-solid fa-check"></i>3 months post-launch support</li>
+      </ul>
+      <a href="https://wa.me/2348180695247" class="pricing-cta">Get a Quote <i class="fa-regular fa-arrow-right" style="margin-left:.35rem"></i></a>
+    </div>
 
-    <!-- Gsap -->
-    <script src="js/gsap/gsap.min.js"></script>
-    <script src="js/gsap/SplitText.min.js"></script>
-    <script src="js/gsap/ScrollTrigger.min.js"></script>
-    <script src="js/gsap/ScrollSmoother.min.js"></script>
-    <!--  -->
-    <script src="js/animation.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  </div>
+</div>
+
+<!-- ══════════════════
+     CTA STRIP
+══════════════════ -->
+<div class="cta-strip">
+  <div>
+    <div class="cta-strip-hl reveal">NOT SURE WHERE<br/>TO START?</div>
+    <p class="cta-strip-sub reveal d1">Book a free 30-minute discovery call. We'll listen, ask the right questions, and tell you exactly what your business needs — and what it'll cost.</p>
+  </div>
+  <div class="cta-btns reveal d2">
+    <a href="https://wa.me/2348180695247" class="btn-red">Chat on WhatsApp</a>
+    <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost">Book a Free Call</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-brand">
+      <img src="img/olujohn-digitals-logo.png" style="height:32px;width:32px;" alt="OluJohn Digitals Logo"/>
+    <div>
+      <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
+      <div class="ft-brand-sub">Full-Service Digital Agency</div>
+    </div>
+  </div>
+  <ul class="ft-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Agency</a></li>
+    <li><a href="projects.html">Our Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+  <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.08});
+reveals.forEach(r=>obs.observe(r));
+</script>
+</body>
 </html>

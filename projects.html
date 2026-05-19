@@ -1,488 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/metech-icon.css" />
-  <link rel="stylesheet" href="css/lib/bs/css/bootstrap.css" />
-  <link rel="stylesheet" href="css/fonts/font-awesome.css" />
-  <link rel="stylesheet" href="css/lib/magnific-popup.css" />
-  <link rel="stylesheet" href="css/lib/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon" />
-  <title>
-    OLUJOHN DIGITALS - The most optimal branding agency
-  </title>
-  </head>
-  <body class="dark-bg">
-    <!--================================
-        PRELOADER START
-    =================================-->
-    <!-- <div class="preloader">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-        <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-      </svg>
-      <h5 class="preloader-text">Loading</h5>
-    </div> -->
-    <!--================================
-        PRELOADER END
-    =================================-->
-    <!--============================
-     =            Header            =   
-     =============================-->
-    <header class="main-header fixed-header header-5">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="logo">
-            <a href="index.html">
-              <img src="img/olujohn-digitas-logo.png"
-                  alt="Logo"
-                  style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-            </a>
-          </div>
-          <div class="d-none d-xl-block main-menu">
-            <nav class="navbar-nav m-auto" id="navbarNav">
-              <ul>
-                <li class="">
-                  <li class="dropdown-nav"></li>
-                  <a href="index.html">Home</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="index.html">Home 1</a></li>
-                    <li><a href="index-2.html">Home 2</a></li>
-                    <li><a href="index-3.html">Home 3</a></li>
-                    <li><a href="index-4.html">Home 4</a></li>
-                    <li><a href="index-5.html">Home 5</a></li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="services.html">Services</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown-nav">
-                      <a href="#services">Services</a>
-                      <ul class="submenu">
-                        <li><a href="services.html">Services</a></li>
-                        <li>
-                          <a href="service-details.html">Service Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="team.html">Team</a></li>
-                     <li><a href="faq.html">Faq</a></li> 
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="projects.html">Projects</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="projects.html">Portfolio</a></li>
-                    <li>
-                      <a href="project-details.html">Portfolio Details</a>
-                    </li>
-                  </ul> -->
-                </li>
-                <li class="">
-                  <a href="about.html">About Us</a>
-                  <!-- <ul class="submenu">
-                    <li><a href="blog.html">About Us</a></li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul> -->
-                </li>
-                <li>
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Projects — OluJohn Digitals</title>
+<meta name="description" content="Explore the full portfolio of OluJohn Digitals — websites, mobile apps, SaaS platforms, brand identities, and more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#040404;
+  --white:#F8F6F2;
+  --red:#C41E1E;
+  --red-dark:#8B1212;
+  --gray:#5C5C5C;
+  --gray-light:#B0ADA8;
+  --border:rgba(248,246,242,.08);
+  --nav-h:68px;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-sub:'Chakra Petch',sans-serif;
+  --font-body:'Space Grotesk',sans-serif;
+}
+html,body{width:100%;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
 
-          <div class="d-flex align-items-center">
-            <a href="#" class="search-btn cf-ml-50"
-              ><i class="fa-regular fa-magnifying-glass"></i
-            ></a>
-            <a href="#" class="btn-5 cf-ml-30 d-none d-lg-block"
-              >WhatsApp: (234) 8180695247</a
-            >
-            <a href="#" class="toggle-sidebar cf-ml-20">
-              <div class="toggle">
-                <span></span>
-                <span></span>
-              </div>
-            </a>
-          </div>
+/* ══════════════════
+   NAV
+══════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;
+  border-bottom:1px solid var(--border);
+  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);
+}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
+.nav-brand-text em{color:var(--red);font-style:normal}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{
+  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.52rem 1.4rem;border:1px solid var(--red);
+  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
+}
+.nav-cta:hover{background:var(--red);color:var(--white)}
+
+/* ══════════════════
+   PAGE HERO
+══════════════════ */
+.page-hero{
+  padding-top:calc(var(--nav-h) + 5rem);
+  padding-bottom:4rem;
+  padding-left:3rem;padding-right:3rem;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.page-hero-lines{
+  position:absolute;inset:0;pointer-events:none;
+  display:flex;justify-content:space-evenly;
+}
+.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.12) 50%,transparent)}
+.page-eyebrow{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:block;
+}
+.page-hl{
+  font-family:var(--font-display);
+  font-size:clamp(3.5rem,9vw,10rem);
+  line-height:.9;letter-spacing:.04em;color:var(--white);
+  position:relative;z-index:2;
+}
+.page-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+.page-sub{
+  max-width:500px;font-size:.92rem;color:var(--gray-light);
+  line-height:1.75;font-weight:300;margin-top:2rem;position:relative;z-index:2;
+}
+
+/* ══════════════════
+   FILTER BAR
+══════════════════ */
+.filter-bar{
+  display:flex;gap:0;border-bottom:1px solid var(--border);
+  padding:0 3rem;overflow-x:auto;
+}
+.filter-bar::-webkit-scrollbar{display:none}
+.filter-btn{
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gray-light);
+  padding:1.1rem 1.6rem;border:none;background:none;
+  cursor:pointer;white-space:nowrap;
+  border-bottom:2px solid transparent;margin-bottom:-1px;
+  transition:color .25s,border-color .25s;
+}
+.filter-btn:hover{color:var(--white)}
+.filter-btn.active{color:var(--white);border-bottom-color:var(--red)}
+
+/* ══════════════════
+   PROJECT LIST
+══════════════════ */
+.projects-section{padding:0 3rem 6rem}
+.proj-list{display:flex;flex-direction:column}
+
+.proj-row{
+  display:grid;
+  grid-template-columns:60px 1fr auto;
+  align-items:start;
+  gap:2rem;
+  padding:2.2rem 0;
+  border-bottom:1px solid var(--border);
+  transition:background .3s;
+  cursor:default;
+  position:relative;
+}
+.proj-row::before{
+  content:'';position:absolute;left:-3rem;right:-3rem;top:0;bottom:0;
+  background:rgba(196,30,30,.04);opacity:0;transition:opacity .3s;
+  pointer-events:none;
+}
+.proj-row:hover::before{opacity:1}
+.proj-row:hover .proj-num{color:var(--red)}
+.proj-row:hover .proj-row-name{color:var(--white)}
+
+.proj-num{
+  font-family:var(--font-display);font-size:1.1rem;letter-spacing:.06em;
+  color:rgba(248,246,242,.15);padding-top:.2rem;
+  transition:color .3s;
+}
+.proj-row-body{min-width:0}
+.proj-row-top{
+  display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:.5rem;
+}
+.proj-row-name{
+  font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.8rem);
+  letter-spacing:.04em;color:rgba(248,246,242,.85);line-height:1;
+  transition:color .3s;
+}
+.proj-tag{
+  font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--red);
+  border:1px solid rgba(196,30,30,.3);padding:.2rem .65rem;
+  white-space:nowrap;flex-shrink:0;
+}
+.proj-badge{
+  font-family:var(--font-sub);font-size:.55rem;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--red);color:var(--white);
+  padding:.2rem .6rem;flex-shrink:0;
+}
+.proj-row-desc{
+  font-size:.82rem;color:var(--gray-light);line-height:1.65;
+  font-weight:300;max-width:680px;
+}
+.proj-stack{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.stack-tag{
+  font-family:var(--font-sub);font-size:.58rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gray);
+  border:1px solid var(--border);padding:.18rem .55rem;
+}
+.proj-row-right{
+  display:flex;flex-direction:column;align-items:flex-end;
+  gap:.8rem;padding-top:.3rem;flex-shrink:0;
+}
+.proj-lnk{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--red);text-decoration:none;
+  white-space:nowrap;
+}
+.proj-lnk i{font-size:.6rem;transition:transform .3s}
+.proj-lnk:hover i{transform:translate(2px,-2px)}
+.proj-year{
+  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.1em;
+  color:var(--gray);
+}
+
+/* ══════════════════
+   CTA STRIP
+══════════════════ */
+.cta-strip{
+  border-top:1px solid var(--border);
+  padding:5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+  background:rgba(196,30,30,.03);
+}
+.cta-strip-text{}
+.cta-strip-hl{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4vw,4.5rem);
+  letter-spacing:.04em;color:var(--white);line-height:.95;
+}
+.cta-strip-sub{
+  font-size:.88rem;color:var(--gray-light);margin-top:.8rem;
+  font-weight:300;line-height:1.7;max-width:440px;
+}
+.cta-strip-btns{display:flex;gap:.8rem;flex-shrink:0}
+.btn-red{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
+  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
+}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{
+  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
+  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+
+/* ══════════════════
+   FOOTER
+══════════════════ */
+footer{
+  border-top:1px solid var(--border);
+  padding:2.8rem 3rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
+  justify-content:space-between;
+}
+.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
+.ft-brand-text em{color:var(--red);font-style:normal}
+.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
+.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
+.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
+.ft-links a:hover{color:var(--white)}
+.ft-social{display:flex;gap:.55rem}
+.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
+.soc:hover{border-color:var(--red);color:var(--red)}
+.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+
+/* ══════════════════
+   REVEAL
+══════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}
+.reveal.d2{transition-delay:.2s}
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media(max-width:1024px){
+  nav{padding:0 1.2rem}
+  .nav-links,.nav-cta{display:none}
+  .page-hero,.projects-section,.filter-bar,.cta-strip,footer{padding-left:1.5rem;padding-right:1.5rem}
+  .proj-row{grid-template-columns:40px 1fr;gap:1rem}
+  .proj-row-right{display:none}
+  .cta-strip{flex-direction:column;align-items:flex-start}
+  .cta-strip-btns{flex-direction:column}
+  .page-hero{padding-left:1.5rem;padding-right:1.5rem;padding-top:calc(var(--nav-h) + 3rem)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <img src="img/olujohn-digitals-logo.png" style="height:26px;width:26px;" alt="OluJohn Digitals Logo"/>
+    <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html" class="active">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-lines">
+    <div class="vl"></div><div class="vl"></div>
+    <div class="vl"></div><div class="vl"></div>
+  </div>
+  <span class="page-eyebrow reveal">Selected Work</span>
+  <h1 class="page-hl reveal d1">PRODUCTS<br/>WE'VE<br/><span class="outline">BUILT.</span></h1>
+  <p class="page-sub reveal d2">From fintech platforms to brand identities — a full record of what we've designed, built, and shipped for founders across industries.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="web">Web & App</button>
+  <button class="filter-btn" data-filter="mobile">Mobile</button>
+  <button class="filter-btn" data-filter="branding">Branding</button>
+  <button class="filter-btn" data-filter="saas">SaaS</button>
+  <button class="filter-btn" data-filter="fintech">Fintech</button>
+  <button class="filter-btn" data-filter="pm">Project Mgmt</button>
+</div>
+
+<!-- PROJECT LIST -->
+<div class="projects-section">
+  <div class="proj-list">
+
+    <!-- BBanking -->
+    <div class="proj-row reveal" data-cats="web fintech">
+      <div class="proj-num">01</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">BBanking</div>
+          <span class="proj-tag">Fintech</span>
+          <span class="proj-tag">Web App</span>
+        </div>
+        <p class="proj-row-desc">A simplified crypto and borderless banking platform. Users can buy virtual cards and access financial services through a clean, fast interface designed to remove complexity from digital finance.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">API Integration</span>
         </div>
       </div>
-    </header>
-
-    <div class="mobile-menu">
-      <div class="menu-backdrop"></div>
-      <div class="main-menu-mobile">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="nav-logo">
-            <a href="index.html"><img src="img/olujohn-digitas-logo.png" alt="" title="" /></a>
-          </div>
-          <div class="close-btn"><span class="far fa-times fa-fw"></span></div>
-        </div>
-        <div id="mobile-nav"></div>
+      <div class="proj-row-right">
+        <a href="https://bbanking.capital" target="_blank" class="proj-lnk">View Live <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
       </div>
     </div>
-    <!-- Search Popup -->
-    <div class="search-popup">
-      <div class="search-popup-overlay"></div>
-      <div class="search-popup-content">
-        <a href="#" class="close-search">
-          <i class="fa-regular fa-times"></i>
-        </a>
-        <div class="search-popup-form-container">
-          <form>
-            <input type="text" placeholder="Search Here" />
-            <button><i class="fa-regular fa-magnifying-glass"></i></button>
-          </form>
+
+    <!-- Apollo Pay -->
+    <div class="proj-row reveal" data-cats="web fintech">
+      <div class="proj-num">02</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Apollo Pay</div>
+          <span class="proj-tag">Fintech</span>
+          <span class="proj-tag">Payments</span>
         </div>
+        <p class="proj-row-desc">A streamlined payment platform built for simplicity and trust. Full frontend and backend architecture — users transact quickly with confidence through a clean, well-structured interface.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Laravel</span>
+          <span class="stack-tag">Payment Gateway</span>
+          <span class="stack-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
       </div>
     </div>
 
-    <div id="scrollsmoother-container">
-      <!-- breadcrumbs -->
-      <div class="breadcrumb">
-        <div class="container">
-          <div class="breadcrum-content">
-            <ul
-              data-animation="fade"
-              data-animation-delay="1.5"
-              data-animation-direction="bottom"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li>/</li>
-              <li>Our Projects</li>
-            </ul>
-            <h1 data-text-animation="slide" data-animation-delay="1.7">
-              Our Projects
-            </h1>
-          </div>
+    <!-- KwiikPOS -->
+    <div class="proj-row reveal" data-cats="web mobile saas">
+      <div class="proj-num">03</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">KwiikPOS</div>
+          <span class="proj-tag">SaaS</span>
+          <span class="proj-tag">Web & Mobile App</span>
+          <span class="proj-badge">Sold</span>
+        </div>
+        <p class="proj-row-desc">A full point-of-sale SaaS platform for supermarkets, malls, and retail businesses across Nigeria. Built with offline-first architecture — records sales and tracks stock without internet, then syncs automatically when connection returns. Multi-branch management, real-time inventory, payment integrations, and staff controls. The company was successfully built, scaled, and sold.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Go</span>
+          <span class="stack-tag">React Native</span>
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">AWS</span>
         </div>
       </div>
-      <!-- Our Projects -->
-      <section class="mt-200">
-        <div class="container">
-          <h4 class="sub-title" data-text-animation="slide" data-split="words">
-            Our Projects
-          </h4>
-          <div class="row align-items-center cf-gap-lg-30">
-            <div class="col-xxxl-7 col-lg-7" data-animation="move">
-              <h2 class="section-title">
-                What we create <span>for our branding customers</span>
-              </h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-6">
-              <div
-                class="project-5-items"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <a  class="project-5-item">
-                  <h4><span>.01/</span> Brand Identity Design</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/clype.png" alt="" />
-                </a>
-                <a  class="project-5-item">
-                  <h4><span>.02/</span> Business Rebranding</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/simi_craft.png" alt="" />
-                </a>
-                <a class="project-5-item">
-                  <h4><span>.03/</span> Web &amp; App Design</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/bbanking.jpg" alt="" width="70%"/>
-                </a>
-                 <a class="project-5-item">
-                  <h4><span>.04/</span> UI/UX & Graphics Design</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/myservicepics/ViletteFoods.jpg" alt="" width="70%"/>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-6">
-              <div
-                class="project-5-items cf-pl-35 cf-pl-xl-0"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <a class="project-5-item">
-                  <h4><span>.05/</span> Digital Marketing Strategy</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/myservicepics/Screenshot 3.png" alt="" width="50%"/>
-                </a>
-               <a class="project-5-item">
-  <h4><span>.06/</span> Media Production</h4>
-  <i class="fa-regular fa-arrow-up-right"></i>
-  <video 
-  src="https://res.cloudinary.com/dxdptwnsp/video/upload/v1763073877/BREAST_CANCER_AWARENESS_3_ackafy.mp4"
-  width="20%"
-  autoplay
-  muted
-  loop
-  playsinline>
-</video>
-
-</a>
-
-                <a  class="project-5-item">
-                  <h4><span>.07/</span> Project Management & Consulting</h4>
-                  <i class="fa-regular fa-arrow-up-right"></i>
-                  <img src="img/myservicepics/companioxlogo.jpg" alt="" width="70%"/>
-                </a>
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- About -->
-      <section class="mt-200">
-        <div class="container">
-          <div class="row">
-            <div class="col-xxl-4 col-lg-3">
-              <img
-                src="img/arrow-top-icon-2.png"
-                class="about-icon d-none d-lg-block"
-                alt=""
-              />
-            </div>
-            <div class="col-xxl-7 col-lg-9 flex-end">
-              <div>
-                <h6
-                  class="sub-title"
-                  data-text-animation="slide"
-                  data-split="words"
-                >
-                  About Our Company
-                </h6>
-                <div data-animation="move">
-                  <h2 class="section-title">
-                    We are the modern branding and digital solutions company .
-                    <span
-                      >committed to helping businesses, entrepreneurs, and organizations define, refine,  </span
-                    >
-                    and elevate their brand identities
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row cf-mt-80 cf-gap-lg-30">
-            <div
-              class="col-lg-5"
-              data-animation="fade"
-              data-animation-direction="bottom"
-            >
-              <p>
-                We create mind-blowing visuals, brands, websites and products
-                that help startups and innovative companies gain more exposure.
-                We are experts in crafting bold visuals, distinctive brand
-                identities, innovative products, and immersive websites. build
-                an MVP, or explore a new idea, we'll take care of everything.
-              </p>
-            </div>
-            <div class="col-lg-7">
-              <div
-                class="about-counter-container"
-                data-animation="fade"
-                data-animation-direction="bottom"
-              >
-                <div class="counter-item">
-                  <h4><span class="count">20</span>+</h4>
-                  <p>Awesome clients</p>
-                </div>
-                <div class="counter-item">
-                  <h4><span class="count">20</span>M+</h4>
-                  <p>Earnings a year</p>
-                </div>
-                <a href="about.html" class="btn-2"
-                  >About Agency <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Blog -->
-      <!-- <section class="mt-200">
-        <div class="container">
-          <h4 class="sub-title" data-text-animation="slide" data-split="words">
-            Our Latest Insights
-          </h4>
-          <div class="row align-items-center">
-            <div class="col-xxxl-6 col-lg-8">
-              <div data-animation="move">
-                <h2 class="section-title">
-                  Update with us
-                  <span>and know our latest insights, blog and news</span>
-                </h2>
-              </div>
-            </div>
-            <div
-              class="col-xxxl-6 col-lg-4 flex-lg-end"
-              data-animation="fade"
-              data-animation-direction="bottom"
-            >
-              <a
-                href="blog.html"
-                class="btn-2 cf-mt-100 color-theme-1 border-color-theme-1"
-                >News Overview <i class="metech-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-          <div
-            class="row cf-mt-26 cf-gap-lg-30"
-            data-animation="fade"
-            data-animation-direction="bottom"
-          >
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/3.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    How can you choose the better option for you
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/4.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Find out your best policy for that your best reasons
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="blog-5-item">
-                <img src="img/blog/5.png" class="w-100 img-fluid" alt="" />
-                <ul class="blog-meta">
-                  <li>Admin</li>
-                  <li>23 January 2024</li>
-                </ul>
-                <h4 class="blog-title">
-                  <a href="blog-details.html">
-                    Top 10 better tips to grow your digital marketing services
-                    in web
-                  </a>
-                </h4>
-                <a
-                  href="blog-details.html"
-                  class="btn-2 color-theme-1 border-color-theme-1"
-                  >Read More <i class="metech-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Footer -->
-     <footer class="mt-200">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-xxxl-6 col-xl-8 col-md-9">
-            <h2>Let’s Talk</h2>
-          </div>
-          <div class="col-md-3 offset-xl-1 d-none d-md-block">
-            <a href="contact.html" class="btn-3"> Contact Us </a>
-          </div>
-        </div>
-        <div class="row cf-pb-77 cf-pt-100 align-items-center cf-gap-lg-30">
-          <div class="col-xl-6 col-lg-7">
-            <div class="d-flex flex-column flex-sm-row cf-gap-66 align-items-sm-center">
-              <a href="index.html">
-                <a href="index.html">
-                  <img src="img/olujohn-digitas-logo.png" alt="Logo"
-                    style="height: 50px !important; max-height: 200px !important; padding: 0 !important; margin: 0 !important; display: block; object-fit: contain;" />
-                </a>
-              </a>
-              <!-- <form class="w-100">
-                  <input type="text" placeholder="Your Email" />
-                  <a href="#" class="btn-2 color-theme-1 border-color-theme-1"
-                    >Read More <i class="metech-arrow-right"></i
-                  ></a>
-                </form> -->
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-5 flex-lg-end">
-            <ul class="icon-list">
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=61578561470869"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/olujohn_digitals/"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="https://x.com/olujohndigitals?s=09"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/olujohndigitals/"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="footer-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">ABOUT AGENCY</a></li>
-          <li><a href="projects.html">OUR WORK</a></li>
-          <!-- <li><a href="team.html">TEAM MEMBER</a></li> -->
-          <li><a href="services.html">SERVICES</a></li>
-          <li><a href="contact.html">CONTACT US</a></li>
-          <!-- <li><a href="faq.html">FAQ’s</a></li>
-          <li><a href="#">OUR INSIGHTS</a></li> -->
-        </ul>
-        <p class="text-center copyright">
-          © 2025 All rights reserved by OLUJOHNDIGITALS
-        </p>
+      <div class="proj-row-right">
+        <a href="https://kwiikpos.com" target="_blank" class="proj-lnk">View Live <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2023</span>
       </div>
-    </footer>
     </div>
 
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/bootstrap.bundle.min.js"></script>
-    <script src="js/lib/waypoints.min.js"></script>
-    <script src="js/lib/jquery.counterup.min.js"></script>
-    <script src="js/lib/swiper-bundle.min.js"></script>
-    <script src="js/lib/imagesloaded.js"></script>
-    <script src="js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="js/lib/isotope.js"></script>
-    <script src="js/lib/jquery.lettering.min.js"></script>
-    <script src="js/lib/circletype.min.js"></script>
-    <script src="js/lib/marquee.min.js"></script>
+    <!-- BOA Automate -->
+    <div class="proj-row reveal" data-cats="web fintech saas">
+      <div class="proj-num">04</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">BOA Automate</div>
+          <span class="proj-tag">Fintech</span>
+          <span class="proj-tag">Loan Management</span>
+        </div>
+        <p class="proj-row-desc">Branch Operation Automation — a production loan management system architected from v1 to v4, migrating from Laravel to Golang for performance. Handles financial workflows, multi-tenant identity, and concurrent transactions at scale for savings and loan operations.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Go</span>
+          <span class="stack-tag">gRPC</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">Docker</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="https://boaautomate.com" target="_blank" class="proj-lnk">View Live <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
 
-    <!-- Gsap -->
-    <script src="js/gsap/gsap.min.js"></script>
-    <script src="js/gsap/SplitText.min.js"></script>
-    <script src="js/gsap/ScrollTrigger.min.js"></script>
-    <script src="js/gsap/ScrollSmoother.min.js"></script>
-    <!--  -->
-    <script src="js/animation.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <!-- Companiox -->
+    <div class="proj-row reveal" data-cats="web saas pm">
+      <div class="proj-num">05</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Companiox</div>
+          <span class="proj-tag">SaaS</span>
+          <span class="proj-tag">Social Platform</span>
+          <span class="proj-badge">Launching Soon</span>
+        </div>
+        <p class="proj-row-desc">A social media SaaS platform currently in final stages before public launch. Built for teams and communities who want a focused, distraction-free collaboration environment. End-to-end project management consultation from concept to production-ready launch.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Go</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2025</span>
+      </div>
+    </div>
+
+    <!-- Vilette Foods -->
+    <div class="proj-row reveal" data-cats="mobile web">
+      <div class="proj-num">06</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Vilette Foods</div>
+          <span class="proj-tag">Mobile App</span>
+          <span class="proj-tag">UI/UX Design</span>
+        </div>
+        <p class="proj-row-desc">A premium food delivery mobile app with a rich UI, smart ordering flow, and a seamless experience from first open to checkout. Designed to feel premium and perform flawlessly across iOS and Android.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React Native</span>
+          <span class="stack-tag">Expo</span>
+          <span class="stack-tag">Figma</span>
+          <span class="stack-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
+
+    <!-- EstateRental -->
+    <div class="proj-row reveal" data-cats="mobile web">
+      <div class="proj-num">07</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">EstateRental</div>
+          <span class="proj-tag">Mobile App</span>
+          <span class="proj-tag">PropTech</span>
+        </div>
+        <p class="proj-row-desc">A property rental mobile app with intuitive search, detailed listings, virtual tours, and seamless agent-to-tenant communication. Designed to simplify the Nigerian real estate rental experience for both parties.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React Native</span>
+          <span class="stack-tag">Laravel</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">Figma</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
+
+    <!-- EasyGets -->
+    <div class="proj-row reveal" data-cats="web fintech">
+      <div class="proj-num">08</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">EasyGets</div>
+          <span class="proj-tag">Fintech</span>
+          <span class="proj-tag">VTU Platform</span>
+        </div>
+        <p class="proj-row-desc">Built from Figma to production. A VTU platform with airtime top-up, data bundles, bill payment, and multiple payment gateway integrations. Fully deployed and live, handling real transactions daily.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Laravel 11</span>
+          <span class="stack-tag">SCSS</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">Payment APIs</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="https://easygets.ng" target="_blank" class="proj-lnk">View Live <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
+
+    <!-- Simi Footwear -->
+    <div class="proj-row reveal" data-cats="branding">
+      <div class="proj-num">09</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Simi Footwear</div>
+          <span class="proj-tag">Branding</span>
+          <span class="proj-tag">Brand Identity</span>
+        </div>
+        <p class="proj-row-desc">Complete brand identity design for a premium Nigerian footwear label. Logo design, typography selection, color system, brand guidelines, and packaging direction — built to position Simi Footwear as a standout in a competitive market.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Logo Design</span>
+          <span class="stack-tag">Brand Guidelines</span>
+          <span class="stack-tag">Typography</span>
+          <span class="stack-tag">Color System</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2023</span>
+      </div>
+    </div>
+
+    <!-- Owlist -->
+    <div class="proj-row reveal" data-cats="branding web mobile">
+      <div class="proj-num">10</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Owlist</div>
+          <span class="proj-tag">Branding</span>
+          <span class="proj-tag">Web & Mobile App</span>
+        </div>
+        <p class="proj-row-desc">Brand identity and full-stack platform development for Owlist — from naming and logo through to a live web and mobile app. A ground-up build that went from zero to a fully operational product.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Brand Identity</span>
+          <span class="stack-tag">React Native</span>
+          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
+
+    <!-- Clype -->
+    <div class="proj-row reveal" data-cats="branding">
+      <div class="proj-num">11</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Clype</div>
+          <span class="proj-tag">Branding</span>
+          <span class="proj-tag">Brand Identity</span>
+        </div>
+        <p class="proj-row-desc">Brand identity design for Clype — a distinct visual language crafted to communicate the brand's character clearly and memorably across all touchpoints.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Logo Design</span>
+          <span class="stack-tag">Brand Identity</span>
+          <span class="stack-tag">Visual System</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2023</span>
+      </div>
+    </div>
+
+    <!-- Dan Mart -->
+    <div class="proj-row reveal" data-cats="branding web">
+      <div class="proj-num">12</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Dan Mart</div>
+          <span class="proj-tag">Branding</span>
+          <span class="proj-tag">Retail</span>
+        </div>
+        <p class="proj-row-desc">Brand identity and digital presence for Dan Mart — a retail business needing a strong visual identity to compete in both physical and online marketplaces.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Brand Identity</span>
+          <span class="stack-tag">Logo Design</span>
+          <span class="stack-tag">Digital Assets</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2023</span>
+      </div>
+    </div>
+
+    <!-- DataWise -->
+    <div class="proj-row reveal" data-cats="branding web">
+      <div class="proj-num">13</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">DataWise</div>
+          <span class="proj-tag">Branding</span>
+          <span class="proj-tag">Tech Brand</span>
+        </div>
+        <p class="proj-row-desc">Brand identity for DataWise — a data and analytics company needing a credible, modern visual identity that speaks to both technical and executive audiences.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Brand Identity</span>
+          <span class="stack-tag">Logo Design</span>
+          <span class="stack-tag">Brand Guidelines</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">Case Study <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2023</span>
+      </div>
+    </div>
+
+    <!-- Breast Cancer Awareness Campaign -->
+    <div class="proj-row reveal" data-cats="branding">
+      <div class="proj-num">14</div>
+      <div class="proj-row-body">
+        <div class="proj-row-top">
+          <div class="proj-row-name">Awareness Campaign</div>
+          <span class="proj-tag">Media Production</span>
+          <span class="proj-tag">Social Impact</span>
+        </div>
+        <p class="proj-row-desc">A full media production campaign for breast cancer awareness — scripted, shot, and edited into a compelling short-form video series designed to drive engagement and spread across social platforms.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Video Production</span>
+          <span class="stack-tag">Scriptwriting</span>
+          <span class="stack-tag">Motion Graphics</span>
+        </div>
+      </div>
+      <div class="proj-row-right">
+        <a href="projects.html" class="proj-lnk">View Work <i class="fa-regular fa-arrow-up-right"></i></a>
+        <span class="proj-year">2024</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <div class="cta-strip-hl">WANT TO BE<br/>ON THIS LIST?</div>
+    <p class="cta-strip-sub">Tell us what you're building. We'll design, build, and launch it — properly.</p>
+  </div>
+  <div class="cta-strip-btns">
+    <a href="https://wa.me/2348180695247" class="btn-red">Start on WhatsApp</a>
+    <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost">Schedule a Call</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-brand">
+      <img src="img/olujohn-digitals-logo.png" style="height:32px;width:32px;" alt="OluJohn Digitals Logo"/>
+    <div>
+      <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
+      <div class="ft-brand-sub">Full-Service Digital Agency</div>
+    </div>
+  </div>
+  <ul class="ft-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Agency</a></li>
+    <li><a href="projects.html">Our Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+  <p class="ft-copy">© 2020 -2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
+</footer>
+
+<script>
+/* ── REVEAL ON SCROLL ── */
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1});
+reveals.forEach(r=>obs.observe(r));
+
+/* ── FILTER ── */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projRows   = document.querySelectorAll('.proj-row');
+
+filterBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const f = btn.dataset.filter;
+    projRows.forEach((row,i)=>{
+      const cats = row.dataset.cats || '';
+      const show = f==='all' || cats.split(' ').includes(f);
+      row.style.display = show ? 'grid' : 'none';
+      if(show){
+        row.style.transitionDelay = (i * 0.04)+'s';
+        row.classList.remove('visible');
+        requestAnimationFrame(()=>{ row.classList.add('visible'); });
+      }
+    });
+  });
+});
+</script>
+</body>
 </html>

@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLUJOHN DIGITALS, Academy</title>
+    <meta
+      name="description"
+      content="OLUJOHN DIGITALS Academy trains tech aspirants in Frontend, Backend, and UI/UX. Taught by the same team building production software for real clients."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="img/blue logo icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --navy: #0f1f4d;
+        --navy-deep: #0a1636;
+        --red: #c41e1e;
+        --red-dark: #8b1212;
+        --bg: #ffffff;
+        --bg-alt: #f6f7fa;
+        --gray: #5c6470;
+        --gray-light: #8a93a3;
+        --border: rgba(15, 31, 77, 0.1);
+        --nav-h: 76px;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(15, 31, 77, 0.06);
+        --shadow-hover: 0 10px 32px rgba(15, 31, 77, 0.12);
+        --font: "Plus Jakarta Sans", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        background: var(--bg);
+        color: var(--navy);
+        font-family: var(--font);
+        font-weight: 400;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--navy);
+        color: #fff;
+        padding: 0.8rem 1.4rem;
+        z-index: 9999;
+        font-size: 0.85rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        height: 44px;
+        width: auto;
+        max-width: 100px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.25s;
+        position: relative;
+        padding: 0.3rem 0;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--navy);
+      }
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--red);
+        border-radius: 2px;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .nav-cta {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.5rem;
+        background: var(--red);
+        border: 1px solid var(--red);
+        border-radius: 100px;
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      .nav-partner {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.4rem;
+        border: 1px solid var(--navy);
+        border-radius: 100px;
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+      }
+      .nav-partner:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: var(--navy);
+        cursor: pointer;
+      }
+
+      .section {
+        padding: 6rem 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .section-alt-wrap {
+        background: var(--bg-alt);
+      }
+      .eyebrow {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+      .s-title {
+        font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+      .s-sub {
+        font-size: 0.98rem;
+        color: var(--gray);
+        line-height: 1.75;
+        font-weight: 400;
+        max-width: 620px;
+      }
+
+      /* HERO */
+      .a-hero {
+        position: relative;
+        padding: calc(var(--nav-h) + 5rem) 3rem 5.5rem;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(10, 22, 54, 0.9) 0%,
+            rgba(15, 31, 77, 0.82) 100%
+          ),
+          url("img/academy-hero-bg.jpg") center/cover no-repeat;
+        text-align: center;
+        color: #fff;
+      }
+      .a-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 100px;
+        padding: 0.55rem 1.2rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        margin-bottom: 1.6rem;
+      }
+      .a-hero h1 {
+        font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #fff;
+        font-weight: 800;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .a-hero h1 .accent {
+        color: #ff5c5c;
+      }
+      .a-hero p {
+        max-width: 580px;
+        margin: 1.5rem auto 2rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.8;
+        font-weight: 400;
+      }
+      .a-hero-ctas {
+        display: flex;
+        gap: 0.9rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .a-hero .btn-outline {
+        border-color: rgba(255, 255, 255, 0.6);
+        color: #fff;
+      }
+      .a-hero .btn-outline:hover {
+        background: #fff;
+        color: var(--navy);
+      }
+      .btn-red {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        background: var(--red);
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+        display: inline-block;
+        border: 1px solid var(--red);
+      }
+      .btn-red:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+        display: inline-block;
+      }
+      .btn-outline:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+
+      /* PROCESS */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .process-card {
+        background: #fff;
+        padding: 2.4rem 2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .process-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .process-ico {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        margin-bottom: 1.4rem;
+        font-size: 1.3rem;
+      }
+      .process-title {
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.6rem;
+      }
+      .process-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.7;
+        font-weight: 400;
+      }
+
+      /* TRACKS */
+      .track-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .track-card {
+        background: #fff;
+        padding: 2.4rem 2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .track-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .track-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--navy);
+        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+      }
+      .track-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 0.6rem;
+      }
+      .track-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.7;
+        font-weight: 400;
+        margin-bottom: 1.3rem;
+        flex: 1;
+      }
+      .track-meta {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.4rem;
+      }
+      .track-tag {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--red);
+        background: rgba(196, 30, 30, 0.08);
+        border-radius: 100px;
+        padding: 0.3rem 0.8rem;
+      }
+      .track-link {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--navy);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .track-link i {
+        font-size: 0.7rem;
+        transition: transform 0.3s;
+      }
+      .track-link:hover i {
+        transform: translate(2px, -2px);
+      }
+
+      /* WHY */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .why-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .why-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .why-ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(196, 30, 30, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        margin-bottom: 1.1rem;
+        font-size: 1.05rem;
+      }
+      .why-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.5rem;
+      }
+      .why-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.7;
+        font-weight: 400;
+      }
+
+      /* FORMAT STRIP */
+      .format-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .format-cell {
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 2.2rem;
+        text-align: center;
+      }
+      .format-lbl {
+        font-size: 0.78rem;
+        color: var(--gray-light);
+        margin-bottom: 0.6rem;
+        font-weight: 500;
+      }
+      .format-val {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--navy);
+      }
+
+      /* SIGNUP FORM */
+      .signup-split {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2.5rem;
+        align-items: stretch;
+        margin-top: 3rem;
+      }
+      .signup-wrap {
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: #fff;
+        padding: 3rem;
+        box-shadow: var(--shadow);
+      }
+      .signup-visual {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        min-height: 420px;
+        box-shadow: var(--shadow-hover);
+      }
+      .signup-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 420px;
+      }
+      .signup-float {
+        position: absolute;
+        bottom: 1.4rem;
+        left: 1.4rem;
+        right: 1.4rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        border-radius: 14px;
+        padding: 1.1rem 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        box-shadow: var(--shadow-hover);
+      }
+      .sf-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: rgba(196, 30, 30, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .sf-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+      }
+      .sf-sub {
+        font-size: 0.74rem;
+        color: var(--gray-light);
+        margin-top: 0.15rem;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.4rem;
+      }
+      .form-group {
+        margin-bottom: 1.4rem;
+      }
+      .form-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--gray);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .form-input,
+      .form-select,
+      .form-textarea {
+        width: 100%;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--navy);
+        font-family: var(--font);
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 0.75rem 1rem;
+        outline: none;
+        transition: border-color 0.25s;
+      }
+      .form-input::placeholder,
+      .form-textarea::placeholder {
+        color: var(--gray-light);
+      }
+      .form-input:focus,
+      .form-select:focus,
+      .form-textarea:focus {
+        border-color: var(--red);
+      }
+      .form-textarea {
+        min-height: 100px;
+        resize: none;
+      }
+      .btn-submit {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2.1rem;
+        background: var(--red);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .btn-submit:hover {
+        background: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .form-status {
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        display: none;
+      }
+      .form-status.success {
+        color: #2e7d32;
+        display: block;
+      }
+      .form-status.error {
+        color: var(--red);
+        display: block;
+      }
+
+      /* FAQ */
+      .faq-list {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 3.5rem;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+      }
+      .faq-q {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 0;
+        cursor: pointer;
+        gap: 1rem;
+      }
+      .faq-q-text {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .faq-item.open .faq-q-text {
+        color: var(--red);
+      }
+      .faq-toggle {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray);
+        font-size: 0.7rem;
+        flex-shrink: 0;
+        transition:
+          transform 0.3s,
+          color 0.25s;
+      }
+      .faq-item.open .faq-toggle {
+        color: var(--red);
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .faq-a-inner {
+        font-size: 0.88rem;
+        color: var(--gray);
+        line-height: 1.8;
+        font-weight: 400;
+        padding-bottom: 1.6rem;
+      }
+      .faq-item.open .faq-a {
+        max-height: 260px;
+      }
+
+      #cta {
+        background: var(--navy);
+        text-align: center;
+        padding: 6rem 3rem;
+      }
+      .cta-hl {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        color: #fff;
+        line-height: 1.1;
+        font-weight: 800;
+      }
+      .cta-sub {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 460px;
+        margin: 1.4rem auto 2rem;
+        line-height: 1.75;
+        font-weight: 400;
+      }
+      .btn-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        background: #fff;
+        color: var(--navy);
+        text-decoration: none;
+        transition: opacity 0.25s;
+        display: inline-block;
+      }
+      .btn-white:hover {
+        opacity: 0.9;
+      }
+
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3.5rem 3rem 1.8rem;
+      }
+      .ft-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2.5rem;
+        justify-content: space-between;
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .ft-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .ft-brand img {
+        height: 46px;
+        width: auto;
+        max-width: 46px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .ft-brand-text {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .ft-brand-sub {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
+      .ft-col-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+      }
+      .ft-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .ft-links a {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.25s;
+        font-weight: 400;
+      }
+      .ft-links a:hover {
+        color: #fff;
+      }
+      .ft-social {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+      .soc {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.25s,
+          color 0.25s,
+          background 0.25s;
+      }
+      .soc:hover {
+        border-color: var(--red);
+        color: #fff;
+        background: var(--red);
+      }
+      .ft-copy {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding-top: 1.6rem;
+        font-weight: 400;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.1s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.2s;
+      }
+
+      @media (max-width: 1024px) {
+        nav {
+          padding: 0 1.2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        .a-hero,
+        .section,
+        #cta {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem;
+        }
+        .process-grid,
+        .track-grid,
+        .why-grid,
+        .format-strip {
+          grid-template-columns: 1fr;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .signup-split {
+          grid-template-columns: 1fr;
+        }
+        .signup-wrap {
+          padding: 1.8rem;
+        }
+        .signup-visual {
+          min-height: 260px;
+        }
+        .signup-visual img {
+          min-height: 260px;
+        }
+        .faq-list {
+          grid-template-columns: 1fr;
+        }
+        .nav-partner {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 1rem;
+          height: 70px;
+        }
+        .nav-brand img {
+          height: 40px;
+          max-width: 90px;
+        }
+        .nav-cta {
+          padding: 0.55rem 1.2rem;
+          font-size: 0.75rem;
+        }
+        .a-hero,
+        .section,
+        #cta {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav {
+          height: 65px;
+          padding: 0 0.8rem;
+        }
+        .nav-brand img {
+          height: 36px;
+          max-width: 80px;
+        }
+        .nav-cta {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+        .a-hero,
+        .section,
+        #cta {
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+        input,
+        textarea {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav>
+      <a
+        href="index.html"
+        class="nav-brand"
+        aria-label="OluJohn Digitals — Home"
+      >
+        <img src="img/blue logo.png" alt="OluJohn Digitals Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="academy.html" class="active">Academy</a></li>
+        <li><a href="projects.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="partner.html" class="nav-partner">Partner With Us</a>
+        <a href="https://wa.me/2348180695247" class="nav-cta"
+          >Start a Project</a
+        >
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="a-hero">
+        <span class="a-pill reveal"
+          ><i class="fa-solid fa-graduation-cap"></i> OLUJOHN DIGITALS
+          ACADEMY</span
+        >
+        <h1 class="reveal d1">
+          Learn by building.<br />Not just <span class="accent">watching.</span>
+        </h1>
+        <p class="reveal d2">
+          Frontend, Backend, and UI/UX — taught by the same team that ships
+          production software for real clients. No recycled slides, no
+          theory-only courses. Build the way we build.
+        </p>
+        <div class="a-hero-ctas reveal d2">
+          <a href="#signup" class="btn-red">Apply to a Track</a>
+          <a href="#tracks" class="btn-outline">See the Tracks</a>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">How It Works</span>
+          <h2 class="s-title reveal d1">
+            Learning, structured around real work.
+          </h2>
+          <p class="s-sub reveal d1">
+            No generic curriculum. Every track is shaped by what we actually
+            build for clients — so what you learn is what the industry is hiring
+            for right now.
+          </p>
+          <div class="process-grid reveal d2">
+            <div class="process-card">
+              <div class="process-ico"><i class="fa-solid fa-compass"></i></div>
+              <div class="process-title">Choose Your Track</div>
+              <p class="process-desc">
+                Pick Frontend, Backend, or UI/UX based on where you want to go —
+                no prior experience required for beginner tracks.
+              </p>
+            </div>
+            <div class="process-card">
+              <div class="process-ico"><i class="fa-solid fa-code"></i></div>
+              <div class="process-title">Build Real Projects</div>
+              <p class="process-desc">
+                Work through structured modules and hands-on projects modeled on
+                real client work — not toy exercises.
+              </p>
+            </div>
+            <div class="process-card">
+              <div class="process-ico"><i class="fa-solid fa-rocket"></i></div>
+              <div class="process-title">Get Mentored & Reviewed</div>
+              <p class="process-desc">
+                Get direct feedback from working developers and designers at
+                OluJohn Digitals — the people actually shipping products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRACKS -->
+      <section class="section" id="tracks">
+        <span class="eyebrow reveal">Our Tracks</span>
+        <h2 class="s-title reveal d1">
+          Start with the fundamentals that matter.
+        </h2>
+        <p class="s-sub reveal d1">
+          We're launching with three focused tracks — more are on the way as the
+          Academy grows.
+        </p>
+        <div class="track-grid reveal d2">
+          <div class="track-card">
+            <div class="track-icon"><i class="fa-solid fa-display"></i></div>
+            <div class="track-name">Frontend</div>
+            <p class="track-desc">
+              HTML, CSS, and JavaScript fundamentals through to modern
+              frameworks — build interfaces that are fast, responsive, and
+              production-ready.
+            </p>
+            <div class="track-meta">
+              <span class="track-tag">HTML/CSS/JS</span
+              ><span class="track-tag">Responsive Design</span
+              ><span class="track-tag">Frameworks</span>
+            </div>
+            <a href="#signup" class="track-link"
+              >Apply for Frontend <i class="fa-regular fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="track-card">
+            <div class="track-icon"><i class="fa-solid fa-server"></i></div>
+            <div class="track-name">Backend</div>
+            <p class="track-desc">
+              Server-side logic, databases, and APIs — learn to build the
+              systems that power real applications behind the scenes.
+            </p>
+            <div class="track-meta">
+              <span class="track-tag">APIs</span
+              ><span class="track-tag">Databases</span
+              ><span class="track-tag">Server Logic</span>
+            </div>
+            <a href="#signup" class="track-link"
+              >Apply for Backend <i class="fa-regular fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="track-card">
+            <div class="track-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <div class="track-name">UI/UX</div>
+            <p class="track-desc">
+              Design thinking, wireframing, prototyping, and design systems —
+              craft interfaces people actually enjoy using.
+            </p>
+            <div class="track-meta">
+              <span class="track-tag">Wireframing</span
+              ><span class="track-tag">Prototyping</span
+              ><span class="track-tag">Design Systems</span>
+            </div>
+            <a href="#signup" class="track-link"
+              >Apply for UI/UX <i class="fa-regular fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">Why Learn With Us</span>
+          <h2 class="s-title reveal d1">
+            Taught by people who build, not just teach.
+          </h2>
+          <div class="why-grid reveal d2">
+            <div class="why-card">
+              <div class="why-ico"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="why-title">Real Agency Experience</div>
+              <p class="why-desc">
+                Your instructors are the same team shipping platforms like
+                KwiikPOS, BBanking, and BOA Automate — not just course creators.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-ico">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="why-title">Project-Based Learning</div>
+              <p class="why-desc">
+                Every module ends in something you build, not just a quiz — a
+                portfolio that grows as you learn.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-ico"><i class="fa-solid fa-comments"></i></div>
+              <div class="why-title">Direct Mentorship</div>
+              <p class="why-desc">
+                Get feedback from working developers and designers, not
+                automated grading — the same review standard we hold ourselves
+                to.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-ico"><i class="fa-solid fa-book-open"></i></div>
+              <div class="why-title">Built From Our Own Curriculum</div>
+              <p class="why-desc">
+                Course material draws on our in-house frontend teaching
+                resources, refined through real mentorship experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- FORMAT -->
+          <div class="format-strip reveal d2">
+            <div class="format-cell">
+              <div class="format-lbl">Format</div>
+              <div class="format-val">Details Coming Soon</div>
+            </div>
+            <div class="format-cell">
+              <div class="format-lbl">Tracks Available</div>
+              <div class="format-val">3</div>
+            </div>
+            <div class="format-cell">
+              <div class="format-lbl">Location</div>
+              <div class="format-val">Lagos & Remote</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIGNUP -->
+      <section class="section" id="signup">
+        <span class="eyebrow reveal">Apply Now</span>
+        <h2 class="s-title reveal d1">Tell us where you want to start.</h2>
+        <p class="s-sub reveal d1">
+          Fill this in and we'll reach out with enrollment details, format, and
+          next intake information for your chosen track.
+        </p>
+        <div class="signup-split reveal d2">
+          <div class="signup-wrap">
+            <form
+              id="academy-form"
+              action="https://formspree.io/f/xzzknawq"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="a-name">Full Name</label>
+                  <input
+                    class="form-input"
+                    id="a-name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="a-email">Email Address</label>
+                  <input
+                    class="form-input"
+                    id="a-email"
+                    name="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="a-phone"
+                    >Phone / WhatsApp</label
+                  >
+                  <input
+                    class="form-input"
+                    id="a-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+234 800 000 0000"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="a-track"
+                    >Track of Interest</label
+                  >
+                  <select
+                    class="form-select"
+                    id="a-track"
+                    name="track"
+                    required
+                  >
+                    <option value="" disabled selected>Select a track…</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                    <option>UI/UX</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="a-level">Experience Level</label>
+                <select class="form-select" id="a-level" name="level">
+                  <option value="" disabled selected>Select your level…</option>
+                  <option>Complete Beginner</option>
+                  <option>Some Experience</option>
+                  <option>Intermediate</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="a-message"
+                  >Why do you want to join?</label
+                >
+                <textarea
+                  class="form-textarea"
+                  id="a-message"
+                  name="message"
+                  placeholder="Tell us a bit about your goals…"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                Submit Application <i class="fa-regular fa-arrow-right"></i>
+              </button>
+              <p class="form-status" id="a-form-status"></p>
+            </form>
+          </div>
+          <div class="signup-visual">
+            <img
+              src="img/aspirant one.jfif"
+              alt="Tech aspirants learning at OluJohn Academy"
+            />
+            <div class="signup-float">
+              <div class="sf-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <div class="sf-title">3 Tracks Open</div>
+                <div class="sf-sub">Frontend · Backend · UI/UX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">Common Questions</span>
+          <h2 class="s-title reveal d1">Before you apply.</h2>
+          <div class="faq-list reveal d2">
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >Do I need prior experience to join?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  No — each track has a beginner-friendly starting point. Let us
+                  know your level on the application and we'll place you
+                  correctly.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text">Is the Academy free or paid?</span>
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Pricing and format details will be shared directly with
+                  applicants as the Academy launches. Apply now and we'll follow
+                  up with everything you need.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text">Will I get a certificate?</span>
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Yes — track completion comes with a certificate, plus a
+                  portfolio of the projects you build during the program.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text">Can I learn remotely?</span>
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Yes — the Academy supports both in-person (Lagos) and remote
+                  learners.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta">
+        <h2 class="cta-hl reveal">Ready to start<br />building your future?</h2>
+        <p class="cta-sub reveal d1">
+          Apply today and join the first cohort of the OluJohn Academy.
+        </p>
+        <a href="#signup" class="btn-white reveal d2">Apply Now</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ft-inner">
+        <div style="flex: 1; min-width: 240px">
+          <div class="ft-brand">
+            <img src="img/white logo icon.png" alt="OluJohn Digitals Logo" />
+            <div>
+              <div class="ft-brand-text">OLUJOHN DIGITALS</div>
+              <div class="ft-brand-sub">
+                Branding & Software Solutions Agency
+              </div>
+            </div>
+          </div>
+          <div class="ft-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578561470869"
+              class="soc"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/olujohn_digitals/"
+              class="soc"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://x.com/olujohndigitals?s=09"
+              class="soc"
+              target="_blank"
+              aria-label="X (Twitter)"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/olujohndigitals/"
+              class="soc"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@olujohndigitals"
+              class="soc"
+              target="_blank"
+              aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-col-title">Navigate</div>
+          <ul class="ft-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="projects.html">Work</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ft-col-title">Company</div>
+          <ul class="ft-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partner.html">Partner With Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="ft-copy">
+        © 2026 OLUJOHN DIGITALS. All rights reserved. Lagos, Nigeria. Serving
+        clients worldwide.
+      </p>
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((r) => obs.observe(r));
+
+      document.querySelectorAll(".faq-q").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item.open")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      const form = document.getElementById("academy-form");
+      const status = document.getElementById("a-form-status");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector(".btn-submit");
+        const origHTML = btn.innerHTML;
+        btn.innerHTML =
+          'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
+        btn.disabled = true;
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            status.textContent =
+              "✓ Application received — we'll be in touch soon.";
+            status.className = "form-status success";
+            form.reset();
+          } else {
+            throw new Error();
+          }
+        } catch {
+          status.textContent =
+            "✗ Something went wrong. Please email us directly.";
+          status.className = "form-status error";
+        }
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+      });
+    </script>
+  </body>
+</html>

@@ -1,836 +1,1521 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact Us — OluJohn Digitals</title>
-<meta name="description" content="Get in touch with OluJohn Digitals — Lagos' full-service digital agency. Start a project, schedule a call, or send us a message."/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLUJOHN DIGITALS, Contact Us</title>
+    <meta
+      name="description"
+      content="Get in touch with OLUJOHN DIGITALS. Lagos' branding and software solutions agency. Start a project, schedule a call, or send us a message."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="img/blue logo icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --navy: #0f1f4d;
+        --navy-deep: #0a1636;
+        --red: #c41e1e;
+        --red-dark: #8b1212;
+        --bg: #ffffff;
+        --bg-alt: #f6f7fa;
+        --gray: #5c6470;
+        --gray-light: #8a93a3;
+        --border: rgba(15, 31, 77, 0.1);
+        --nav-h: 76px;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(15, 31, 77, 0.06);
+        --shadow-hover: 0 10px 32px rgba(15, 31, 77, 0.12);
+        --font: "Plus Jakarta Sans", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        background: var(--bg);
+        color: var(--navy);
+        font-family: var(--font);
+        font-weight: 400;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--navy);
+        color: #fff;
+        padding: 0.8rem 1.4rem;
+        z-index: 9999;
+        font-size: 0.85rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
 
-<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        height: 44px;
+        width: auto;
+        max-width: 100px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.25s;
+        position: relative;
+        padding: 0.3rem 0;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--navy);
+      }
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--red);
+        border-radius: 2px;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .nav-cta {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.5rem;
+        background: var(--red);
+        border: 1px solid var(--red);
+        border-radius: 100px;
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      .nav-partner {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.4rem;
+        border: 1px solid var(--navy);
+        border-radius: 100px;
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+      }
+      .nav-partner:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: var(--navy);
+        cursor: pointer;
+      }
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+      .section {
+        padding: 5rem 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .section-alt-wrap {
+        background: var(--bg-alt);
+      }
+      .eyebrow {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+      .s-title {
+        font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+      .s-sub {
+        font-size: 0.98rem;
+        color: var(--gray);
+        line-height: 1.75;
+        font-weight: 400;
+        max-width: 620px;
+      }
 
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --black:#040404;
-  --white:#F8F6F2;
-  --red:#C41E1E;
-  --red-dark:#8B1212;
-  --gray:#5C5C5C;
-  --gray-light:#B0ADA8;
-  --border:rgba(248,246,242,.08);
-  --nav-h:68px;
-  --font-display:'Bebas Neue',sans-serif;
-  --font-sub:'Chakra Petch',sans-serif;
-  --font-body:'Space Grotesk',sans-serif;
-}
-html,body{width:100%;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
+      /* PAGE HERO */
+      .p-hero {
+        padding: calc(var(--nav-h) + 4rem) 3rem 3.5rem;
+        background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+        text-align: center;
+      }
+      .p-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--navy);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 0.55rem 1.2rem;
+        background: #fff;
+        margin-bottom: 1.6rem;
+        box-shadow: var(--shadow);
+      }
+      .p-hero h1 {
+        font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        font-weight: 800;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .p-hero p {
+        max-width: 580px;
+        margin: 1.5rem auto 0;
+        font-size: 1rem;
+        color: var(--gray);
+        line-height: 1.8;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   NAV  (identical to about.html)
-══════════════════ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 3rem;
-  border-bottom:1px solid var(--border);
-  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-}
-.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
-.nav-brand-text em{color:var(--red);font-style:normal}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
-}
-.nav-links a:hover,.nav-links a.active{color:var(--white)}
-.nav-cta{
-  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
-  letter-spacing:.14em;text-transform:uppercase;
-  padding:.52rem 1.4rem;border:1px solid var(--red);
-  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
-}
-.nav-cta:hover{background:var(--red);color:var(--white)}
+      /* CONTACT INFO */
+      .contact-info-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+      }
+      .cic {
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 2.2rem;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .cic:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .cic-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 1.15rem;
+        margin-bottom: 1.3rem;
+      }
+      .cic-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--gray-light);
+        margin-bottom: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .cic-value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+      }
+      .cic-value a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.25s;
+      }
+      .cic-value a:hover {
+        color: var(--red);
+      }
+      .cic-sub {
+        font-size: 0.82rem;
+        color: var(--gray);
+        margin-top: 0.5rem;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   PAGE HERO
-══════════════════ */
-.page-hero{
-  padding-top:calc(var(--nav-h) + 5rem);
-  padding-bottom:4rem;
-  padding-left:3rem;padding-right:3rem;
-  border-bottom:1px solid var(--border);
-  position:relative;overflow:hidden;
-  min-height:68vh;display:flex;flex-direction:column;justify-content:flex-end;
-}
-.hero-lines{
-  position:absolute;inset:0;pointer-events:none;
-  display:flex;justify-content:space-evenly;
-}
-.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.12) 50%,transparent)}
-.page-eyebrow{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:block;
-}
-.page-hl{
-  font-family:var(--font-display);
-  font-size:clamp(4rem,10vw,11rem);
-  line-height:.88;letter-spacing:.04em;color:var(--white);
-  position:relative;z-index:2;
-}
-.page-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
-.page-hl .accent{color:var(--red)}
-.hero-foot{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;
-  border-top:1px solid var(--border);padding-top:2rem;margin-top:3rem;
-  position:relative;z-index:2;
-}
-.hero-foot-desc{max-width:480px;font-size:.92rem;color:var(--gray-light);line-height:1.75;font-weight:300}
-.hero-tag{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);
-  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
-  white-space:nowrap;flex-shrink:0;
-}
+      /* FORM + SOCIAL GRID */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem;
+      }
+      .contact-form-col {
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 3rem;
+        box-shadow: var(--shadow);
+      }
+      .contact-social-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
 
-/* ══════════════════
-   SECTION BASE
-══════════════════ */
-.section{padding:6rem 3rem}
-.section-alt{background:#050505}
-.eyebrow{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
-}
-.s-title{
-  font-family:var(--font-display);
-  font-size:clamp(2.2rem,4.8vw,5rem);
-  letter-spacing:.04em;color:var(--white);line-height:.92;
-}
-.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+      .form-group {
+        margin-bottom: 1.4rem;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.4rem;
+      }
+      .form-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--gray);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .form-input,
+      .form-textarea,
+      .form-select {
+        width: 100%;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--navy);
+        font-family: var(--font);
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 0.75rem 1rem;
+        outline: none;
+        transition: border-color 0.25s;
+      }
+      .form-input::placeholder,
+      .form-textarea::placeholder {
+        color: var(--gray-light);
+      }
+      .form-input:focus,
+      .form-textarea:focus,
+      .form-select:focus {
+        border-color: var(--red);
+      }
+      .form-textarea {
+        min-height: 110px;
+        padding-top: 0.75rem;
+        resize: none;
+      }
+      .btn-submit {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2.1rem;
+        background: var(--red);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .btn-submit:hover {
+        background: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .form-status {
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        display: none;
+      }
+      .form-status.success {
+        color: #2e7d32;
+        display: block;
+      }
+      .form-status.error {
+        color: var(--red);
+        display: block;
+      }
 
-/* ══════════════════
-   CONTACT INFO ROW  (mirrors stats-row style)
-══════════════════ */
-.contact-info-row{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border:1px solid var(--border);
-  margin-bottom:0;
-}
-.contact-info-cell{
-  padding:3rem 2.5rem;border-right:1px solid var(--border);
-  position:relative;overflow:hidden;transition:background .3s;
-}
-.contact-info-cell:last-child{border-right:none}
-.contact-info-cell:hover{background:rgba(196,30,30,.05)}
-.contact-info-cell::before{
-  content:'';position:absolute;bottom:0;left:0;right:0;
-  height:2px;background:var(--red);
-  transform:scaleX(0);transform-origin:left;transition:transform .4s;
-}
-.contact-info-cell:hover::before{transform:scaleX(1)}
-.cic-icon{
-  width:44px;height:44px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--red);font-size:1.1rem;margin-bottom:1.5rem;
-  transition:border-color .3s;
-}
-.contact-info-cell:hover .cic-icon{border-color:rgba(196,30,30,.4)}
-.cic-label{
-  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gray);margin-bottom:.6rem;
-}
-.cic-value{
-  font-family:var(--font-display);font-size:1.5rem;letter-spacing:.04em;
-  color:var(--white);line-height:1.1;
-}
-.cic-value a{color:inherit;text-decoration:none;transition:color .25s}
-.cic-value a:hover{color:var(--red)}
-.cic-sub{font-size:.78rem;color:var(--gray-light);margin-top:.5rem;font-weight:300}
+      .contact-social-title {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1.15;
+        margin-bottom: 1.8rem;
+      }
+      .social-list {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+      .social-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 1.6rem;
+        border-bottom: 1px solid var(--border);
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .social-item:last-child {
+        border-bottom: none;
+      }
+      .social-item:hover {
+        background: var(--bg-alt);
+      }
+      .social-item:hover .si-arrow {
+        transform: translate(3px, -3px);
+      }
+      .si-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .si-ico {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--navy);
+        font-size: 0.9rem;
+      }
+      .si-label {
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .si-handle {
+        font-size: 0.75rem;
+        color: var(--gray-light);
+        margin-top: 0.1rem;
+      }
+      .si-arrow {
+        color: var(--red);
+        font-size: 0.75rem;
+        transition: transform 0.3s;
+      }
 
-/* ══════════════════
-   CONTACT FORM + MAP GRID
-══════════════════ */
-.contact-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:1px;background:var(--border);border:1px solid var(--border);
-}
-.contact-form-col{
-  background:var(--black);padding:3.5rem;
-}
-.contact-map-col{
-  background:#050505;padding:3.5rem;
-  display:flex;flex-direction:column;gap:3rem;
-}
+      .quick-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .qa-card {
+        background: #fff;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        padding: 1.6rem;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .qa-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-3px);
+      }
+      .qa-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(196, 30, 30, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 0.95rem;
+      }
+      .qa-title {
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .qa-desc {
+        font-size: 0.78rem;
+        color: var(--gray);
+        line-height: 1.6;
+        font-weight: 400;
+      }
 
-/* ── FORM ── */
-.form-group{margin-bottom:1.4rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
-.form-label{
-  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gray-light);margin-bottom:.5rem;display:block;
-}
-.form-input,
-.form-textarea{
-  width:100%;background:transparent;
-  border:none;border-bottom:1px solid var(--border);
-  color:var(--white);font-family:var(--font-body);font-size:.88rem;font-weight:300;
-  padding:.75rem 0;outline:none;
-  transition:border-color .25s;
-  resize:none;
-}
-.form-input::placeholder,.form-textarea::placeholder{color:var(--gray)}
-.form-input:focus,.form-textarea:focus{border-bottom-color:var(--red)}
-.form-textarea{min-height:120px;padding-top:.75rem}
+      /* WORKING HOURS */
+      .hours-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .hours-card {
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 2.2rem;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .hours-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .hours-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        margin-bottom: 1.1rem;
+        font-size: 1.05rem;
+      }
+      .hours-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.5rem;
+      }
+      .hours-time {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 0.6rem;
+      }
+      .hours-desc {
+        font-size: 0.82rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
 
-/* service select-style dropdown */
-.form-select{
-  width:100%;background:transparent;
-  border:none;border-bottom:1px solid var(--border);
-  color:var(--gray);font-family:var(--font-body);font-size:.88rem;font-weight:300;
-  padding:.75rem 0;outline:none;cursor:pointer;
-  appearance:none;-webkit-appearance:none;
-  transition:border-color .25s;
-}
-.form-select:focus{border-bottom-color:var(--red);color:var(--white)}
-.form-select option{background:var(--black);color:var(--white)}
-.select-wrap{position:relative}
-.select-wrap::after{
-  content:'\f107';font-family:'Font Awesome 6 Pro',FontAwesome;
-  position:absolute;right:0;top:50%;transform:translateY(-50%);
-  color:var(--gray);font-size:.75rem;pointer-events:none;
-}
+      /* FAQ — full-width grid, matching Academy pattern */
+      .faq-list {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 3.5rem;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+      }
+      .faq-q {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 0;
+        cursor: pointer;
+        gap: 1rem;
+      }
+      .faq-q-text {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .faq-item.open .faq-q-text {
+        color: var(--red);
+      }
+      .faq-toggle {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray);
+        font-size: 0.7rem;
+        flex-shrink: 0;
+        transition:
+          transform 0.3s,
+          color 0.25s;
+      }
+      .faq-item.open .faq-toggle {
+        color: var(--red);
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .faq-a-inner {
+        font-size: 0.88rem;
+        color: var(--gray);
+        line-height: 1.8;
+        font-weight: 400;
+        padding-bottom: 1.6rem;
+      }
+      .faq-item.open .faq-a {
+        max-height: 260px;
+      }
 
-.btn-submit{
-  font-family:var(--font-sub);font-size:.68rem;font-weight:600;
-  letter-spacing:.14em;text-transform:uppercase;
-  padding:.85rem 2.2rem;background:var(--red);color:var(--white);
-  border:none;cursor:pointer;margin-top:.5rem;
-  transition:background .25s,transform .2s;display:inline-flex;align-items:center;gap:.6rem;
-}
-.btn-submit:hover{background:var(--red-dark);transform:translateY(-2px)}
-.btn-submit i{font-size:.7rem;transition:transform .3s}
-.btn-submit:hover i{transform:translateX(3px)}
+      /* CTA STRIP */
+      .cta-strip {
+        border-radius: var(--radius);
+        background: var(--red);
+        padding: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .cta-strip-hl {
+        font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+        color: #fff;
+        line-height: 1.15;
+        font-weight: 800;
+      }
+      .cta-strip-sub {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 0.7rem;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 420px;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 0.8rem;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+      }
+      .btn-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.85rem 1.9rem;
+        background: #fff;
+        color: var(--red);
+        text-decoration: none;
+        transition: opacity 0.25s;
+        display: inline-block;
+      }
+      .btn-white:hover {
+        opacity: 0.9;
+      }
+      .btn-outline-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.85rem 1.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.25s;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
 
-/* form success/error state */
-.form-status{
-  font-family:var(--font-sub);font-size:.7rem;letter-spacing:.1em;
-  text-transform:uppercase;margin-top:1rem;display:none;
-}
-.form-status.success{color:#4caf50;display:block}
-.form-status.error{color:var(--red);display:block}
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3.5rem 3rem 1.8rem;
+      }
+      .ft-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2.5rem;
+        justify-content: space-between;
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .ft-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .ft-brand img {
+        height: 46px;
+        width: auto;
+        max-width: 46px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .ft-brand-text {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .ft-brand-sub {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
+      .ft-col-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+      }
+      .ft-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .ft-links a {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.25s;
+        font-weight: 400;
+      }
+      .ft-links a:hover {
+        color: #fff;
+      }
+      .ft-social {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+      .soc {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.25s,
+          color 0.25s,
+          background 0.25s;
+      }
+      .soc:hover {
+        border-color: var(--red);
+        color: #fff;
+        background: var(--red);
+      }
+      .ft-copy {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding-top: 1.6rem;
+        font-weight: 400;
+      }
 
-/* ── RIGHT COL: social + quick links ── */
-.contact-social-title{
-  font-family:var(--font-display);font-size:2.2rem;letter-spacing:.04em;
-  color:var(--white);line-height:.95;margin-bottom:2rem;
-}
-.contact-social-title em{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent;font-style:normal}
-.social-list{display:flex;flex-direction:column;gap:0}
-.social-item{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.3rem 0;border-bottom:1px solid var(--border);
-  text-decoration:none;
-  transition:background .2s;
-}
-.social-item:first-child{padding-top:0}
-.social-item:last-child{border-bottom:none;padding-bottom:0}
-.social-item:hover .si-label{color:var(--white)}
-.social-item:hover .si-arrow{transform:translate(3px,-3px)}
-.si-left{display:flex;align-items:center;gap:1rem}
-.si-ico{
-  width:34px;height:34px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--gray-light);font-size:.85rem;
-  transition:border-color .25s,color .25s;
-}
-.social-item:hover .si-ico{border-color:var(--red);color:var(--red)}
-.si-label{
-  font-family:var(--font-sub);font-size:.75rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gray-light);transition:color .25s;
-}
-.si-handle{font-size:.7rem;color:var(--gray);margin-top:.1rem}
-.si-arrow{
-  color:var(--red);font-size:.7rem;transition:transform .3s;
-}
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.1s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.2s;
+      }
 
-/* Quick action cards */
-.quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.qa-card{
-  background:#050505;padding:1.8rem 1.6rem;
-  transition:background .3s;text-decoration:none;
-  display:flex;flex-direction:column;gap:.6rem;
-}
-.qa-card:hover{background:#0c0808}
-.qa-card:hover .qa-arrow{transform:translate(2px,-2px)}
-.qa-icon{font-size:1rem;color:var(--red)}
-.qa-title{
-  font-family:var(--font-sub);font-size:.75rem;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
-}
-.qa-desc{font-size:.76rem;color:var(--gray-light);line-height:1.6;font-weight:300}
-.qa-arrow{color:var(--red);font-size:.65rem;transition:transform .3s;margin-top:.2rem}
+      @media (max-width: 1024px) {
+        nav {
+          padding: 0 1.2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        .p-hero,
+        .section {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem;
+        }
+        .contact-info-row {
+          grid-template-columns: 1fr;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-form-col {
+          padding: 1.8rem;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .hours-grid {
+          grid-template-columns: 1fr;
+        }
+        .faq-list {
+          grid-template-columns: 1fr;
+        }
+        .quick-actions {
+          grid-template-columns: 1fr;
+        }
+        .cta-strip {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2.2rem;
+        }
+        .nav-partner {
+          display: none;
+        }
+      }
 
-/* ══════════════════
-   WORKING HOURS  (mirrors values-grid style)
-══════════════════ */
-.hours-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--border);border:1px solid var(--border);
-  margin-top:4rem;
-}
-.hours-card{
-  background:var(--black);padding:2.5rem 2.2rem;
-  transition:background .3s;
-}
-.hours-card:hover{background:#0a0808}
-.hours-title{
-  font-family:var(--font-sub);font-size:.78rem;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
-  margin-bottom:.5rem;
-}
-.hours-time{
-  font-family:var(--font-display);font-size:2rem;letter-spacing:.04em;
-  color:var(--red);line-height:1;margin-bottom:.5rem;
-}
-.hours-desc{font-size:.78rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 1rem;
+          height: 70px;
+        }
+        .nav-brand img {
+          height: 40px;
+          max-width: 90px;
+        }
+        .nav-cta {
+          padding: 0.55rem 1.2rem;
+          font-size: 0.75rem;
+        }
+        .p-hero,
+        .section {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+        .contact-form-col {
+          padding: 1.4rem;
+        }
+      }
 
-/* ══════════════════
-   FAQ  (mirrors why-list style)
-══════════════════ */
-.faq-list{display:flex;flex-direction:column;margin-top:4rem}
-.faq-item{
-  border-bottom:1px solid var(--border);
-  overflow:hidden;
-}
-.faq-q{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.8rem 0;cursor:pointer;gap:1rem;
-  user-select:none;
-}
-.faq-q-text{
-  font-family:var(--font-sub);font-size:.82rem;font-weight:600;
-  letter-spacing:.06em;color:var(--white);transition:color .25s;
-}
-.faq-item.open .faq-q-text{color:var(--red)}
-.faq-toggle{
-  width:26px;height:26px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--gray-light);font-size:.65rem;flex-shrink:0;
-  transition:border-color .25s,color .25s,transform .3s;
-}
-.faq-item.open .faq-toggle{border-color:var(--red);color:var(--red);transform:rotate(45deg)}
-.faq-a{
-  max-height:0;overflow:hidden;
-  transition:max-height .45s cubic-bezier(.16,1,.3,1),padding .35s ease;
-}
-.faq-a-inner{font-size:.84rem;color:var(--gray-light);line-height:1.8;font-weight:300;padding-bottom:1.8rem}
-.faq-item.open .faq-a{max-height:300px}
+      @media (max-width: 480px) {
+        nav {
+          height: 65px;
+          padding: 0 0.8rem;
+        }
+        .nav-brand img {
+          height: 36px;
+          max-width: 80px;
+        }
+        .nav-cta {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+        .p-hero,
+        .section {
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+        input,
+        textarea,
+        select {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-/* ══════════════════
-   CTA STRIP
-══════════════════ */
-.cta-strip{
-  border-top:1px solid var(--border);padding:5rem 3rem;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:2rem;flex-wrap:wrap;background:rgba(196,30,30,.03);
-}
-.cta-strip-hl{
-  font-family:var(--font-display);font-size:clamp(2rem,4vw,4.5rem);
-  letter-spacing:.04em;color:var(--white);line-height:.95;
-}
-.cta-strip-sub{
-  font-size:.88rem;color:var(--gray-light);margin-top:.8rem;
-  font-weight:300;line-height:1.7;max-width:440px;
-}
-.cta-btns{display:flex;gap:.8rem;flex-shrink:0}
-.btn-red{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
-  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
-}
-.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
-.btn-ghost{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
-  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
-}
-.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+    <nav>
+      <a
+        href="index.html"
+        class="nav-brand"
+        aria-label="OluJohn Digitals — Home"
+      >
+        <img src="img/blue logo.png" alt="OluJohn Digitals Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="projects.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="partner.html" class="nav-partner">Partner With Us</a>
+        <a href="https://wa.me/2348180695247" class="nav-cta"
+          >Start a Project</a
+        >
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
 
-/* ══════════════════
-   FOOTER
-══════════════════ */
-footer{
-  border-top:1px solid var(--border);padding:2.8rem 3rem;
-  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
-  justify-content:space-between;
-}
-.ft-brand{display:flex;align-items:center;gap:.6rem}
-.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
-.ft-brand-text em{color:var(--red);font-style:normal}
-.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
-.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
-.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
-.ft-links a:hover{color:var(--white)}
-.ft-social{display:flex;gap:.55rem}
-.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
-.soc:hover{border-color:var(--red);color:var(--red)}
-.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+    <main id="main">
+      <!-- PAGE HERO -->
+      <section class="p-hero">
+        <span class="p-pill reveal"
+          ><i class="fa-solid fa-comment-dots"></i> Get In Touch</span
+        >
+        <h1 class="reveal d1">Let's build something great.</h1>
+        <p class="reveal d1">
+          Whether you're starting from scratch, rebranding, or scaling a
+          platform — we're ready to talk. Tell us what you need and we'll show
+          you exactly how we'll deliver it.
+        </p>
+      </section>
 
-/* ══════════════════
-   TICKER
-══════════════════ */
-.ticker-wrap{
-  overflow:hidden;border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);padding:.9rem 0;
-  background:rgba(196,30,30,.03);
-}
-.ticker-track{display:flex;animation:ticker 22s linear infinite;width:max-content}
-.ticker-item{
-  font-family:var(--font-sub);font-size:.7rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--gray-light);
-  padding:0 2.5rem;white-space:nowrap;
-}
-.ticker-dot{color:var(--red);margin:0 .3rem}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ══════════════════
-   REVEAL
-══════════════════ */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:none}
-.reveal.d1{transition-delay:.1s}
-.reveal.d2{transition-delay:.22s}
-.reveal.d3{transition-delay:.34s}
-
-/* ══════════════════
-   RESPONSIVE
-══════════════════ */
-@media(max-width:1024px){
-  nav{padding:0 1.2rem}
-  .nav-links,.nav-cta{display:none}
-  .page-hero,.section,.cta-strip,footer{padding-left:1.5rem;padding-right:1.5rem}
-  .hero-foot{flex-direction:column;align-items:flex-start;gap:1.2rem}
-  .page-hero{min-height:auto;padding-top:calc(var(--nav-h) + 3rem)}
-  .contact-info-row{grid-template-columns:1fr}
-  .contact-info-cell{border-right:none;border-bottom:1px solid var(--border)}
-  .contact-grid{grid-template-columns:1fr}
-  .contact-form-col,.contact-map-col{padding:2rem 1.5rem}
-  .form-row{grid-template-columns:1fr}
-  .hours-grid{grid-template-columns:1fr}
-  .cta-strip{flex-direction:column;align-items:flex-start}
-  .cta-btns{flex-direction:column}
-  .quick-actions{grid-template-columns:1fr}
-}
-</style>
-</head>
-<body>
-
-<!-- ══════════════════
-     NAV
-══════════════════ -->
-<nav>
-  <a href="index.html" class="nav-brand">
-      <img src="img/olujohn-digitals-logo.png" style="height:26px;width:26px;" alt="OluJohn Digitals Logo"/>
-    <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="projects.html">Work</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
-</nav>
-
-<!-- ══════════════════
-     PAGE HERO
-══════════════════ -->
-<div class="page-hero">
-  <div class="hero-lines">
-    <div class="vl"></div><div class="vl"></div>
-    <div class="vl"></div><div class="vl"></div>
-  </div>
-  <span class="page-eyebrow reveal">Get In Touch</span>
-  <h1 class="page-hl reveal d1">
-    LET'S BUILD<br/>SOMETHING<br/><span class="outline">GREAT.</span>
-  </h1>
-  <div class="hero-foot">
-    <p class="hero-foot-desc reveal d2">Whether you're starting from scratch, rebranding, or scaling a platform — we're ready to talk. Tell us what you need and we'll show you exactly how we'll deliver it.</p>
-    <span class="hero-tag reveal d3">Response within 24 hours</span>
-  </div>
-</div>
-
-<!-- ══════════════════
-     TICKER
-══════════════════ -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <span class="ticker-item">Brand Identity <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Mobile Apps <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Brand Identity <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Mobile Apps <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
-  </div>
-</div>
-
-<!-- ══════════════════
-     CONTACT INFO CELLS
-══════════════════ -->
-<div class="section" style="padding-top:5rem;padding-bottom:5rem">
-  <div class="contact-info-row reveal">
-    <div class="contact-info-cell">
-      <div class="cic-icon"><i class="fa-regular fa-phone"></i></div>
-      <div class="cic-label">Call Us</div>
-      <div class="cic-value"><a href="tel:+2348143673918">+234 814 367 3918</a></div>
-      <p class="cic-sub">Mon – Sat, 8am – 9pm WAT</p>
-    </div>
-    <div class="contact-info-cell">
-      <div class="cic-icon"><i class="fa-regular fa-envelope"></i></div>
-      <div class="cic-label">Email Us</div>
-      <div class="cic-value"><a href="mailto:olujohndigitals@gmail.com">olujohndigitals@gmail.com</a></div>
-      <p class="cic-sub">We reply within 24 hours</p>
-    </div>
-    <div class="contact-info-cell">
-      <div class="cic-icon"><i class="fa-regular fa-location-dot"></i></div>
-      <div class="cic-label">Find Us</div>
-      <div class="cic-value">Lagos, Nigeria</div>
-      <p class="cic-sub">Serving clients worldwide</p>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════
-     FORM + SOCIAL GRID
-══════════════════ -->
-<div class="section section-alt" style="padding-top:0;padding-bottom:0">
-  <div class="contact-grid reveal">
-
-    <!-- FORM -->
-    <div class="contact-form-col">
-      <span class="eyebrow">Send a Message</span>
-      <h2 class="s-title" style="margin-bottom:2.5rem">TELL US WHAT<br/>YOU'RE <span class="ol">BUILDING.</span></h2>
-
-      <form id="contact-form" action="https://formspree.io/f/xzzknawq" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="name">Your Name</label>
-            <input class="form-input" id="name" name="name" type="text" placeholder="John Doe" required/>
+      <!-- CONTACT INFO -->
+      <section class="section" style="padding-top: 0; padding-bottom: 4rem">
+        <div class="contact-info-row reveal">
+          <div class="cic">
+            <div class="cic-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="cic-label">Call Us</div>
+            <div class="cic-value">
+              <a href="tel:+2348143673918">+234 814 367 3918</a>
+            </div>
+            <p class="cic-sub">Mon – Sat, 8am – 9pm WAT</p>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" id="email" name="email" type="email" placeholder="john@company.com" required/>
+          <div class="cic">
+            <div class="cic-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="cic-label">Email Us</div>
+            <div class="cic-value">
+              <a href="mailto:olujohndigitals@gmail.com"
+                >olujohndigitals@gmail.com</a
+              >
+            </div>
+            <p class="cic-sub">We reply within 24 hours</p>
+          </div>
+          <div class="cic">
+            <div class="cic-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="cic-label">Find Us</div>
+            <div class="cic-value">Lagos, Nigeria</div>
+            <p class="cic-sub">Serving clients worldwide</p>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="phone">Phone / WhatsApp</label>
-            <input class="form-input" id="phone" name="phone" type="tel" placeholder="+234 800 000 0000"/>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="company">Company / Brand</label>
-            <input class="form-input" id="company" name="company" type="text" placeholder="Your Company Name"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="service">Service Needed</label>
-          <div class="select-wrap">
-            <select class="form-select" id="service" name="service">
-              <option value="" disabled selected>Select a service…</option>
-              <option>Brand Identity Design</option>
-              <option>Web Design & Development</option>
-              <option>UI/UX & Graphics Design</option>
-              <option>Mobile App Development</option>
-              <option>Digital Marketing Strategy</option>
-              <option>Business Rebranding</option>
-              <option>Project Management & Consulting</option>
-              <option>Media Production</option>
-              <option>Cloud Hosting & DevOps</option>
-              <option>Full-Package (Multiple Services)</option>
-              <option>Not Sure Yet — Let's Talk</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="budget">Budget Range</label>
-          <div class="select-wrap">
-            <select class="form-select" id="budget" name="budget">
-              <option value="" disabled selected>Select budget range…</option>
-              <option>Under ₦200,000</option>
-              <option>₦200,000 – ₦500,000</option>
-              <option>₦500,000 – ₦1,000,000</option>
-              <option>₦1,000,000 – ₦3,000,000</option>
-              <option>₦3,000,000+</option>
-              <option>To Be Discussed</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Your Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your project, goals, timeline, or anything we should know…" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">
-          Send Message <i class="fa-regular fa-arrow-right"></i>
-        </button>
-        <p class="form-status" id="form-status"></p>
-      </form>
-    </div>
+      </section>
 
-    <!-- RIGHT: SOCIAL + QUICK ACTIONS -->
-    <div class="contact-map-col">
-      <!-- Social links -->
-      <div>
-        <span class="eyebrow">Find Us Online</span>
-        <div class="contact-social-title">FOLLOW THE<br/><em>JOURNEY.</em></div>
-        <div class="social-list">
-          <a href="https://www.instagram.com/olujohn_digitals/" target="_blank" class="social-item">
-            <div class="si-left">
-              <div class="si-ico"><i class="fa-brands fa-instagram"></i></div>
+      <!-- FORM + SOCIAL -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <div class="contact-grid reveal">
+            <div class="contact-form-col">
+              <span class="eyebrow">Send a Message</span>
+              <h2 class="s-title" style="margin-bottom: 2rem">
+                Tell us what you're building.
+              </h2>
+              <form
+                id="contact-form"
+                action="https://formspree.io/f/xzzknawq"
+                method="POST"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Your Name</label>
+                    <input
+                      class="form-input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input
+                      class="form-input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="john@company.com"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="phone"
+                      >Phone / WhatsApp</label
+                    >
+                    <input
+                      class="form-input"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+234 800 000 0000"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="company"
+                      >Company / Brand</label
+                    >
+                    <input
+                      class="form-input"
+                      id="company"
+                      name="company"
+                      type="text"
+                      placeholder="Your Company Name"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="service">Service Needed</label>
+                  <select class="form-select" id="service" name="service">
+                    <option value="" disabled selected>
+                      Select a service…
+                    </option>
+                    <option>Brand Identity Design</option>
+                    <option>Web Design & Development</option>
+                    <option>UI/UX & Graphics Design</option>
+                    <option>Mobile App Development</option>
+                    <option>Digital Marketing Strategy</option>
+                    <option>Business Rebranding</option>
+                    <option>Project Management & Consulting</option>
+                    <option>Media Production</option>
+                    <option>Cloud Hosting & DevOps</option>
+                    <option>Full-Package (Multiple Services)</option>
+                    <option>Not Sure Yet — Let's Talk</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget">Budget Range</label>
+                  <select class="form-select" id="budget" name="budget">
+                    <option value="" disabled selected>
+                      Select budget range…
+                    </option>
+                    <option>Under ₦200,000</option>
+                    <option>₦200,000 – ₦500,000</option>
+                    <option>₦500,000 – ₦1,000,000</option>
+                    <option>₦1,000,000 – ₦3,000,000</option>
+                    <option>₦3,000,000+</option>
+                    <option>To Be Discussed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="message">Your Message</label>
+                  <textarea
+                    class="form-textarea"
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your project, goals, timeline, or anything we should know…"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                  Send Message <i class="fa-regular fa-arrow-right"></i>
+                </button>
+                <p class="form-status" id="form-status"></p>
+              </form>
+            </div>
+
+            <div class="contact-social-col">
               <div>
-                <div class="si-label">Instagram</div>
-                <div class="si-handle">@olujohn_digitals</div>
+                <span class="eyebrow">Find Us Online</span>
+                <div class="contact-social-title">Follow the journey.</div>
+                <div class="social-list">
+                  <a
+                    href="https://www.instagram.com/olujohn_digitals/"
+                    target="_blank"
+                    class="social-item"
+                  >
+                    <div class="si-left">
+                      <div class="si-ico">
+                        <i class="fa-brands fa-instagram"></i>
+                      </div>
+                      <div>
+                        <div class="si-label">Instagram</div>
+                        <div class="si-handle">@olujohn_digitals</div>
+                      </div>
+                    </div>
+                    <i class="fa-regular fa-arrow-up-right si-arrow"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/olujohndigitals/"
+                    target="_blank"
+                    class="social-item"
+                  >
+                    <div class="si-left">
+                      <div class="si-ico">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </div>
+                      <div>
+                        <div class="si-label">LinkedIn</div>
+                        <div class="si-handle">OluJohn Digitals</div>
+                      </div>
+                    </div>
+                    <i class="fa-regular fa-arrow-up-right si-arrow"></i>
+                  </a>
+                  <a
+                    href="https://x.com/olujohndigitals?s=09"
+                    target="_blank"
+                    class="social-item"
+                  >
+                    <div class="si-left">
+                      <div class="si-ico">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </div>
+                      <div>
+                        <div class="si-label">X / Twitter</div>
+                        <div class="si-handle">@olujohndigitals</div>
+                      </div>
+                    </div>
+                    <i class="fa-regular fa-arrow-up-right si-arrow"></i>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61578561470869"
+                    target="_blank"
+                    class="social-item"
+                  >
+                    <div class="si-left">
+                      <div class="si-ico">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </div>
+                      <div>
+                        <div class="si-label">Facebook</div>
+                        <div class="si-handle">OluJohn Digitals</div>
+                      </div>
+                    </div>
+                    <i class="fa-regular fa-arrow-up-right si-arrow"></i>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@olujohndigitals"
+                    target="_blank"
+                    class="social-item"
+                  >
+                    <div class="si-left">
+                      <div class="si-ico">
+                        <i class="fa-brands fa-tiktok"></i>
+                      </div>
+                      <div>
+                        <div class="si-label">TikTok</div>
+                        <div class="si-handle">@olujohndigitals</div>
+                      </div>
+                    </div>
+                    <i class="fa-regular fa-arrow-up-right si-arrow"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <span class="eyebrow" style="margin-bottom: 1.2rem"
+                  >Prefer a Different Way?</span
+                >
+                <div class="quick-actions">
+                  <a
+                    href="https://wa.me/2348180695247"
+                    target="_blank"
+                    class="qa-card"
+                  >
+                    <div class="qa-icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="qa-title">WhatsApp Us</div>
+                    <p class="qa-desc">
+                      Chat directly with us for a fast response.
+                    </p>
+                  </a>
+                  <a
+                    href="https://calendly.com/olumoyepelumi1"
+                    target="_blank"
+                    class="qa-card"
+                  >
+                    <div class="qa-icon">
+                      <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <div class="qa-title">Book a Call</div>
+                    <p class="qa-desc">Schedule a 30-min discovery call.</p>
+                  </a>
+                </div>
               </div>
             </div>
-            <i class="fa-regular fa-arrow-up-right si-arrow"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/olujohndigitals/" target="_blank" class="social-item">
-            <div class="si-left">
-              <div class="si-ico"><i class="fa-brands fa-linkedin-in"></i></div>
-              <div>
-                <div class="si-label">LinkedIn</div>
-                <div class="si-handle">OluJohn Digitals</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AVAILABILITY -->
+      <section class="section">
+        <span class="eyebrow reveal">When We Work</span>
+        <h2 class="s-title reveal d1">Our availability & response times.</h2>
+        <div class="hours-grid reveal d2">
+          <div class="hours-card">
+            <div class="hours-icon">
+              <i class="fa-solid fa-calendar-week"></i>
+            </div>
+            <div class="hours-title">Weekdays</div>
+            <div class="hours-time">8AM – 9PM</div>
+            <p class="hours-desc">
+              Monday through Friday. Full team available for calls,
+              consultations, and project work.
+            </p>
+          </div>
+          <div class="hours-card">
+            <div class="hours-icon">
+              <i class="fa-solid fa-calendar-day"></i>
+            </div>
+            <div class="hours-title">Saturdays</div>
+            <div class="hours-time">9AM – 6PM</div>
+            <p class="hours-desc">
+              Weekend availability for ongoing projects. We remain active on
+              WhatsApp and email.
+            </p>
+          </div>
+          <div class="hours-card">
+            <div class="hours-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="hours-title">Emergency Support</div>
+            <div class="hours-time">24H</div>
+            <p class="hours-desc">
+              For live production issues on hosted projects, we offer 24-hour
+              emergency support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">Common Questions</span>
+          <h2 class="s-title reveal d1">Before you reach out — read this.</h2>
+          <p class="s-sub reveal d1">
+            We know you're busy. Here are the most common questions we get
+            before a project starts.
+          </p>
+          <div class="faq-list reveal d2">
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >How quickly can you start on my project?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  We typically begin new projects within 3–7 business days of
+                  signing off. Rush timelines are available depending on scope
+                  and current workload.
+                </p>
               </div>
             </div>
-            <i class="fa-regular fa-arrow-up-right si-arrow"></i>
-          </a>
-          <a href="https://x.com/olujohndigitals?s=09" target="_blank" class="social-item">
-            <div class="si-left">
-              <div class="si-ico"><i class="fa-brands fa-x-twitter"></i></div>
-              <div>
-                <div class="si-label">X / Twitter</div>
-                <div class="si-handle">@olujohndigitals</div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >Do you work with international clients?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Absolutely. We have active clients in the UK, Canada,
+                  Mauritius, and across Africa, with no drop in quality
+                  remotely.
+                </p>
               </div>
             </div>
-            <i class="fa-regular fa-arrow-up-right si-arrow"></i>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61578561470869" target="_blank" class="social-item">
-            <div class="si-left">
-              <div class="si-ico"><i class="fa-brands fa-facebook-f"></i></div>
-              <div>
-                <div class="si-label">Facebook</div>
-                <div class="si-handle">OluJohn Digitals</div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >What does your typical process look like?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Discovery → Strategy → Design → Development → Review → Launch
+                  → Support, with visibility at every stage.
+                </p>
               </div>
             </div>
-            <i class="fa-regular fa-arrow-up-right si-arrow"></i>
-          </a>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >How do you handle revisions and feedback?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Every project includes revision rounds built into the
+                  timeline, with structured feedback loops so nothing gets lost.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >Can I get support after the project is launched?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Yes — we offer ongoing maintenance, feature updates, hosting
+                  management, and growth support.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span class="faq-q-text"
+                  >Do you also offer training or courses?</span
+                >
+                <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                <p class="faq-a-inner">
+                  Yes — through the OluJohn Academy, we teach Frontend, Backend,
+                  and UI/UX to tech aspirants. Visit the Academy page to apply.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA STRIP -->
+      <section class="section">
+        <div class="cta-strip reveal">
+          <div>
+            <div class="cta-strip-hl">Ready to work together?</div>
+            <p class="cta-strip-sub">
+              Fill out the form above, send us a WhatsApp, or just book a call.
+              We'll figure out exactly what you need and build a plan around it.
+            </p>
+          </div>
+          <div class="cta-btns">
+            <a href="https://wa.me/2348180695247" class="btn-white"
+              >Chat on WhatsApp</a
+            >
+            <a
+              href="https://calendly.com/olumoyepelumi1"
+              target="_blank"
+              class="btn-outline-white"
+              >Schedule a Call</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ft-inner">
+        <div style="flex: 1; min-width: 240px">
+          <div class="ft-brand">
+            <img src="img/white logo icon.png" alt="OluJohn Digitals Logo" />
+            <div>
+              <div class="ft-brand-text">OLUJOHN DIGITALS</div>
+              <div class="ft-brand-sub">
+                Branding & Software Solutions Agency
+              </div>
+            </div>
+          </div>
+          <div class="ft-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578561470869"
+              class="soc"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/olujohn_digitals/"
+              class="soc"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://x.com/olujohndigitals?s=09"
+              class="soc"
+              target="_blank"
+              aria-label="X (Twitter)"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/olujohndigitals/"
+              class="soc"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@olujohndigitals"
+              class="soc"
+              target="_blank"
+              aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-col-title">Navigate</div>
+          <ul class="ft-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="projects.html">Work</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ft-col-title">Company</div>
+          <ul class="ft-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partner.html">Partner With Us</a></li>
+          </ul>
         </div>
       </div>
+      <p class="ft-copy">
+        © 2026 OLUJOHN DIGITALS. All rights reserved. Lagos, Nigeria. Serving
+        clients worldwide.
+      </p>
+    </footer>
 
-      <!-- Quick action cards -->
-      <div>
-        <span class="eyebrow" style="margin-bottom:1.2rem">Prefer a Different Way?</span>
-        <div class="quick-actions">
-          <a href="https://wa.me/2348180695247" target="_blank" class="qa-card">
-            <div class="qa-icon"><i class="fa-brands fa-whatsapp"></i></div>
-            <div class="qa-title">WhatsApp Us</div>
-            <p class="qa-desc">Chat directly with us on WhatsApp for a fast response.</p>
-            <div class="qa-arrow"><i class="fa-regular fa-arrow-up-right"></i></div>
-          </a>
-          <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="qa-card">
-            <div class="qa-icon"><i class="fa-regular fa-calendar-check"></i></div>
-            <div class="qa-title">Book a Call</div>
-            <p class="qa-desc">Schedule a 30-min discovery call at your convenience.</p>
-            <div class="qa-arrow"><i class="fa-regular fa-arrow-up-right"></i></div>
-          </a>
-        </div>
-      </div>
-    </div>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((r) => obs.observe(r));
 
-  </div>
-</div>
+      document.querySelectorAll(".faq-q").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item.open")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
 
-<!-- ══════════════════
-     AVAILABILITY / WORKING HOURS
-══════════════════ -->
-<div class="section">
-  <span class="eyebrow reveal">When We Work</span>
-  <h2 class="s-title reveal d1">OUR AVAILABILITY<br/><span class="ol">& RESPONSE TIMES.</span></h2>
-  <div class="hours-grid">
-    <div class="hours-card reveal">
-      <div class="hours-title">Weekdays</div>
-      <div class="hours-time">8AM – 9PM</div>
-      <p class="hours-desc">Monday through Friday. Full team available for calls, consultations, and project work. Best time to reach us for detailed discussions.</p>
-    </div>
-    <div class="hours-card reveal d1">
-      <div class="hours-title">Saturdays</div>
-      <div class="hours-time">9AM – 6PM</div>
-      <p class="hours-desc">Weekend availability for ongoing projects and client support. We remain active on WhatsApp and email throughout the day.</p>
-    </div>
-    <div class="hours-card reveal d2">
-      <div class="hours-title">Emergency Support</div>
-      <div class="hours-time">24H</div>
-      <p class="hours-desc">For live production issues on hosted projects, we offer 24-hour emergency support. Reach us via WhatsApp for critical incidents.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════
-     FAQ
-══════════════════ -->
-<div class="section section-alt">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start">
-    <div>
-      <span class="eyebrow reveal">Common Questions</span>
-      <h2 class="s-title reveal d1">BEFORE YOU<br/>REACH OUT —<br/><span class="ol">READ THIS.</span></h2>
-      <p class="reveal d2" style="font-size:.88rem;color:var(--gray-light);line-height:1.8;font-weight:300;margin-top:1.5rem">We know you're busy. Here are the most common questions we get before a project starts — so you can come to us with confidence.</p>
-    </div>
-    <div class="faq-list reveal d1">
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">How quickly can you start on my project?</span>
-          <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
-        </div>
-        <div class="faq-a"><p class="faq-a-inner">We typically begin new projects within 3–7 business days of signing off. Rush timelines are available depending on scope and current workload — just ask us.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">Do you work with international clients?</span>
-          <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
-        </div>
-        <div class="faq-a"><p class="faq-a-inner">Absolutely. We have active clients in the UK, Canada, Mauritius, and across Africa. All project communication and deliverables are handled remotely with no drop in quality.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">What does your typical process look like?</span>
-          <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
-        </div>
-        <div class="faq-a"><p class="faq-a-inner">Discovery → Strategy → Design → Development → Review → Launch → Support. We give you visibility at every stage and never disappear between milestones.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">How do you handle revisions and feedback?</span>
-          <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
-        </div>
-        <div class="faq-a"><p class="faq-a-inner">Every project includes revision rounds built into the timeline. We use structured feedback loops so nothing gets lost — and we won't close a milestone until you're genuinely happy with it.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">Can I get support after the project is launched?</span>
-          <div class="faq-toggle"><i class="fa-regular fa-plus"></i></div>
-        </div>
-        <div class="faq-a"><p class="faq-a-inner">Yes — we offer ongoing maintenance, feature updates, hosting management, and growth support. Most of our clients stay with us long after launch.</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════
-     CTA STRIP
-══════════════════ -->
-<div class="cta-strip">
-  <div>
-    <div class="cta-strip-hl reveal">READY TO WORK<br/>TOGETHER?</div>
-    <p class="cta-strip-sub reveal d1">Fill out the form above, send us a WhatsApp, or just book a call. We'll figure out exactly what you need and build a plan around it.</p>
-  </div>
-  <div class="cta-btns reveal d2">
-    <a href="https://wa.me/2348180695247" class="btn-red">Chat on WhatsApp</a>
-    <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost">Schedule a Call</a>
-  </div>
-</div>
-
-<!-- ══════════════════
-     FOOTER
-══════════════════ -->
-<footer>
-  <div class="ft-brand">
-      <img src="img/olujohn-digitals-logo.png" style="height:32px;width:32px;" alt="OluJohn Digitals Logo"/>
-    <div>
-      <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
-      <div class="ft-brand-sub">Full-Service Digital Agency</div>
-    </div>
-  </div>
-  <ul class="ft-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Agency</a></li>
-    <li><a href="projects.html">Our Work</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-  <div class="ft-social">
-    <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-  </div>
-  <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
-</footer>
-
-<script>
-/* ── REVEAL ON SCROLL ── */
-const reveals = document.querySelectorAll('.reveal');
-const revObs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:0.1});
-reveals.forEach(r=>revObs.observe(r));
-
-/* ── FAQ ACCORDION ── */
-document.querySelectorAll('.faq-q').forEach(q=>{
-  q.addEventListener('click',()=>{
-    const item = q.parentElement;
-    const isOpen = item.classList.contains('open');
-    // close all
-    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-    if(!isOpen) item.classList.add('open');
-  });
-});
-
-/* ── FORM SUBMIT (Formspree async) ── */
-const form   = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
-
-form.addEventListener('submit', async e=>{
-  e.preventDefault();
-  const btn = form.querySelector('.btn-submit');
-  const origHTML = btn.innerHTML;
-  btn.innerHTML = 'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
-  btn.disabled = true;
-
-  try{
-    const res = await fetch(form.action,{
-      method:'POST',
-      body:new FormData(form),
-      headers:{Accept:'application/json'}
-    });
-    if(res.ok){
-      status.textContent = '✓ Message sent — we\'ll be in touch within 24 hours.';
-      status.className = 'form-status success';
-      form.reset();
-    } else {
-      throw new Error();
-    }
-  } catch{
-    status.textContent = '✗ Something went wrong. Please email us directly or use WhatsApp.';
-    status.className = 'form-status error';
-  }
-
-  btn.innerHTML = origHTML;
-  btn.disabled = false;
-});
-</script>
-</body>
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector(".btn-submit");
+        const origHTML = btn.innerHTML;
+        btn.innerHTML =
+          'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
+        btn.disabled = true;
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            status.textContent =
+              "✓ Message sent — we'll be in touch within 24 hours.";
+            status.className = "form-status success";
+            form.reset();
+          } else {
+            throw new Error();
+          }
+        } catch {
+          status.textContent =
+            "✗ Something went wrong. Please email us directly or use WhatsApp.";
+          status.className = "form-status error";
+        }
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+      });
+    </script>
+  </body>
 </html>

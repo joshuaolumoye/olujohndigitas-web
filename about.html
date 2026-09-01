@@ -1,767 +1,1487 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>About Us — OluJohn Digitals</title>
-<meta name="description" content="We are a modern branding and digital solutions company committed to helping businesses define, refine, and elevate their brand identities."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --black:#040404;
-  --white:#F8F6F2;
-  --red:#C41E1E;
-  --red-dark:#8B1212;
-  --gray:#5C5C5C;
-  --gray-light:#B0ADA8;
-  --border:rgba(248,246,242,.08);
-  --nav-h:68px;
-  --font-display:'Bebas Neue',sans-serif;
-  --font-sub:'Chakra Petch',sans-serif;
-  --font-body:'Space Grotesk',sans-serif;
-}
-html,body{width:100%;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLUJOHN DIGITALS, About Us</title>
+    <meta
+      name="description"
+      content="OLUJOHN DIGITALS is a branding and software solutions agency in Lagos, Nigeria. Vision to Visibility. Meet the team building brands and software that win."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="img/blue logo icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --navy: #0f1f4d;
+        --navy-deep: #0a1636;
+        --red: #c41e1e;
+        --red-dark: #8b1212;
+        --bg: #ffffff;
+        --bg-alt: #f6f7fa;
+        --gray: #5c6470;
+        --gray-light: #8a93a3;
+        --border: rgba(15, 31, 77, 0.1);
+        --nav-h: 76px;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(15, 31, 77, 0.06);
+        --shadow-hover: 0 10px 32px rgba(15, 31, 77, 0.12);
+        --font: "Plus Jakarta Sans", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        background: var(--bg);
+        color: var(--navy);
+        font-family: var(--font);
+        font-weight: 400;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--navy);
+        color: #fff;
+        padding: 0.8rem 1.4rem;
+        z-index: 9999;
+        font-size: 0.85rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
 
-/* ══════════════════
-   NAV
-══════════════════ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 3rem;
-  border-bottom:1px solid var(--border);
-  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);
-}
-.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
-.nav-brand-text em{color:var(--red);font-style:normal}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
-}
-.nav-links a:hover,.nav-links a.active{color:var(--white)}
-.nav-cta{
-  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
-  letter-spacing:.14em;text-transform:uppercase;
-  padding:.52rem 1.4rem;border:1px solid var(--red);
-  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
-}
-.nav-cta:hover{background:var(--red);color:var(--white)}
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        height: 44px;
+        width: auto;
+        max-width: 100px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.25s;
+        position: relative;
+        padding: 0.3rem 0;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--navy);
+      }
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--red);
+        border-radius: 2px;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .nav-cta {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.5rem;
+        background: var(--red);
+        border: 1px solid var(--red);
+        border-radius: 100px;
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      .nav-partner {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.4rem;
+        border: 1px solid var(--navy);
+        border-radius: 100px;
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+      }
+      .nav-partner:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: var(--navy);
+        cursor: pointer;
+      }
 
-/* ══════════════════
-   PAGE HERO
-══════════════════ */
-.page-hero{
-  padding-top:calc(var(--nav-h) + 5rem);
-  padding-bottom:4rem;
-  padding-left:3rem;padding-right:3rem;
-  border-bottom:1px solid var(--border);
-  position:relative;overflow:hidden;
-  min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;
-}
-.hero-lines{
-  position:absolute;inset:0;pointer-events:none;
-  display:flex;justify-content:space-evenly;
-}
-.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.12) 50%,transparent)}
-.page-eyebrow{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;display:block;
-}
-.page-hl{
-  font-family:var(--font-display);
-  font-size:clamp(4rem,10vw,11rem);
-  line-height:.88;letter-spacing:.04em;color:var(--white);
-  position:relative;z-index:2;
-}
-.page-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
-.page-hl .accent{color:var(--red)}
-.hero-foot{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;
-  border-top:1px solid var(--border);padding-top:2rem;margin-top:3rem;
-  position:relative;z-index:2;
-}
-.hero-foot-desc{max-width:480px;font-size:.92rem;color:var(--gray-light);line-height:1.75;font-weight:300}
-.hero-tag{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);
-  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
-  white-space:nowrap;flex-shrink:0;
-}
+      .section {
+        padding: 6rem 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .section-alt-wrap {
+        background: var(--bg-alt);
+      }
+      .eyebrow {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+      .s-title {
+        font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+      .s-sub {
+        font-size: 0.98rem;
+        color: var(--gray);
+        line-height: 1.75;
+        font-weight: 400;
+        max-width: 620px;
+      }
 
-/* ══════════════════
-   SECTION BASE
-══════════════════ */
-.section{padding:6rem 3rem}
-.section-alt{background:#050505}
-.eyebrow{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
-}
-.s-title{
-  font-family:var(--font-display);
-  font-size:clamp(2.2rem,4.8vw,5rem);
-  letter-spacing:.04em;color:var(--white);line-height:.92;
-}
-.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+      /* PAGE HERO */
+      .p-hero {
+        padding: calc(var(--nav-h) + 4rem) 3rem 3.5rem;
+        background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+        text-align: center;
+      }
+      .p-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--navy);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 0.55rem 1.2rem;
+        background: #fff;
+        margin-bottom: 1.6rem;
+        box-shadow: var(--shadow);
+      }
+      .p-hero h1 {
+        font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        font-weight: 800;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .p-hero p {
+        max-width: 580px;
+        margin: 1.5rem auto 0;
+        font-size: 1rem;
+        color: var(--gray);
+        line-height: 1.8;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   STORY SECTION
-══════════════════ */
-.story-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
-  align-items:center;
-}
-.story-img{
-  width:100%;aspect-ratio:4/5;
-  background:linear-gradient(135deg,#141410,#0a0a08);
-  border:1px solid var(--border);
-  overflow:hidden;position:relative;
-}
-.story-img img{width:100%;height:100%;object-fit:cover;display:block}
-.story-img-tag{
-  position:absolute;bottom:1.5rem;left:1.5rem;
-  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.14em;
-  text-transform:uppercase;background:var(--red);color:var(--white);
-  padding:.35rem .8rem;
-}
-.story-body{}
-.story-body .s-title{margin-bottom:2rem}
-.story-p{font-size:.92rem;color:var(--gray-light);line-height:1.8;font-weight:300;margin-bottom:1.4rem}
-.story-p:last-of-type{margin-bottom:0}
+      /* STATS */
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.6rem;
+      }
+      .stat-cell {
+        background: #fff;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 2.2rem;
+        text-align: center;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .stat-cell:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .stat-num {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1;
+      }
+      .stat-num em {
+        color: var(--red);
+        font-style: normal;
+      }
+      .stat-lbl {
+        font-size: 0.8rem;
+        color: var(--gray-light);
+        margin-top: 0.6rem;
+        font-weight: 500;
+      }
 
-/* ══════════════════
-   STATS ROW
-══════════════════ */
-.stats-row{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border:1px solid var(--border);
-}
-.stat-cell{
-  padding:3rem 2.5rem;border-right:1px solid var(--border);
-  position:relative;overflow:hidden;
-  transition:background .3s;
-}
-.stat-cell:last-child{border-right:none}
-.stat-cell:hover{background:rgba(196,30,30,.05)}
-.stat-cell::before{
-  content:'';position:absolute;bottom:0;left:0;right:0;
-  height:2px;background:var(--red);
-  transform:scaleX(0);transform-origin:left;transition:transform .4s;
-}
-.stat-cell:hover::before{transform:scaleX(1)}
-.stat-num{
-  font-family:var(--font-display);font-size:4.5rem;
-  letter-spacing:.04em;color:var(--white);line-height:1;
-}
-.stat-num em{color:var(--red);font-style:normal}
-.stat-lbl{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--gray-light);margin-top:.6rem;
-}
+      /* TICKER */
+      #ticker {
+        background: var(--navy);
+        padding: 1.1rem 0;
+        overflow: hidden;
+      }
+      .ticker-track {
+        display: flex;
+        animation: scroll 24s linear infinite;
+        width: max-content;
+      }
+      .ticker-item {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        padding: 0 2rem;
+        white-space: nowrap;
+      }
+      .ticker-dot {
+        color: var(--red);
+        margin: 0 0.3rem;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
-/* ══════════════════
-   TICKER MARQUEE
-══════════════════ */
-.ticker-wrap{
-  overflow:hidden;border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);padding:.9rem 0;
-  background:rgba(196,30,30,.03);
-}
-.ticker-track{display:flex;animation:ticker 22s linear infinite;width:max-content}
-.ticker-item{
-  font-family:var(--font-sub);font-size:.7rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--gray-light);
-  padding:0 2.5rem;white-space:nowrap;
-}
-.ticker-dot{color:var(--red);margin:0 .3rem}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      /* STORY */
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .story-img {
+        width: 100%;
+        aspect-ratio: 4/5;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-hover);
+        position: relative;
+      }
+      .story-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .story-img-tag {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 1.2rem;
+        right: 1.2rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        padding: 0.9rem 1.1rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .story-p {
+        font-size: 0.94rem;
+        color: var(--gray);
+        line-height: 1.85;
+        font-weight: 400;
+        margin-bottom: 1.3rem;
+      }
+      .story-p:last-of-type {
+        margin-bottom: 0;
+      }
 
-/* ══════════════════
-   VALUES
-══════════════════ */
-.values-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--border);border:1px solid var(--border);
-  margin-top:4rem;
-}
-.value-card{
-  background:var(--black);padding:2.8rem 2.5rem;
-  transition:background .3s;
-}
-.value-card:hover{background:#0a0808}
-.value-card:hover .value-ico{border-color:rgba(196,30,30,.5);color:var(--red)}
-.value-ico{
-  width:44px;height:44px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--gray-light);margin-bottom:1.5rem;
-  transition:border-color .3s,color .3s;
-}
-.value-name{
-  font-family:var(--font-sub);font-size:.82rem;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
-  margin-bottom:.6rem;
-}
-.value-desc{font-size:.82rem;color:var(--gray-light);line-height:1.7;font-weight:300}
+      /* VALUES */
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .value-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .value-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .value-ico {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        margin-bottom: 1.3rem;
+        font-size: 1.2rem;
+      }
+      .value-name {
+        font-size: 0.98rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.6rem;
+      }
+      .value-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.7;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   WHY US
-══════════════════ */
-.why-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
-  align-items:center;
-}
-.why-img{
-  width:100%;aspect-ratio:1;
-  border:1px solid var(--border);overflow:hidden;
-}
-.why-img img{width:100%;height:100%;object-fit:cover;display:block}
-.why-list{display:flex;flex-direction:column;gap:0}
-.why-item{
-  display:flex;gap:1.2rem;align-items:flex-start;
-  padding:1.8rem 0;border-bottom:1px solid var(--border);
-}
-.why-item:first-child{padding-top:0}
-.why-item:last-child{border-bottom:none;padding-bottom:0}
-.why-ico{
-  width:32px;height:32px;border:1px solid rgba(196,30,30,.3);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--red);flex-shrink:0;margin-top:.1rem;
-}
-.why-title{
-  font-family:var(--font-sub);font-size:.78rem;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--white);
-  margin-bottom:.3rem;
-}
-.why-desc{font-size:.82rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+      /* WHY US */
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .why-img {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-hover);
+      }
+      .why-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .why-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .why-row {
+        display: flex;
+        gap: 1.1rem;
+        align-items: flex-start;
+      }
+      .why-ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(196, 30, 30, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 1.05rem;
+        flex-shrink: 0;
+      }
+      .why-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.3rem;
+      }
+      .why-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   TEAM
-══════════════════ */
-.team-row{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--border);border:1px solid var(--border);
-  margin-top:4rem;
-}
-.team-card{
-  background:var(--black);padding:2.5rem;
-  transition:background .3s;
-}
-.team-card:hover{background:#0a0808}
-.team-img{
-  width:100%;aspect-ratio:1;
-  background:linear-gradient(135deg,#141410,#0a0a08);
-  border:1px solid var(--border);margin-bottom:1.5rem;
-  overflow:hidden;
-}
-.team-img img{width:100%;height:100%;object-fit:cover;display:block}
-.team-name{
-  font-family:var(--font-display);font-size:1.6rem;letter-spacing:.04em;
-  color:var(--white);margin-bottom:.3rem;
-}
-.team-role{
-  font-family:var(--font-sub);font-size:.65rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--red);margin-bottom:.8rem;
-}
-.team-bio{font-size:.8rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+      /* TEAM — full bios, 6 members */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .team-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .team-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .team-img {
+        width: 108px;
+        height: 108px;
+        border-radius: 50%;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        margin-bottom: 1.2rem;
+        overflow: hidden;
+      }
+      .team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Individual team member positioning */
+      .team-card:nth-child(1) .team-img img {
+        object-position: center 28%;
+      }
+      .team-card:nth-child(2) .team-img img {
+        object-position: center 50%;
+      }
+      .team-card:nth-child(4) .team-img img {
+        object-position: center 23%;
+      }
+      .team-card:nth-child(5) .team-img img {
+        object-position: center 40%;
+      }
 
-/* ══════════════════
-   CLIENTS TICKER
-══════════════════ */
-.clients-section{padding:5rem 3rem;border-top:1px solid var(--border)}
-.clients-label{
-  font-family:var(--font-sub);font-size:.6rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gray);text-align:center;margin-bottom:3rem;
-}
-.clients-row{
-  display:flex;overflow:hidden;
-}
-.clients-track{
-  display:flex;align-items:center;gap:4rem;
-  animation:ticker 20s linear infinite;width:max-content;
-}
-.client-logo{
-  height:50px;width:auto;object-fit:contain;
-  filter:brightness(0) invert(1);opacity:.25;
-  transition:opacity .3s;flex-shrink:0;
-}
-.client-logo:hover{opacity:.6}
+      .team-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.2rem;
+      }
+      .team-role {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+      }
+      .team-bio {
+        font-size: 0.84rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   TESTIMONIALS
-══════════════════ */
-.test-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--border);border:1px solid var(--border);
-  margin-top:4rem;
-}
-.test-card{background:#060404;padding:2rem 2rem}
-.test-q{font-family:Georgia,serif;font-size:2.6rem;color:var(--red);opacity:.4;line-height:.8;margin-bottom:.8rem}
-.test-body{font-size:.82rem;color:var(--gray-light);line-height:1.8;font-style:italic;font-weight:300}
-.test-auth{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border)}
-.test-name{font-family:var(--font-sub);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--white)}
-.test-role{font-size:.68rem;color:var(--red);letter-spacing:.08em;margin-top:.2rem}
+      /* CLIENT LOGOS */
+      .clients-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--gray-light);
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .clients-row {
+        display: flex;
+        overflow: hidden;
+      }
+      .clients-track {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        animation: scroll 20s linear infinite;
+        width: max-content;
+      }
+      .client-logo {
+        height: 42px;
+        width: auto;
+        object-fit: contain;
+        opacity: 0.5;
+        filter: grayscale(1);
+        transition:
+          opacity 0.3s,
+          filter 0.3s;
+        flex-shrink: 0;
+      }
+      .client-logo:hover {
+        opacity: 1;
+        filter: none;
+      }
 
-/* ══════════════════
-   CTA STRIP
-══════════════════ */
-.cta-strip{
-  border-top:1px solid var(--border);
-  padding:5rem 3rem;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:2rem;flex-wrap:wrap;
-  background:rgba(196,30,30,.03);
-}
-.cta-strip-hl{
-  font-family:var(--font-display);
-  font-size:clamp(2rem,4vw,4.5rem);
-  letter-spacing:.04em;color:var(--white);line-height:.95;
-}
-.cta-strip-sub{
-  font-size:.88rem;color:var(--gray-light);margin-top:.8rem;
-  font-weight:300;line-height:1.7;max-width:440px;
-}
-.cta-btns{display:flex;gap:.8rem;flex-shrink:0}
-.btn-red{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
-  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
-}
-.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
-.btn-ghost{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
-  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
-}
-.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+      /* TESTIMONIALS */
+      .test-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .test-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .test-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .test-body {
+        font-size: 0.92rem;
+        color: var(--navy);
+        line-height: 1.8;
+        font-weight: 500;
+      }
+      .test-auth {
+        margin-top: 1.4rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--border);
+      }
+      .test-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .test-role {
+        font-size: 0.76rem;
+        color: var(--red);
+        margin-top: 0.2rem;
+        font-weight: 500;
+      }
 
-/* ══════════════════
-   FOOTER
-══════════════════ */
-footer{
-  border-top:1px solid var(--border);
-  padding:2.8rem 3rem;
-  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
-  justify-content:space-between;
-}
-.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
-.ft-brand-text em{color:var(--red);font-style:normal}
-.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
-.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
-.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
-.ft-links a:hover{color:var(--white)}
-.ft-social{display:flex;gap:.55rem}
-.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
-.soc:hover{border-color:var(--red);color:var(--red)}
-.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+      /* CTA STRIP */
+      .cta-strip {
+        border-radius: var(--radius);
+        background: var(--red);
+        padding: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .cta-strip-hl {
+        font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+        color: #fff;
+        line-height: 1.15;
+        font-weight: 800;
+      }
+      .cta-strip-sub {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 0.7rem;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 420px;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 0.8rem;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+      }
+      .btn-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.85rem 1.9rem;
+        background: #fff;
+        color: var(--red);
+        text-decoration: none;
+        transition: opacity 0.25s;
+        display: inline-block;
+      }
+      .btn-white:hover {
+        opacity: 0.9;
+      }
+      .btn-outline-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.85rem 1.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.25s;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .btn-outline {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+        display: inline-block;
+      }
+      .btn-outline:hover {
+        background: var(--navy);
+        color: #fff;
+      }
 
-/* ══════════════════
-   REVEAL
-══════════════════ */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:none}
-.reveal.d1{transition-delay:.1s}
-.reveal.d2{transition-delay:.22s}
-.reveal.d3{transition-delay:.34s}
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3.5rem 3rem 1.8rem;
+      }
+      .ft-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2.5rem;
+        justify-content: space-between;
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .ft-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .ft-brand img {
+        height: 46px;
+        width: auto;
+        max-width: 46px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .ft-brand-text {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .ft-brand-sub {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
+      .ft-col-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+      }
+      .ft-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .ft-links a {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.25s;
+        font-weight: 400;
+      }
+      .ft-links a:hover {
+        color: #fff;
+      }
+      .ft-social {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+      .soc {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.25s,
+          color 0.25s,
+          background 0.25s;
+      }
+      .soc:hover {
+        border-color: var(--red);
+        color: #fff;
+        background: var(--red);
+      }
+      .ft-copy {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding-top: 1.6rem;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   RESPONSIVE
-══════════════════ */
-@media(max-width:1024px){
-  nav{padding:0 1.2rem}
-  .nav-links,.nav-cta{display:none}
-  .page-hero,.section,.clients-section,.cta-strip,footer{padding-left:1.5rem;padding-right:1.5rem}
-  .story-grid,.why-grid{grid-template-columns:1fr;gap:3rem}
-  .story-img{aspect-ratio:16/9}
-  .why-img{display:none}
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .stat-cell{border-bottom:1px solid var(--border)}
-  .values-grid,.team-row,.test-grid{grid-template-columns:1fr}
-  .cta-strip{flex-direction:column;align-items:flex-start}
-  .cta-btns{flex-direction:column}
-  .hero-foot{flex-direction:column;align-items:flex-start;gap:1.2rem}
-  .page-hero{min-height:auto;padding-top:calc(var(--nav-h) + 3rem)}
-}
-</style>
-</head>
-<body>
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.1s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.2s;
+      }
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-brand">
-    <img src="img/olujohn-digitals-logo.png" style="height:26px;width:26px;" alt="OluJohn Digitals Logo"/>
-    <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="projects.html">Work</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
-</nav>
+      @media (max-width: 1024px) {
+        nav {
+          padding: 0 1.2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        .p-hero,
+        .section {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem;
+        }
+        .stats-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .story-grid,
+        .why-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .why-img {
+          display: none;
+        }
+        .values-grid,
+        .team-grid,
+        .test-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-strip {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2.2rem;
+        }
+        .nav-partner {
+          display: none;
+        }
+      }
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="hero-lines">
-    <div class="vl"></div><div class="vl"></div>
-    <div class="vl"></div><div class="vl"></div>
-  </div>
-  <span class="page-eyebrow reveal">Who We Are</span>
-  <h1 class="page-hl reveal d1">
-    BUILDING<br/>BRANDS THAT<br/><span class="outline">LAST.</span>
-  </h1>
-  <div class="hero-foot">
-    <p class="hero-foot-desc reveal d2">We are a modern branding and digital solutions company committed to helping businesses, entrepreneurs, and organizations define, refine, and elevate their brand identities — from Lagos to the world.</p>
-    <span class="hero-tag reveal d3">Lagos, Nigeria &mdash; Est. 2019</span>
-  </div>
-</div>
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 1rem;
+          height: 70px;
+        }
+        .nav-brand img {
+          height: 40px;
+          max-width: 90px;
+        }
+        .nav-cta {
+          padding: 0.55rem 1.2rem;
+          font-size: 0.75rem;
+        }
+        .p-hero,
+        .section {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+        .stats-row {
+          gap: 1.2rem;
+        }
+        .team-card {
+          padding: 1.5rem;
+        }
+      }
 
-<!-- STATS -->
-<div class="section" style="padding-top:5rem;padding-bottom:5rem;">
-  <div class="stats-row reveal">
-    <div class="stat-cell">
-      <div class="stat-num">20<em>+</em></div>
-      <div class="stat-lbl">Projects Delivered</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num">5<em>+</em></div>
-      <div class="stat-lbl">Years of Experience</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num">100<em>%</em></div>
-      <div class="stat-lbl">Client Satisfaction</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num">24<em>h</em></div>
-      <div class="stat-lbl">Service Availability</div>
-    </div>
-  </div>
-</div>
+      @media (max-width: 480px) {
+        nav {
+          height: 65px;
+          padding: 0 0.8rem;
+        }
+        .nav-brand img {
+          height: 36px;
+          max-width: 80px;
+        }
+        .nav-cta {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+        .p-hero,
+        .section {
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+        .stats-row {
+          grid-template-columns: 1fr;
+        }
+        .stat-num {
+          font-size: 1.6rem;
+        }
+        .team-img {
+          width: 90px;
+          height: 90px;
+        }
+        .team-name {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <span class="ticker-item">Branding & Identity Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Branding & Identity Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Web Development <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Mobile Applications <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Digital Marketing <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">UI/UX Design <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Cloud Hosting <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Media Production <span class="ticker-dot">✦</span></span>
-    <span class="ticker-item">Project Management <span class="ticker-dot">✦</span></span>
-  </div>
-</div>
-
-<!-- STORY -->
-<div class="section">
-  <div class="story-grid">
-    <div class="story-img reveal">
-      <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye — CEO, OluJohn Digitals"/>
-      <div class="story-img-tag">John Olumoye — Founder & CEO</div>
-    </div>
-    <div class="story-body reveal d1">
-      <span class="eyebrow">Our Story</span>
-      <h2 class="s-title" style="margin-bottom:2rem">WE STARTED<br/>WITH ONE<br/><span class="ol">BIG IDEA.</span></h2>
-      <p class="story-p">OluJohn Digitals was founded on a simple but powerful belief — that every business, no matter its size or stage, deserves a world-class brand and digital presence. We started in Lagos, Nigeria with a team of creatives, strategists, and engineers who were tired of watching great businesses go unnoticed because of weak branding and poor digital execution.</p>
-      <p class="story-p">Over five years, we've grown from a small branding studio into a full-service digital agency serving clients across Nigeria, Africa, the UK, Canada, and beyond. We've built SaaS platforms that were sold, launched fintech apps that process real transactions daily, and created brand identities that made businesses impossible to ignore.</p>
-      <p class="story-p">We specialize in offering creative and strategic services that foster visibility, trust, and growth in both digital and traditional marketplaces. Our work is rooted in innovation, excellence, and deeply personalized service — because we treat every client's business like it's our own.</p>
-      <div style="margin-top:2.5rem">
-        <a href="projects.html" class="btn-ghost">See Our Work <i class="fa-regular fa-arrow-right" style="margin-left:.4rem"></i></a>
+    <nav>
+      <a
+        href="index.html"
+        class="nav-brand"
+        aria-label="OluJohn Digitals — Home"
+      >
+        <img src="img/blue logo.png" alt="OluJohn Digitals Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="projects.html">Work</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="partner.html" class="nav-partner">Partner With Us</a>
+        <a href="https://wa.me/2348180695247" class="nav-cta"
+          >Start a Project</a
+        >
       </div>
-    </div>
-  </div>
-</div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
 
-<!-- VALUES -->
-<div class="section section-alt">
-  <span class="eyebrow reveal">What Drives Us</span>
-  <h2 class="s-title reveal d1">OUR CORE<br/><span class="ol">VALUES.</span></h2>
-  <div class="values-grid">
+    <main id="main">
+      <!-- PAGE HERO -->
+      <section class="p-hero">
+        <span class="p-pill reveal"
+          ><i class="fa-solid fa-compass"></i> Vision to Visibility</span
+        >
+        <h1 class="reveal d1">Building brands that last.</h1>
+        <p class="reveal d1">
+          We are a branding and software solutions agency committed to helping
+          businesses, entrepreneurs, and organizations define, refine, and
+          elevate their digital presence — from Lagos to the world.
+        </p>
+      </section>
 
-    <div class="value-card reveal">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Excellence First</div>
-      <p class="value-desc">We don't ship mediocre work. Every deliverable — from a logo to a production-grade SaaS — goes through the same relentless standard of quality before it leaves our hands.</p>
-    </div>
-
-    <div class="value-card reveal d1">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.2"/>
-          <path d="M7 10.5L9 12.5L13 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Radical Honesty</div>
-      <p class="value-desc">We tell clients what they need to hear, not what they want to hear. If a strategy won't work, we say so — and we propose something better. Trust is built on truth.</p>
-    </div>
-
-    <div class="value-card reveal d2">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M3 10C3 6.13 6.13 3 10 3C12.5 3 14.7 4.28 16 6.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          <path d="M17 10C17 13.87 13.87 17 10 17C7.5 17 5.3 15.72 4 13.78" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          <path d="M16 3.5V6.5H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 16.5V13.5H7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Continuous Growth</div>
-      <p class="value-desc">The digital landscape never stops evolving, and neither do we. We invest in learning, experimenting, and upgrading our craft so our clients always get the current best — not last year's playbook.</p>
-    </div>
-
-    <div class="value-card reveal">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <rect x="1.5" y="1.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
-          <rect x="11.5" y="1.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
-          <rect x="1.5" y="11.5" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/>
-          <path d="M11.5 15.5H18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          <path d="M15 12V19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Full Ownership</div>
-      <p class="value-desc">When we take on a project, we own it completely — from strategy through to post-launch support. We don't vanish after delivery. Our clients know we're always reachable.</p>
-    </div>
-
-    <div class="value-card reveal d1">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 2C10 2 4 5 4 10.5C4 13.5 6.7 16 10 16C13.3 16 16 13.5 16 10.5C16 5 10 2 10 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-          <path d="M10 16V18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          <path d="M7 18H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Creative Courage</div>
-      <p class="value-desc">We push past the safe and expected. Our best work happens when we take creative risks on behalf of our clients — and those risks consistently pay off with results that stand out.</p>
-    </div>
-
-    <div class="value-card reveal d2">
-      <div class="value-ico">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <circle cx="7" cy="7" r="4" stroke="currentColor" stroke-width="1.2"/>
-          <circle cx="14" cy="13" r="4" stroke="currentColor" stroke-width="1.2"/>
-          <path d="M10.5 9.5L11.5 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="value-name">Partnership Over Transaction</div>
-      <p class="value-desc">We don't want one-off clients. We want long-term partners whose growth we can contribute to again and again. Our best relationships span years, not weeks.</p>
-    </div>
-
-  </div>
-</div>
-
-<!-- WHY US -->
-<div class="section">
-  <div class="why-grid">
-    <div class="why-img reveal">
-      <img src="img/olujohndigitals-certificate.jpg" alt="OluJohn Digitals — Why Us"/>
-    </div>
-    <div class="reveal d1">
-      <span class="eyebrow">Why Choose Us</span>
-      <h2 class="s-title" style="margin-bottom:2.5rem">THE AGENCY<br/>THAT THINKS<br/><span class="ol">LIKE AN OWNER.</span></h2>
-      <div class="why-list">
-        <div class="why-item">
-          <div class="why-ico">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <rect x="1" y="1" width="14" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M4 8H12M8 4V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
+      <!-- STATS -->
+      <section class="section" style="padding-top: 0; padding-bottom: 4rem">
+        <div class="stats-row reveal">
+          <div class="stat-cell">
+            <div class="stat-num">20<em>+</em></div>
+            <div class="stat-lbl">Projects Delivered</div>
           </div>
-          <div>
-            <div class="why-title">Full-Stack In-House</div>
-            <p class="why-desc">Design, development, SEO, hosting — all under one roof. No handoffs to third parties, no communication gaps, no delays from misaligned teams.</p>
+          <div class="stat-cell">
+            <div class="stat-num">5<em>+</em></div>
+            <div class="stat-lbl">Years of Experience</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">100<em>%</em></div>
+            <div class="stat-lbl">Client Satisfaction</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">6</div>
+            <div class="stat-lbl">Team Members</div>
           </div>
         </div>
-        <div class="why-item">
-          <div class="why-ico">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M2 12L5.5 7.5L8 9.5L11 5.5L14 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="14" cy="3" r="1.2" fill="currentColor"/>
-            </svg>
+      </section>
+
+      <!-- TICKER -->
+      <div id="ticker">
+        <div class="ticker-track">
+          <span class="ticker-item"
+            >Branding & Identity <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Web Development <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Mobile Apps <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Digital Marketing <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >UI/UX Design <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Tech Academy <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Branding & Identity <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Web Development <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Mobile Apps <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Digital Marketing <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >UI/UX Design <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Tech Academy <span class="ticker-dot">✦</span></span
+          >
+        </div>
+      </div>
+
+      <!-- STORY -->
+      <section class="section">
+        <div class="story-grid">
+          <div class="story-img reveal">
+            <img
+              src="img/ceo-john-olumoye.jpg"
+              alt="John Olumoye — CEO, OluJohn Digitals"
+            />
+            <div class="story-img-tag">John Olumoye — Founder & CEO</div>
           </div>
-          <div>
-            <div class="why-title">Founder-Level Thinking</div>
-            <p class="why-desc">Our lead engineer built and sold a SaaS company. We think about your product like owners — every decision is made with growth and sustainability in mind, not just aesthetics.</p>
+          <div class="reveal d1">
+            <span class="eyebrow">Our Story</span>
+            <h2 class="s-title" style="margin-bottom: 2rem">
+              We started with one big idea.
+            </h2>
+            <p class="story-p">
+              OluJohn Digitals was founded on a simple but powerful belief —
+              that every business, no matter its size or stage, deserves a
+              world-class brand and digital presence. We started in Lagos,
+              Nigeria with a team of creatives, strategists, and engineers who
+              were tired of watching great businesses go unnoticed because of
+              weak branding and poor digital execution.
+            </p>
+            <p class="story-p">
+              Over five years, we've grown from a small branding studio into a
+              full-service branding and software solutions agency serving
+              clients across Nigeria, Africa, the UK, Canada, and beyond. We've
+              built SaaS platforms that were sold, launched fintech apps that
+              process real transactions daily, and created brand identities that
+              made businesses impossible to ignore.
+            </p>
+            <p class="story-p">
+              Our work is rooted in innovation, excellence, and deeply
+              personalized service — because we treat every client's business
+              like it's our own.
+            </p>
+            <div style="margin-top: 2rem">
+              <a href="projects.html" class="btn-outline"
+                >See Our Work
+                <i
+                  class="fa-regular fa-arrow-right"
+                  style="margin-left: 0.4rem"
+                ></i
+              ></a>
+            </div>
           </div>
         </div>
-        <div class="why-item">
-          <div class="why-ico">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M8 1.5V8L11 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <div class="why-title">Global Standards</div>
-            <p class="why-desc">Based in Lagos, serving clients in Mauritius, Canada, the UK, and across Africa. We know how to build for global audiences while staying grounded in African market realities.</p>
+      </section>
+
+      <!-- VALUES -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">What Drives Us</span>
+          <h2 class="s-title reveal d1">Our core values.</h2>
+          <div class="values-grid reveal d2">
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-star"></i></div>
+              <div class="value-name">Excellence First</div>
+              <p class="value-desc">
+                We don't ship mediocre work. Every deliverable goes through the
+                same relentless standard of quality before it leaves our hands.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-ico">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="value-name">Radical Honesty</div>
+              <p class="value-desc">
+                We tell clients what they need to hear, not what they want to
+                hear. Trust is built on truth.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-ico">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </div>
+              <div class="value-name">Continuous Growth</div>
+              <p class="value-desc">
+                The digital landscape never stops evolving, and neither do we —
+                our clients always get the current best.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-ico">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="value-name">Full Ownership</div>
+              <p class="value-desc">
+                When we take on a project, we own it completely — from strategy
+                through to post-launch support.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-lightbulb"></i></div>
+              <div class="value-name">Creative Courage</div>
+              <p class="value-desc">
+                We push past the safe and expected — our best work happens when
+                we take creative risks on our clients' behalf.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-ico"><i class="fa-solid fa-handshake"></i></div>
+              <div class="value-name">Partnership Over Transaction</div>
+              <p class="value-desc">
+                We want long-term partners whose growth we can contribute to
+                again and again.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="why-item">
-          <div class="why-ico">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M2 8C2 4.7 4.7 2 8 2C10 2 11.8 3 13 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              <path d="M14 8C14 11.3 11.3 14 8 14C6 14 4.2 13 3 11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              <path d="M13 2V5H10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 14V11H6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+      </section>
+
+      <!-- WHY US -->
+      <section class="section">
+        <div class="why-grid">
+          <div class="why-img reveal">
+            <img
+              src="img/olujohndigitals-certificate.jpg"
+              alt="OluJohn Digitals — Why Us"
+            />
           </div>
-          <div>
-            <div class="why-title">Long-Term Partnership</div>
-            <p class="why-desc">We offer ongoing maintenance, feature updates, and growth support. Our clients don't leave because they don't need to — everything they need is right here.</p>
+          <div class="reveal d1">
+            <span class="eyebrow">Why Choose Us</span>
+            <h2 class="s-title" style="margin-bottom: 2rem">
+              The agency that thinks like an owner.
+            </h2>
+            <div class="why-list">
+              <div class="why-row">
+                <div class="why-ico">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                  <div class="why-title">Full-Stack In-House</div>
+                  <p class="why-desc">
+                    Design, development, SEO, hosting — all under one roof. No
+                    handoffs to third parties, no delays.
+                  </p>
+                </div>
+              </div>
+              <div class="why-row">
+                <div class="why-ico"><i class="fa-solid fa-rocket"></i></div>
+                <div>
+                  <div class="why-title">Founder-Level Thinking</div>
+                  <p class="why-desc">
+                    Our lead engineer built and sold a SaaS company. We think
+                    about your product like owners.
+                  </p>
+                </div>
+              </div>
+              <div class="why-row">
+                <div class="why-ico">
+                  <i class="fa-solid fa-earth-africa"></i>
+                </div>
+                <div>
+                  <div class="why-title">Global Standards</div>
+                  <p class="why-desc">
+                    Based in Lagos, serving clients in Mauritius, Canada, the
+                    UK, and across Africa.
+                  </p>
+                </div>
+              </div>
+              <div class="why-row">
+                <div class="why-ico"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <div class="why-title">Long-Term Partnership</div>
+                  <p class="why-desc">
+                    Ongoing maintenance, feature updates, and growth support.
+                    Our clients don't leave.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
 
-<!-- TEAM -->
-<div class="section section-alt">
-  <span class="eyebrow reveal">The People</span>
-  <h2 class="s-title reveal d1">MEET THE TEAM<br/><span class="ol">BEHIND THE WORK.</span></h2>
-  <div class="team-row">
-    <div class="team-card reveal">
-      <div class="team-img">
-        <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye"/>
-      </div>
-      <div class="team-name">John Olumoye</div>
-      <div class="team-role">Founder & CEO</div>
-      <p class="team-bio">Full-stack engineer, brand strategist, and founder. John has built and sold a SaaS company, architected production systems for fintech clients, and led the agency from a solo studio to a multi-disciplinary team.</p>
-    </div>
-    <div class="team-card reveal d2">
-      <div class="team-img" style="background:linear-gradient(135deg,#141410,#0a0a08);display:flex;align-items:center;justify-content:center;">
-        <img src="img/co-founder-joshua-olumoye.jpg" alt="Joshua Olumoye"/>
-      </div>
-      <div class="team-name">Joshua Olumoye</div>
-      <div class="team-role">Co-Founder &amp; Solutions Architect</div>
-      <p class="team-bio">Joshua architects scalable digital solutions that bridge business goals with robust engineering. From system design and backend infrastructure to product strategy and deployment, he leads the technical vision behind every platform, ensuring performance, security, and long-term growth.</p>
-    </div>
-    <div class="team-card reveal d1">
-      <div class="team-img" style="background:linear-gradient(135deg,#141410,#0a0a08);display:flex;align-items:center;justify-content:center;">
-        <img src="img/daniel.png" alt="Daniel Oguniyi"/>
-      </div>
-      <div class="team-name">Daniel Oguniyi</div>
-      <div class="team-role">Lead Mobile Developer</div>
-      <p class="team-bio">Specialist in React Native and cross-platform mobile development. Daniel leads all mobile app builds — from architecture to App Store deployment — with a focus on performance and native feel.</p>
-    </div>
-  </div>
-</div>
+      <!-- TEAM -->
+      <section class="section">
+        <span class="eyebrow reveal">The People</span>
+        <h2 class="s-title reveal d1">Meet the team behind the work.</h2>
+        <p class="s-sub reveal d1">
+          A team of six designers, engineers, and strategists. Full bios on the
+          <a
+            href="about.html"
+            style="color: var(--red); text-decoration: underline"
+            >About page</a
+          >.
+        </p>
+        <div class="team-grid reveal d2">
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye" />
+            </div>
+            <div class="team-name">John Olumoye</div>
+            <div class="team-role">Co-founder & CEO</div>
+            <p class="team-bio">
+              Full-stack engineer and brand strategist who has built and sold a
+              SaaS company.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img
+                src="img/co-founder-joshua-olumoye.jpg"
+                alt="Joshua Olumoye"
+              />
+            </div>
+            <div class="team-name">Joshua Olumoye</div>
+            <div class="team-role">Co-Founder & Solutions Architect</div>
+            <p class="team-bio">
+              Architects scalable digital solutions bridging business goals with
+              robust engineering.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/daniel.png" alt="Daniel Oguniyi" />
+            </div>
+            <div class="team-name">Daniel Oguniyi</div>
+            <div class="team-role">Lead, Mobile App Development</div>
+            <p class="team-bio">
+              Specialist in React Native and cross-platform mobile app
+              development.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/myservicepics/Timipicture.jpg" alt="Timi Oyewale" />
+            </div>
+            <div class="team-name">Timi Oyewale</div>
+            <div class="team-role">Lead, UI/UX Design</div>
+            <p class="team-bio">
+              Leads interface and experience design across client projects and
+              the Academy.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/team/midegrapgics.jpg" alt="Ayomide Adefela" />
+            </div>
+            <div class="team-name">Ayomide Adefela</div>
+            <div class="team-role">Lead, Graphics Design</div>
+            <p class="team-bio">
+              Leads visual and graphics design work, from brand assets to
+              marketing creatives.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/victor image.png" alt="Victor Oyedeji" />
+            </div>
+            <div class="team-name">Victor Oyedeji</div>
+            <div class="team-role">Lead, Social Media/Digital Marketing</div>
+            <p class="team-bio">
+              Leads social media and digital marketing strategy across client
+              accounts.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<!-- CLIENT LOGOS -->
-<div class="clients-section">
-  <p class="clients-label">Brands we've worked with</p>
-  <div class="clients-row">
-    <div class="clients-track">
-      <img src="img/borderless_banking_logo.png" class="client-logo" alt="BorderlessBanking"/>
-      <img src="img/simi_craft.png" class="client-logo" alt="Simi Craft"/>
-      <img src="img/nite.png" class="client-logo" alt="Nite"/>
-      <img src="img/data_wise.png" class="client-logo" alt="DataWise"/>
-      <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart"/>
-      <img src="img/abbey_wears.png" class="client-logo" alt="Abbey Wears"/>
-      <img src="img/clype.png" class="client-logo" alt="Clype"/>
-      <img src="img/borderless_banking_logo.png" class="client-logo" alt="BorderlessBanking"/>
-      <img src="img/simi_craft.png" class="client-logo" alt="Simi Craft"/>
-      <img src="img/nite.png" class="client-logo" alt="Nite"/>
-      <img src="img/data_wise.png" class="client-logo" alt="DataWise"/>
-      <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart"/>
-      <img src="img/abbey_wears.png" class="client-logo" alt="Abbey Wears"/>
-      <img src="img/clype.png" class="client-logo" alt="Clype"/>
-    </div>
-  </div>
-</div>
+      <!-- CLIENT LOGOS -->
+      <section
+        class="section"
+        style="padding-top: 4.5rem; padding-bottom: 4.5rem"
+      >
+        <p class="clients-label reveal">Brands we've worked with</p>
+        <div class="clients-row reveal d1">
+          <div class="clients-track">
+            <img
+              src="img/borderless_banking_logo.png"
+              class="client-logo"
+              alt="BorderlessBanking"
+            />
+            <img
+              src="img/simi_craft.png"
+              class="client-logo"
+              alt="Simi Craft"
+            />
+            <img src="img/nite.png" class="client-logo" alt="Nite" />
+            <img src="img/data_wise.png" class="client-logo" alt="DataWise" />
+            <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart" />
+            <img
+              src="img/abbey_wears.png"
+              class="client-logo"
+              alt="Abbey Wears"
+            />
+            <img src="img/clype.png" class="client-logo" alt="Clype" />
+            <img
+              src="img/borderless_banking_logo.png"
+              class="client-logo"
+              alt="BorderlessBanking"
+            />
+            <img
+              src="img/simi_craft.png"
+              class="client-logo"
+              alt="Simi Craft"
+            />
+            <img src="img/nite.png" class="client-logo" alt="Nite" />
+            <img src="img/data_wise.png" class="client-logo" alt="DataWise" />
+            <img src="img/dan_mart.png" class="client-logo" alt="Dan Mart" />
+            <img
+              src="img/abbey_wears.png"
+              class="client-logo"
+              alt="Abbey Wears"
+            />
+            <img src="img/clype.png" class="client-logo" alt="Clype" />
+          </div>
+        </div>
+      </section>
 
-<!-- TESTIMONIALS -->
-<div class="section section-alt">
-  <span class="eyebrow reveal">Client Testimonials</span>
-  <h2 class="s-title reveal d1">WHAT OUR<br/><span class="ol">CLIENTS SAY.</span></h2>
-  <div class="test-grid">
-    <div class="test-card reveal">
-      <div class="test-q">&ldquo;</div>
-      <p class="test-body">OluJohn Digitals took my idea and turned it into reality. They built a professional and user-friendly web app where people can buy virtual cards and access financial services seamlessly. The journey from concept to launch was handled with excellence.</p>
-      <div class="test-auth">
-        <div class="test-name">Colibrie</div>
-        <div class="test-role">CEO, BorderlessBanking</div>
+      <!-- TESTIMONIALS -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">Client Testimonials</span>
+          <h2 class="s-title reveal d1">What our clients say.</h2>
+          <div class="test-grid reveal d2">
+            <div class="test-card">
+              <p class="test-body">
+                "OluJohn Digitals took my idea and turned it into reality. They
+                built a professional and user-friendly web app where people can
+                buy virtual cards and access financial services seamlessly."
+              </p>
+              <div class="test-auth">
+                <div class="test-name">Colibrie</div>
+                <div class="test-role">CEO, BorderlessBanking</div>
+              </div>
+            </div>
+            <div class="test-card">
+              <p class="test-body">
+                "I wanted my footwear brand to stand out, and OluJohn Digitals
+                delivered beyond expectations. Their creativity and
+                professionalism brought Simi Footwear to life."
+              </p>
+              <div class="test-auth">
+                <div class="test-name">Simi</div>
+                <div class="test-role">CEO, Simi Footwear</div>
+              </div>
+            </div>
+            <div class="test-card">
+              <p class="test-body">
+                "Starting a brand from scratch can be overwhelming, but OluJohn
+                Digitals made it effortless. Truly a top-notch experience."
+              </p>
+              <div class="test-auth">
+                <div class="test-name">Ola</div>
+                <div class="test-role">CEO, Owlist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA STRIP -->
+      <section class="section">
+        <div class="cta-strip reveal">
+          <div>
+            <div class="cta-strip-hl">Ready to build something great?</div>
+            <p class="cta-strip-sub">
+              Tell us what you're working on. We'll handle design, development,
+              and everything in between.
+            </p>
+          </div>
+          <div class="cta-btns">
+            <a href="https://wa.me/2348180695247" class="btn-white"
+              >Start on WhatsApp</a
+            >
+            <a
+              href="https://calendly.com/olumoyepelumi1"
+              target="_blank"
+              class="btn-outline-white"
+              >Schedule a Call</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ft-inner">
+        <div style="flex: 1; min-width: 240px">
+          <div class="ft-brand">
+            <img src="img/white logo icon.png" alt="OluJohn Digitals Logo" />
+            <div>
+              <div class="ft-brand-text">OLUJOHN DIGITALS</div>
+              <div class="ft-brand-sub">
+                Branding & Software Solutions Agency
+              </div>
+            </div>
+          </div>
+          <div class="ft-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578561470869"
+              class="soc"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/olujohn_digitals/"
+              class="soc"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://x.com/olujohndigitals?s=09"
+              class="soc"
+              target="_blank"
+              aria-label="X (Twitter)"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/olujohndigitals/"
+              class="soc"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@olujohndigitals"
+              class="soc"
+              target="_blank"
+              aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-col-title">Navigate</div>
+          <ul class="ft-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="projects.html">Work</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ft-col-title">Company</div>
+          <ul class="ft-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partner.html">Partner With Us</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="test-card reveal d1">
-      <div class="test-q">&ldquo;</div>
-      <p class="test-body">I wanted my footwear brand to stand out, and OluJohn Digitals delivered beyond expectations. From designing my logo to developing a consistent brand identity, their creativity and professionalism brought Simi Footwear to life.</p>
-      <div class="test-auth">
-        <div class="test-name">Simi</div>
-        <div class="test-role">CEO, Simi Footwear</div>
-      </div>
-    </div>
-    <div class="test-card reveal d2">
-      <div class="test-q">&ldquo;</div>
-      <p class="test-body">Starting a brand from scratch can be overwhelming, but OluJohn Digitals made it effortless. They built my brand identity and successfully developed both the web and mobile app for Owlist. Truly a top-notch experience.</p>
-      <div class="test-auth">
-        <div class="test-name">Ola</div>
-        <div class="test-role">CEO, Owlist</div>
-      </div>
-    </div>
-  </div>
-</div>
+      <p class="ft-copy">
+        © 2026 OLUJOHN DIGITALS. All rights reserved. Lagos, Nigeria. Serving
+        clients worldwide.
+      </p>
+    </footer>
 
-<!-- CTA STRIP -->
-<div class="cta-strip">
-  <div>
-    <div class="cta-strip-hl reveal">READY TO BUILD<br/>SOMETHING GREAT?</div>
-    <p class="cta-strip-sub reveal d1">Tell us what you're working on. We'll handle design, development, and everything in between.</p>
-  </div>
-  <div class="cta-btns reveal d2">
-    <a href="https://wa.me/2348180695247" class="btn-red">Start on WhatsApp</a>
-    <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost">Schedule a Call</a>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ft-brand">
-      <img src="img/olujohn-digitals-logo.png" style="height:32px;width:32px;" alt="OluJohn Digitals Logo"/>
-    <div>
-      <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
-      <div class="ft-brand-sub">Full-Service Digital Agency</div>
-    </div>
-  </div>
-  <ul class="ft-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Agency</a></li>
-    <li><a href="projects.html">Our Work</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-  <div class="ft-social">
-    <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-  </div>
-  <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
-</footer>
-
-<script>
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:0.1});
-reveals.forEach(r=>obs.observe(r));
-</script>
-</body>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((r) => obs.observe(r));
+    </script>
+  </body>
 </html>

@@ -1,842 +1,1844 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>OluJohn Digitals — Full-Service Digital Agency, Lagos</title>
-<meta name="description" content="OluJohn Digitals is a full-service digital agency in Lagos — UI/UX design, web development, mobile apps, SEO, branding, and cloud hosting."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="shortcut icon" href="img/olujohn-digitals-logo.png" type="image/x-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,600;1,300&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --black:#040404;
-  --white:#F8F6F2;
-  --red:#C41E1E;
-  --red-dark:#8B1212;
-  --gray:#5C5C5C;
-  --gray-light:#B0ADA8;
-  --border:rgba(248,246,242,.08);
-  --nav-h:68px;
-  --track-w:28px;
-  --font-display:'Bebas Neue',sans-serif;
-  --font-sub:'Chakra Petch',sans-serif;
-  --font-body:'Space Grotesk',sans-serif;
-}
-html,body{width:100%;height:100%;overflow:hidden;background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:300}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLUJOHN DIGITALS</title>
+    <meta
+      name="description"
+      content="OluJohn Digitals is a branding and software solutions agency in Lagos. Vision to Visibility — UI/UX design, web & mobile development, branding, digital marketing, and the OluJohn Academy."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="img/blue logo icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --navy: #0f1f4d;
+        --navy-deep: #0a1636;
+        --red: #c41e1e;
+        --red-dark: #8b1212;
+        --bg: #ffffff;
+        --bg-alt: #f6f7fa;
+        --gray: #5c6470;
+        --gray-light: #8a93a3;
+        --border: rgba(15, 31, 77, 0.1);
+        --nav-h: 76px;
+        --radius: 16px;
+        --shadow: 0 4px 24px rgba(15, 31, 77, 0.06);
+        --shadow-hover: 0 10px 32px rgba(15, 31, 77, 0.12);
+        --font: "Plus Jakarta Sans", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+        background: var(--bg);
+        color: var(--navy);
+        font-family: var(--font);
+        font-weight: 400;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-/* ══════════════════
-   PRELOADER
-══════════════════ */
-#preloader{
-  position:fixed;inset:0;z-index:9999;background:var(--black);
-  display:flex;align-items:center;justify-content:center;overflow:hidden;
-}
-#preloader .ct,#preloader .cb{
-  position:absolute;left:0;right:0;height:50%;background:var(--black);
-  transition:transform 1.1s cubic-bezier(.76,0,.24,1);z-index:2;
-}
-#preloader .ct{top:0}
-#preloader .cb{bottom:0}
-#preloader.exit .ct{transform:translateY(-100%)}
-#preloader.exit .cb{transform:translateY(100%)}
-.pl-logo{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.9rem}
-.pl-icon{opacity:0;transform:scale(.75);animation:plUp .7s cubic-bezier(.16,1,.3,1) .2s forwards}
-.pl-name{
-  font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.5rem);
-  letter-spacing:.14em;color:var(--white);line-height:1;
-  opacity:0;transform:translateY(16px);
-  animation:plUp .9s cubic-bezier(.16,1,.3,1) .45s forwards;
-}
-.pl-name .dot{color:var(--red)}
-.pl-line{width:0;height:2px;background:var(--red);animation:plLine .8s cubic-bezier(.16,1,.3,1) .7s forwards}
-.pl-tag{
-  font-family:var(--font-sub);font-size:.58rem;letter-spacing:.26em;
-  text-transform:uppercase;color:var(--gray-light);
-  opacity:0;animation:plUp .6s ease .9s forwards;
-}
-.pl-bar-wrap{width:160px;height:1px;background:rgba(248,246,242,.1);overflow:hidden;opacity:0;animation:plUp .4s ease 1.05s forwards}
-.pl-bar{height:100%;background:var(--red);width:0;animation:plFill 1.3s cubic-bezier(.4,0,.2,1) 1.1s forwards}
-@keyframes plUp{to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes plLine{to{width:100%}}
-@keyframes plFill{to{width:100%}}
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        background: var(--navy);
+        color: #fff;
+        padding: 0.8rem 1.4rem;
+        z-index: 9999;
+        font-size: 0.85rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
 
-/* ══════════════════
-   SITE
-══════════════════ */
-#site{opacity:0;transition:opacity .7s ease .15s;width:100%;height:100%}
-#site.visible{opacity:1}
+      /* ══════════════════ NAV ══════════════════ */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        height: 44px;
+        width: auto;
+        max-width: 100px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.25s;
+        position: relative;
+        padding: 0.3rem 0;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--navy);
+      }
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--red);
+        border-radius: 2px;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .nav-cta {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.5rem;
+        background: var(--red);
+        border: 1px solid var(--red);
+        border-radius: 100px;
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s,
+          transform 0.2s;
+      }
+      .nav-cta:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      .nav-partner {
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.65rem 1.4rem;
+        border: 1px solid var(--navy);
+        border-radius: 100px;
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+      }
+      .nav-partner:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: var(--navy);
+        cursor: pointer;
+      }
 
-/* ══════════════════
-   NAV
-══════════════════ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:998;height:var(--nav-h);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 3rem;
-  border-bottom:1px solid var(--border);
-  background:rgba(4,4,4,.92);backdrop-filter:blur(18px);
-}
-.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.nav-brand-text{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.1em;color:var(--white);line-height:1}
-.nav-brand-text em{color:var(--red);font-style:normal}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  font-family:var(--font-sub);font-size:.67rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s;
-}
-.nav-links a:hover{color:var(--white)}
-.nav-cta{
-  font-family:var(--font-sub);font-size:.65rem;font-weight:600;
-  letter-spacing:.14em;text-transform:uppercase;
-  padding:.52rem 1.4rem;border:1px solid var(--red);
-  color:var(--red);text-decoration:none;transition:background .25s,color .25s;
-}
-.nav-cta:hover{background:var(--red);color:var(--white)}
+      /* ══════════════════ HERO — split layout ══════════════════ */
+      #hero {
+        padding: calc(var(--nav-h) + 3.5rem) 3rem 4.5rem;
+        background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 3.5rem;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .hero-tagline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--red);
+        border: 1px solid rgba(196, 30, 30, 0.3);
+        border-radius: 100px;
+        padding: 0.5rem 1.1rem;
+        margin-bottom: 1.6rem;
+        background: rgba(196, 30, 30, 0.05);
+      }
+      .hero-tagline i {
+        font-size: 0.7rem;
+      }
+      .hero-hl {
+        font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        font-weight: 800;
+      }
+      .hero-hl .accent {
+        color: var(--red);
+      }
+      .hero-sub {
+        max-width: 520px;
+        font-size: 1.02rem;
+        color: var(--gray);
+        line-height: 1.75;
+        font-weight: 400;
+        margin: 1.5rem 0 2.2rem;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+      }
+      .btn-red {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        background: var(--red);
+        color: #fff;
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+        display: inline-block;
+        border: 1px solid var(--red);
+      }
+      .btn-red:hover {
+        background: var(--red-dark);
+        border-color: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        text-decoration: none;
+        transition:
+          background 0.25s,
+          color 0.25s;
+        display: inline-block;
+      }
+      .btn-outline:hover {
+        background: var(--navy);
+        color: #fff;
+      }
+      .hero-meta {
+        display: flex;
+        gap: 2.5rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--border);
+        padding-top: 2rem;
+      }
+      .hero-meta-num {
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1;
+      }
+      .hero-meta-num em {
+        color: var(--red);
+        font-style: normal;
+      }
+      .hero-meta-lbl {
+        font-size: 0.76rem;
+        color: var(--gray-light);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
 
-/* ══════════════════
-   SCROLL TRACK
-══════════════════ */
-#scroll-track{
-  position:fixed;right:0;top:var(--nav-h);bottom:0;width:var(--track-w);z-index:997;
-  display:flex;flex-direction:column;align-items:center;
-  background:rgba(4,4,4,.7);border-left:1px solid var(--border);
-}
-#scroll-rail{
-  flex:1;width:1px;background:rgba(248,246,242,.1);
-  position:relative;margin:.8rem 0;cursor:pointer;
-}
-#scroll-thumb{
-  position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:3px;background:var(--red);border-radius:2px;
-  min-height:30px;transition:top .1s linear;
-  cursor:grab;
-}
-#scroll-thumb:active{cursor:grabbing}
+      /* hero visual */
+      .hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 420px;
+      }
+      .hero-blob {
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(196, 30, 30, 0.14),
+          rgba(15, 31, 77, 0.1) 60%,
+          transparent 75%
+        );
+        z-index: 0;
+      }
+      .hero-photo {
+        position: relative;
+        z-index: 1;
+        width: 340px;
+        height: 420px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow-hover);
+        border: 6px solid #fff;
+      }
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-float-card {
+        position: absolute;
+        z-index: 2;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: var(--shadow-hover);
+        padding: 1rem 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .hf-1 {
+        top: 8%;
+        right: 2%;
+      }
+      .hf-2 {
+        bottom: 6%;
+        left: 0%;
+      }
+      .hf-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .hf-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+      }
+      .hf-sub {
+        font-size: 0.68rem;
+        color: var(--gray-light);
+        margin-top: 0.15rem;
+      }
 
-/* ══════════════════
-   FULLPAGE
-══════════════════ */
-#fp{
-  position:fixed;
-  top:var(--nav-h);left:0;
-  right:var(--track-w);bottom:0;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
-  scroll-behavior:smooth;
-}
-#fp::-webkit-scrollbar{display:none}
-#fp{-ms-overflow-style:none;scrollbar-width:none}
+      /* ══════════════════ TICKER ══════════════════ */
+      #ticker {
+        background: var(--navy);
+        padding: 1.1rem 0;
+        overflow: hidden;
+      }
+      .ticker-track {
+        display: flex;
+        animation: scroll 24s linear infinite;
+        width: max-content;
+      }
+      .ticker-item {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        padding: 0 2rem;
+        white-space: nowrap;
+      }
+      .ticker-dot {
+        color: var(--red);
+        margin: 0 0.3rem;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
 
-/* ══════════════════
-   PANEL
-══════════════════ */
-.panel{
-  width:100%;
-  height:calc(100vh - var(--nav-h));
-  scroll-snap-align:start;
-  position:relative;overflow:hidden;
-  display:flex;flex-direction:column;justify-content:center;
-}
+      /* ══════════════════ SECTION BASE ══════════════════ */
+      .section {
+        padding: 6rem 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .section-alt {
+        background: var(--bg-alt);
+      }
+      .section-alt-wrap {
+        background: var(--bg-alt);
+      }
+      .section-dark {
+        background: var(--navy);
+      }
+      .section-dark .s-title {
+        color: #fff;
+      }
+      .section-dark .s-sub {
+        color: rgba(255, 255, 255, 0.68);
+      }
+      .section-dark .proj {
+        background: #fff;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      .section-dark .why-title {
+        color: #fff;
+      }
+      .section-dark .why-desc {
+        color: rgba(255, 255, 255, 0.68);
+      }
+      .section-dark .why-ico {
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+      }
+      .section-dark .a-right {
+        background: #fff;
+      }
+      .academy-teaser-light {
+        background: #fff;
+        border: 1px solid var(--border);
+      }
+      .academy-teaser-light h3 {
+        color: var(--navy);
+      }
+      .academy-teaser-light p {
+        color: var(--gray);
+      }
+      .academy-teaser-light .btn-white {
+        background: var(--red);
+        color: #fff;
+      }
+      .academy-teaser-light .btn-white:hover {
+        background: var(--red-dark);
+      }
+      .eyebrow {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+      .s-title {
+        font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+      .s-sub {
+        font-size: 0.98rem;
+        color: var(--gray);
+        line-height: 1.75;
+        font-weight: 400;
+        max-width: 600px;
+      }
 
-/* ══════════════════
-   HERO
-══════════════════ */
-#hero{background:var(--black)}
-.hero-lines{
-  position:absolute;inset:0;pointer-events:none;
-  display:flex;justify-content:space-evenly;
-}
-.vl{width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,30,30,.14) 40%,rgba(196,30,30,.14) 60%,transparent)}
-.hero-meta{
-  position:absolute;top:1.8rem;left:3rem;right:3rem;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.hero-tag{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);
-  border:1px solid rgba(196,30,30,.35);padding:.28rem .85rem;
-}
-.hero-loc{font-family:var(--font-sub);font-size:.65rem;color:var(--gray);letter-spacing:.1em}
-.hero-body{padding:0 3rem;position:relative;z-index:2}
-.hero-hl{
-  font-family:var(--font-display);
-  font-size:clamp(3.5rem,9.5vw,10.5rem);
-  line-height:.9;letter-spacing:.04em;color:var(--white);
-}
-.hero-hl .accent{color:var(--red)}
-.hero-hl .outline{-webkit-text-stroke:1px rgba(248,246,242,.22);color:transparent}
-.hero-foot{
-  position:absolute;bottom:1.8rem;left:3rem;right:3rem;
-  display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;
-  border-top:1px solid var(--border);padding-top:1.4rem;
-}
-.hero-desc{max-width:340px;font-size:.88rem;color:var(--gray-light);line-height:1.75;font-weight:300}
-.hero-ctas{display:flex;gap:.75rem;flex-shrink:0}
+      /* ══════════════════ SERVICES — spacious cards ══════════════════ */
+      .svc-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .svc-card {
+        background: #fff;
+        padding: 2.2rem 1.8rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .svc-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .svc-ico {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: var(--bg-alt);
+        color: var(--red);
+        font-size: 1.3rem;
+        margin-bottom: 1.3rem;
+      }
+      .svc-lbl {
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.6rem;
+      }
+      .svc-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   BTNS
-══════════════════ */
-.btn-red{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;background:var(--red);color:var(--white);
-  text-decoration:none;transition:background .25s,transform .2s;display:inline-block;
-}
-.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
-.btn-ghost{
-  font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(248,246,242,.2);
-  color:var(--white);text-decoration:none;transition:border-color .25s,background .25s;display:inline-block;
-}
-.btn-ghost:hover{border-color:var(--white);background:rgba(248,246,242,.04)}
+      /* ══════════════════ WORK — spacious cards ══════════════════ */
+      .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .proj {
+        background: #fff;
+        padding: 2rem 1.8rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+        position: relative;
+      }
+      .proj:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .proj-cat {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: var(--red);
+        margin-bottom: 0.6rem;
+      }
+      .proj-name {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 0.5rem;
+      }
+      .proj-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
+      .proj-lnk {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--red);
+        text-decoration: none;
+        margin-top: 1rem;
+      }
+      .proj-lnk i {
+        font-size: 0.7rem;
+        transition: transform 0.3s;
+      }
+      .proj-lnk:hover i {
+        transform: translate(2px, -2px);
+      }
 
-/* ══════════════════
-   TICKER
-══════════════════ */
-#ticker{background:var(--red);overflow:hidden}
-.ticker-bg{
-  position:absolute;bottom:-1rem;left:0;right:0;text-align:center;
-  font-family:var(--font-display);font-size:18vw;color:rgba(255,255,255,.04);
-  line-height:1;pointer-events:none;white-space:nowrap;
-}
-.ticker-row{
-  display:flex;overflow:hidden;
-  border-top:1px solid rgba(255,255,255,.13);
-  border-bottom:1px solid rgba(255,255,255,.13);
-  padding:1.1rem 0;
-}
-.ticker-row+.ticker-row{margin-top:2.5rem}
-.ticker-track{display:flex;animation:scroll 18s linear infinite;width:max-content}
-.ticker-item{
-  font-family:var(--font-display);
-  font-size:clamp(2.5rem,4.5vw,4.5rem);
-  letter-spacing:.05em;color:var(--white);white-space:nowrap;padding:0 1.8rem;opacity:.9;
-}
-.t-sep{color:rgba(255,255,255,.3);margin:0 .2rem}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      /* ══════════════════ TEAM — spacious cards ══════════════════ */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .team-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        text-align: left;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .team-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .team-img {
+        width: 108px;
+        height: 108px;
+        border-radius: 50%;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        margin-bottom: 1.2rem;
+        overflow: hidden;
+      }
+      .team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+      }
+      /* Individual team member positioning */
+      .team-card:nth-child(1) .team-img img {
+        object-position: center 28%;
+      }
+      .team-card:nth-child(2) .team-img img {
+        object-position: center 50%;
+      }
+      .team-card:nth-child(4) .team-img img {
+        object-position: center 23%;
+      }
+      .team-card:nth-child(5) .team-img img {
+        object-position: center 40%;
+      }
+      .team-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.2rem;
+      }
+      .team-role {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--red);
+        margin-bottom: 0.8rem;
+      }
+      .team-bio {
+        font-size: 0.84rem;
+        color: var(--gray);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      .team-cta {
+        margin-top: 2rem;
+      }
 
-/* ══════════════════
-   INNER LAYOUT
-══════════════════ */
-.s-inner{
-  padding:0 3rem;height:100%;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.eyebrow{
-  font-family:var(--font-sub);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--red);margin-bottom:.9rem;display:block;
-}
-.s-title{
-  font-family:var(--font-display);
-  font-size:clamp(2.2rem,4.8vw,5rem);
-  letter-spacing:.04em;color:var(--white);line-height:.92;margin-bottom:2rem;
-}
-.s-title .ol{-webkit-text-stroke:1px rgba(248,246,242,.2);color:transparent}
+      /* ══════════════════ ABOUT / WHY US ══════════════════ */
+      .about-wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .why-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.8rem;
+      }
+      .why-row {
+        display: flex;
+        gap: 1.1rem;
+        align-items: flex-start;
+      }
+      .why-ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(196, 30, 30, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--red);
+        font-size: 1.05rem;
+        flex-shrink: 0;
+      }
+      .why-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.3rem;
+      }
+      .why-desc {
+        font-size: 0.86rem;
+        color: var(--gray);
+        line-height: 1.65;
+        font-weight: 400;
+      }
+      .a-right {
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+      .a-stat {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1.4rem;
+      }
+      .a-stat:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .a-num {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1;
+      }
+      .a-num em {
+        color: var(--red);
+        font-style: normal;
+      }
+      .a-lbl {
+        font-size: 0.78rem;
+        color: var(--gray-light);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
 
-/* ══════════════════
-   SERVICES
-══════════════════ */
-#services{background:var(--black)}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border)}
-.svc-grid+.svc-grid{margin-top:1px;border-top:none}
-.svc-card{padding:1.4rem 1.3rem;border-right:1px solid var(--border);transition:background .3s}
-.svc-card:last-child{border-right:none}
-.svc-card:hover{background:rgba(196,30,30,.06)}
-.svc-card:hover .svc-n{color:var(--red)}
-.svc-n{font-family:var(--font-display);font-size:1rem;color:rgba(248,246,242,.13);margin-bottom:.8rem;transition:color .3s}
-.svc-ico{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);color:var(--gray-light);font-size:.85rem;margin-bottom:.8rem}
-.svc-lbl{font-family:var(--font-sub);font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:.4rem}
-.svc-lbl a{color:inherit;text-decoration:none}
-.svc-desc{font-size:.73rem;color:var(--gray-light);line-height:1.6;font-weight:300}
+      /* ══════════════════ ACADEMY TEASER ══════════════════ */
+      .academy-teaser {
+        border-radius: var(--radius);
+        background: linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--navy-deep) 100%
+        );
+        padding: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        color: #fff;
+      }
+      .academy-teaser h3 {
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+        line-height: 1.15;
+        color: #fff;
+        font-weight: 800;
+      }
+      .academy-teaser p {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.7;
+        max-width: 420px;
+        margin-top: 0.8rem;
+        font-weight: 400;
+      }
+      .btn-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        background: #fff;
+        color: var(--navy);
+        text-decoration: none;
+        transition: opacity 0.25s;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      .btn-white:hover {
+        opacity: 0.9;
+      }
 
-/* ══════════════════
-   WORK
-══════════════════ */
-#work{background:#050505}
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.8rem}
-.proj{background:#050505;padding:1.6rem 1.5rem;transition:background .3s;position:relative;overflow:hidden}
-.proj::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.proj:hover{background:#0c0808}
-.proj:hover::after{transform:scaleX(1)}
-.proj-cat{font-family:var(--font-sub);font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
-.proj-name{font-family:var(--font-display);font-size:1.7rem;letter-spacing:.04em;color:var(--white);margin-bottom:.4rem}
-.proj-desc{font-size:.73rem;color:var(--gray-light);line-height:1.6;font-weight:300}
-.proj-lnk{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-sub);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);text-decoration:none;margin-top:.9rem}
-.proj-lnk i{font-size:.62rem;transition:transform .3s}
-.proj-lnk:hover i{transform:translate(2px,-2px)}
+      /* ══════════════════ TESTIMONIALS — spacious, no icons ══════════════════ */
+      .test-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        margin-top: 3rem;
+      }
+      .test-card {
+        background: #fff;
+        padding: 2.2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .test-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-4px);
+      }
+      .test-body {
+        font-size: 0.92rem;
+        color: var(--navy);
+        line-height: 1.8;
+        font-weight: 500;
+      }
+      .test-auth {
+        margin-top: 1.4rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--border);
+      }
+      .test-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .test-role {
+        font-size: 0.76rem;
+        color: var(--red);
+        margin-top: 0.2rem;
+        font-weight: 500;
+      }
 
-/* ══════════════════
-   ABOUT
-══════════════════ */
-#about{background:var(--black)}
-.about-wrap{padding:0 3rem;height:100%;display:flex;align-items:center;gap:4.5rem}
-.a-left{flex:1;min-width:0}
-.a-right{flex:0 0 310px;border:1px solid var(--border);padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem}
-.a-stat{border-bottom:1px solid var(--border);padding-bottom:1.4rem}
-.a-stat:last-child{border-bottom:none;padding-bottom:0}
-.a-num{font-family:var(--font-display);font-size:3.5rem;letter-spacing:.04em;color:var(--white);line-height:1}
-.a-num em{color:var(--red);font-style:normal}
-.a-lbl{font-family:var(--font-sub);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-light);margin-top:.25rem}
-.why-list{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.6rem}
-.why-row{display:flex;gap:.9rem;align-items:flex-start}
-.why-ico{width:28px;height:28px;border:1px solid rgba(196,30,30,.3);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:.82rem;flex-shrink:0;margin-top:.1rem}
-.why-title{font-family:var(--font-sub);font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:.2rem}
-.why-desc{font-size:.75rem;color:var(--gray-light);line-height:1.65;font-weight:300}
+      /* ══════════════════ CTA ══════════════════ */
+      #cta {
+        background: var(--red);
+        text-align: center;
+        padding: 6rem 3rem;
+      }
+      .cta-hl {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        color: #fff;
+        line-height: 1.1;
+        font-weight: 800;
+      }
+      .cta-sub {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 460px;
+        margin: 1.4rem auto 2rem;
+        line-height: 1.75;
+        font-weight: 400;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 0.9rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn-outline-white {
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 0.9rem 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.25s;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .cta-email {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 1.6rem;
+        font-weight: 500;
+      }
+      .cta-email a {
+        color: #fff;
+        text-decoration: underline;
+      }
 
-/* ══════════════════
-   TESTIMONIALS
-══════════════════ */
-#testimonials{background:#060404}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.8rem}
-.test-card{background:#060404;padding:1.8rem 1.8rem}
-.test-q{font-family:Georgia,serif;font-size:2.6rem;color:var(--red);opacity:.4;line-height:.8;margin-bottom:.7rem}
-.test-body{font-size:.8rem;color:var(--gray-light);line-height:1.8;font-style:italic;font-weight:300}
-.test-auth{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--border)}
-.test-name{font-family:var(--font-sub);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--white)}
-.test-role{font-size:.68rem;color:var(--red);letter-spacing:.08em;margin-top:.18rem}
+      /* ══════════════════ FOOTER ══════════════════ */
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3.5rem 3rem 1.8rem;
+      }
+      .ft-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2.5rem;
+        justify-content: space-between;
+        padding-bottom: 2.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .ft-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .ft-brand img {
+        height: 46px;
+        width: auto;
+        max-width: 46px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .ft-brand-text {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .ft-brand-sub {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+        font-weight: 500;
+      }
+      .ft-col-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 1rem;
+      }
+      .ft-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .ft-links a {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.25s;
+        font-weight: 400;
+      }
+      .ft-links a:hover {
+        color: #fff;
+      }
+      .ft-social {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+      .soc {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.25s,
+          color 0.25s,
+          background 0.25s;
+      }
+      .soc:hover {
+        border-color: var(--red);
+        color: #fff;
+        background: var(--red);
+      }
+      .ft-copy {
+        max-width: 1400px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding-top: 1.6rem;
+        font-weight: 400;
+      }
 
-/* ══════════════════
-   CTA
-══════════════════ */
-#cta{background:var(--red);flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.cta-bg{position:absolute;font-family:var(--font-display);font-size:26vw;color:rgba(0,0,0,.1);line-height:1;pointer-events:none;white-space:nowrap;top:50%;transform:translateY(-50%);z-index:0}
-.cta-hl{font-family:var(--font-display);font-size:clamp(2.8rem,7.5vw,8.5rem);letter-spacing:.04em;color:var(--white);line-height:.9;position:relative;z-index:1}
-.cta-sub{font-size:.9rem;color:rgba(255,255,255,.74);max-width:440px;margin:1.6rem auto 2.2rem;line-height:1.75;font-weight:300;position:relative;z-index:1}
-.cta-btns{display:flex;gap:.9rem;justify-content:center;position:relative;z-index:1}
-.btn-white{font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 1.8rem;background:var(--white);color:var(--red);text-decoration:none;display:inline-block;transition:opacity .25s}
-.btn-white:hover{opacity:.9}
-.btn-outline-white{font-family:var(--font-sub);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 1.8rem;border:1px solid rgba(255,255,255,.5);color:var(--white);text-decoration:none;display:inline-block;transition:background .25s}
-.btn-outline-white:hover{background:rgba(255,255,255,.12)}
-.cta-email{font-size:.74rem;color:rgba(255,255,255,.6);margin-top:1.6rem;position:relative;z-index:1;font-family:var(--font-sub);letter-spacing:.04em}
-.cta-email a{color:rgba(255,255,255,.88);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+      /* ══════════════════ REVEAL ══════════════════ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.1s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.2s;
+      }
 
-/* ══════════════════
-   FOOTER
-══════════════════ */
-#footer{
-  scroll-snap-align:start;background:var(--black);
-  min-height:calc(100vh - var(--nav-h));
-  display:flex;flex-direction:column;justify-content:center;
-}
-.ft-inner{
-  padding:2.8rem 3rem;
-  display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;
-  justify-content:space-between;
-  border-top:1px solid var(--border);
-}
-.ft-brand{display:flex;align-items:center;gap:.6rem}
-.ft-brand-text{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.08em;color:var(--white)}
-.ft-brand-text em{color:var(--red);font-style:normal}
-.ft-brand-sub{font-family:var(--font-sub);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:.2rem}
-.ft-links{display:flex;gap:1.8rem;list-style:none;flex-wrap:wrap}
-.ft-links a{font-family:var(--font-sub);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-light);text-decoration:none;transition:color .25s}
-.ft-links a:hover{color:var(--white)}
-.ft-social{display:flex;gap:.55rem}
-.soc{width:30px;height:30px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);text-decoration:none;font-size:.78rem;transition:border-color .25s,color .25s}
-.soc:hover{border-color:var(--red);color:var(--red)}
-.ft-copy{width:100%;font-family:var(--font-sub);font-size:.64rem;letter-spacing:.08em;color:var(--gray);padding-top:1.6rem;border-top:1px solid var(--border)}
+      /* ══════════════════ RESPONSIVE ══════════════════ */
+      @media (max-width: 1024px) {
+        nav {
+          padding: 0 1.2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        #hero,
+        .section,
+        #cta {
+          padding-left: 1.4rem;
+          padding-right: 1.4rem;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .hero-visual {
+          min-height: 320px;
+        }
+        .hero-photo {
+          width: 260px;
+          height: 320px;
+        }
+        .svc-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .proj-grid,
+        .team-grid,
+        .test-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-wrap {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .academy-teaser {
+          padding: 2.2rem;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+        .hero-meta {
+          gap: 1.6rem;
+        }
+        .nav-partner {
+          display: none;
+        }
+      }
 
-/* ══════════════════
-   PANEL REVEAL
-══════════════════ */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
-.in-view .reveal{opacity:1;transform:none}
-.reveal.d1{transition-delay:.1s}
-.reveal.d2{transition-delay:.22s}
-.reveal.d3{transition-delay:.34s}
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 1rem;
+          height: 70px;
+        }
+        .nav-brand img {
+          height: 40px;
+          max-width: 90px;
+        }
+        .nav-cta {
+          padding: 0.55rem 1.2rem;
+          font-size: 0.75rem;
+        }
+        #hero {
+          padding: calc(70px + 2rem) 1rem 2.5rem;
+        }
+        .section {
+          padding: 3.5rem 1rem;
+        }
+        #cta {
+          padding: 3.5rem 1rem;
+        }
+        .hero-hl {
+          font-size: clamp(1.8rem, 5vw, 2.8rem);
+        }
+        .s-title {
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
+        }
+        .hero-ctas {
+          flex-direction: column;
+          gap: 0.7rem;
+        }
+        .btn-red,
+        .btn-outline {
+          width: 100%;
+          text-align: center;
+        }
+        .hero-meta {
+          flex-direction: column;
+          gap: 1.2rem;
+        }
+        .svc-grid {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+        .svc-card {
+          padding: 1.5rem;
+        }
+        .hero-float-card {
+          padding: 0.8rem 1rem;
+          font-size: 0.9rem;
+        }
+        .hf-title {
+          font-size: 0.75rem;
+        }
+        .hf-sub {
+          font-size: 0.6rem;
+        }
+        .cta-hl {
+          font-size: clamp(1.6rem, 4vw, 2.4rem);
+        }
+        .cta-btns {
+          flex-direction: column;
+        }
+        .btn-white,
+        .btn-outline-white {
+          width: 100%;
+        }
+        .academy-teaser {
+          padding: 1.8rem;
+          gap: 1.2rem;
+        }
+        .academy-teaser h3 {
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
+        }
+        .academy-teaser p {
+          font-size: 0.85rem;
+        }
+      }
 
-/* ══════════════════
-   RESPONSIVE
-══════════════════ */
-@media(max-width:1024px){
-  html,body{overflow:auto}
-  #site{height:auto}
-  #fp{position:static;height:auto;right:0;overflow:visible;scroll-snap-type:none}
-  nav{padding:0 1.2rem}
-  .nav-links,.nav-cta{display:none}
-  #scroll-track{display:none}
-  .panel{height:auto;min-height:100svh;scroll-snap-align:none}
-  #hero{padding-bottom:1.5rem}
-  .hero-body{padding:2.5rem 1.5rem 1rem}
-  .hero-meta{display:none}
-  .hero-foot{position:static;flex-direction:column;align-items:flex-start;gap:1.2rem;margin:0 1.5rem 2rem;padding-top:1.4rem}
-  .hero-lines{display:none}
-  .s-inner,.about-wrap{padding:3rem 1.5rem}
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
-  .svc-card{border-bottom:1px solid var(--border)}
-  .proj-grid,.test-grid{grid-template-columns:1fr}
-  .about-wrap{flex-direction:column;gap:2.5rem}
-  .a-right{flex:none;width:100%}
-  .cta-btns{flex-direction:column;align-items:center}
-  .ft-inner{padding:2.2rem 1.5rem}
-  #footer{min-height:auto}
-}
-</style>
-</head>
-<body>
+      @media (max-width: 480px) {
+        nav {
+          height: 65px;
+          padding: 0 0.8rem;
+        }
+        .nav-brand img {
+          height: 36px;
+          max-width: 80px;
+        }
+        .nav-cta {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+        #hero {
+          padding: calc(65px + 1.5rem) 0.8rem 1.5rem;
+        }
+        .section {
+          padding: 2.5rem 0.8rem;
+        }
+        #cta {
+          padding: 2.5rem 0.8rem;
+        }
+        .hero-hl {
+          font-size: clamp(1.4rem, 4.5vw, 2rem);
+          line-height: 1.1;
+        }
+        .hero-sub {
+          font-size: 0.9rem;
+          margin: 1rem 0 1.5rem;
+        }
+        .s-title {
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          margin-bottom: 0.8rem;
+        }
+        .s-sub {
+          font-size: 0.85rem;
+        }
+        .eyebrow {
+          font-size: 0.75rem;
+          margin-bottom: 0.6rem;
+        }
+        .svc-card {
+          padding: 1.2rem 1rem;
+        }
+        .svc-lbl {
+          font-size: 0.9rem;
+        }
+        .svc-desc {
+          font-size: 0.8rem;
+        }
+        .proj-name {
+          font-size: 1.1rem;
+        }
+        .proj-desc {
+          font-size: 0.8rem;
+        }
+        .team-img {
+          width: 90px;
+          height: 90px;
+          margin-bottom: 0.8rem;
+        }
+        .team-name {
+          font-size: 0.95rem;
+        }
+        .team-role {
+          font-size: 0.7rem;
+        }
+        .team-bio {
+          font-size: 0.78rem;
+        }
+        .hero-meta-num {
+          font-size: 1.4rem;
+        }
+        .hero-meta-lbl {
+          font-size: 0.7rem;
+        }
+        .cta-hl {
+          font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+        }
+        .cta-sub {
+          font-size: 0.8rem;
+        }
+        .btn-red,
+        .btn-outline {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.8rem;
+        }
+        .test-card {
+          padding: 1.2rem;
+        }
+        .test-body {
+          font-size: 0.85rem;
+        }
+        .test-name {
+          font-size: 0.85rem;
+        }
+        .academy-teaser {
+          padding: 1.4rem;
+          gap: 0.8rem;
+        }
+        .academy-teaser h3 {
+          font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+        .academy-teaser p {
+          font-size: 0.8rem;
+          line-height: 1.6;
+        }
+      }
+    </style>
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- PRELOADER -->
-<div id="preloader">
-  <div class="ct"></div>
-  <div class="cb"></div>
-  <div class="pl-logo">
-    <div class="pl-icon">
-      <img src="img/olujohn-digitals-logo.png" style="height: 56px; width: 56px;" alt="OluJohn Digitals Logo">
-    </div>
-    <div class="pl-name">OLUJOHN<span class="dot">.</span>DIGITALS</div>
-    <div class="pl-line"></div>
-    <div class="pl-tag">Full-Service Digital Agency — Lagos, Nigeria</div>
-    <div class="pl-bar-wrap"><div class="pl-bar"></div></div>
-  </div>
-</div>
-
-<!-- SITE -->
-<div id="site">
-
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="nav-brand">
-      <!-- if the file is in an img/ folder -->
-<img src="img/olujohn-digitals-logo.png" style="height: 26px; width: 26px;" alt="OluJohn Digitals Logo">
-      <span class="nav-brand-text">OLUJOHN<em>.</em>DIGITALS</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://wa.me/2348180695247" class="nav-cta">Start a Project</a>
-  </nav>
-
-  <!-- SCROLL TRACK -->
-  <div id="scroll-track">
-    <div id="scroll-rail">
-      <div id="scroll-thumb"></div>
-    </div>
-  </div>
-
-  <!-- FULLPAGE -->
-  <div id="fp">
-
-    <!-- HERO -->
-    <div class="panel" id="hero">
-      <div class="hero-lines">
-        <div class="vl"></div><div class="vl"></div>
-        <div class="vl"></div><div class="vl"></div>
+    <!-- NAV -->
+    <nav>
+      <a
+        href="index.html"
+        class="nav-brand"
+        aria-label="OluJohn Digitals — Home"
+      >
+        <img src="img/blue logo.png" alt="OluJohn Digitals Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="projects.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="partner.html" class="nav-partner">Partner With Us</a>
+        <a href="https://wa.me/2348180695247" class="nav-cta"
+          >Start a Project</a
+        >
       </div>
-      <div class="hero-meta">
-        <span class="hero-tag">Full-Service Digital Agency</span>
-        <span class="hero-loc">Lagos, Nigeria — Serving Worldwide</span>
-      </div>
-      <div class="hero-body">
-        <div class="reveal">
-          <h1 class="hero-hl">WE BUILD<br/><span class="accent">DIGITAL</span><br/><span class="outline">PRODUCTS</span><br/>THAT WIN.</h1>
-        </div>
-      </div>
-      <div class="hero-foot">
-        <div class="reveal d1">
-          <!-- <p class="hero-desc">From brand identity to full-stack platforms — we design, build, and launch digital experiences that attract premium clients and drive real business growth.</p> -->
-        </div>
-        <div class="reveal d2">
-          <div class="hero-ctas">
-            <a href="https://wa.me/2348180695247" class="btn-red">Start a Project</a>
-            <a href="projects.html" class="btn-ghost">View Our Work</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-tagline reveal"
+              ><i class="fa-solid fa-compass"></i> Vision to Visibility</span
+            >
+            <h1 class="hero-hl reveal d1">
+              We build brands and<br />software that
+              <span class="accent">win</span>.
+            </h1>
+            <p class="hero-sub reveal d2">
+              OLUJOHN DIGITALS is a branding and software solutions agency in
+              Lagos. We design, build, and launch digital products and
+              identities that help businesses grow, plus train the next
+              generation of tech talent through the OLUJOHN DIGITALS ACADEMY.
+            </p>
+            <div class="hero-ctas reveal d2">
+              <a href="https://wa.me/2348180695247" class="btn-red"
+                >Start a Project</a
+              >
+              <a href="projects.html" class="btn-outline">View Our Work</a>
+            </div>
+            <div class="hero-meta reveal d2">
+              <div>
+                <div class="hero-meta-num">20<em>+</em></div>
+                <div class="hero-meta-lbl">Projects Delivered</div>
+              </div>
+              <div>
+                <div class="hero-meta-num">5<em>+</em></div>
+                <div class="hero-meta-lbl">Years of Experience</div>
+              </div>
+              <div>
+                <div class="hero-meta-num">6</div>
+                <div class="hero-meta-lbl">Team Members</div>
+              </div>
+              <div>
+                <div class="hero-meta-num">100<em>%</em></div>
+                <div class="hero-meta-lbl">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual reveal d2">
+            <div class="hero-blob"></div>
+            <div class="hero-photo">
+              <img
+                src="img/location pic.jpeg"
+                alt="John Olumoye, Founder & CEO of OluJohn Digitals, at work"
+              />
+            </div>
+            <div class="hero-float-card hf-1">
+              <div class="hf-icon">
+                <i class="fa-solid fa-face-smile"></i>
+              </div>
+              <div>
+                <div class="hf-title">100% Satisfaction</div>
+                <div class="hf-sub">Across 20+ projects</div>
+              </div>
+            </div>
+            <div class="hero-float-card hf-2">
+              <div class="hf-icon"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <div class="hf-title">Team of 6</div>
+                <div class="hf-sub">Designers & engineers</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- TICKER -->
-    <div class="panel" id="ticker" style="margin-bottom: 30px;">
-      <div class="ticker-bg">DIGITAL</div>
-      <div class="ticker-row">
+      <!-- TICKER -->
+      <div id="ticker">
         <div class="ticker-track">
-          <span class="ticker-item">UI/UX Design <span class="t-sep">/</span></span>
-          <span class="ticker-item">Web Development <span class="t-sep">/</span></span>
-          <span class="ticker-item">Mobile Apps <span class="t-sep">/</span></span>
-          <span class="ticker-item">Backend Systems <span class="t-sep">/</span></span>
-          <span class="ticker-item">Brand Identity <span class="t-sep">/</span></span>
-          <span class="ticker-item">SEO Strategy <span class="t-sep">/</span></span>
-          <span class="ticker-item">UI/UX Design <span class="t-sep">/</span></span>
-          <span class="ticker-item">Web Development <span class="t-sep">/</span></span>
-          <span class="ticker-item">Mobile Apps <span class="t-sep">/</span></span>
-          <span class="ticker-item">Backend Systems <span class="t-sep">/</span></span>
-          <span class="ticker-item">Brand Identity <span class="t-sep">/</span></span>
-          <span class="ticker-item">SEO Strategy <span class="t-sep">/</span></span>
+          <span class="ticker-item"
+            >Brand Identity <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Web Development <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Mobile Apps <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >UI/UX Design <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Digital Marketing <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Tech Academy <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Cloud Hosting <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Brand Identity <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Web Development <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Mobile Apps <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >UI/UX Design <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Digital Marketing <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Tech Academy <span class="ticker-dot">✦</span></span
+          >
+          <span class="ticker-item"
+            >Cloud Hosting <span class="ticker-dot">✦</span></span
+          >
         </div>
       </div>
-      <div class="ticker-row">
-        <div class="ticker-track" style="animation-direction:reverse">
-          <span class="ticker-item">Cloud Hosting <span class="t-sep">/</span></span>
-          <span class="ticker-item">Digital Marketing <span class="t-sep">/</span></span>
-          <span class="ticker-item">Rebranding <span class="t-sep">/</span></span>
-          <span class="ticker-item">Project Management <span class="t-sep">/</span></span>
-          <span class="ticker-item">Media Production <span class="t-sep">/</span></span>
-          <span class="ticker-item">Cloud Hosting <span class="t-sep">/</span></span>
-          <span class="ticker-item">Digital Marketing <span class="t-sep">/</span></span>
-          <span class="ticker-item">Rebranding <span class="t-sep">/</span></span>
-          <span class="ticker-item">Project Management <span class="t-sep">/</span></span>
-          <span class="ticker-item">Media Production <span class="t-sep">/</span></span>
-        </div>
-      </div>
-    </div>
 
-    <!-- SERVICES -->
-    <div class="panel" id="services">
-      <div class="s-inner" style="margin: 100px 0;">
-        <div class="reveal" style="margin-top: 80px;">
-          <span class="eyebrow">What We Do</span>
-          <h2 class="s-title">EVERYTHING YOUR<br/>BUSINESS NEEDS<br/><span class="ol">TO GROW.</span></h2>
-        </div>
-        <div class="svc-grid reveal d1">
-
-          <!-- 01 Brand Identity Design -->
-          <div class="svc-card">
-            <div class="svc-n">01</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M7 15L10.5 7L14 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M8.2 12.5H12.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="servicebrand-id.html">Brand Identity Design</a></div>
-            <p class="svc-desc">Logos, fonts, colors, and brand systems that make your business impossible to forget.</p>
-          </div>
-
-          <!-- 02 Web Design & Development -->
-          <div class="svc-card">
-            <div class="svc-n">02</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1.5" y="3.5" width="19" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M7 18.5H15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M11 16.5V18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M6 9L8.5 11L6 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10.5 13H14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="serviceweb.html">Web Design & Development</a></div>
-            <p class="svc-desc">Sleek, responsive websites tailored to convert and impress your target audience.</p>
-          </div>
-
-          <!-- 03 UI/UX & Graphics Design -->
-          <div class="svc-card">
-            <div class="svc-n">03</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="1.5" width="10" height="14" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
-                <rect x="9" y="6.5" width="10" height="14" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M6 5.5H10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-                <path d="M6 8H9" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-                <path d="M12 10.5H16" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-                <path d="M12 13H15" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="serviceuiux.html">UI/UX & Graphics Design</a></div>
-            <p class="svc-desc">High-quality user interface visuals for web and app — eye-catching graphics that amplify your brand.</p>
-          </div>
-
-          <!-- 04 Digital Marketing Strategy -->
-          <div class="svc-card">
-            <div class="svc-n">04</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 16L7 10.5L10.5 13.5L14.5 8L20 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="20" cy="5" r="1.5" fill="currentColor"/>
-                <path d="M2 19.5H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="servicedms.html">Digital Marketing Strategy</a></div>
-            <p class="svc-desc">Growing your online presence through smart social media, email, and content strategies.</p>
-          </div>
-
-        </div>
+      <!-- SERVICES -->
+      <section class="section">
+        <span class="eyebrow reveal">What We Do</span>
+        <h2 class="s-title reveal d1">
+          Everything your business needs to grow.
+        </h2>
+        <p class="s-sub reveal d1">
+          From your first logo to a production-grade platform. One team, no
+          handoffs.
+        </p>
         <div class="svc-grid reveal d2">
-
-          <!-- 05 Business Rebranding -->
           <div class="svc-card">
-            <div class="svc-n">05</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 11C4 7.13 7.13 4 11 4C13.5 4 15.7 5.28 17 7.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M18 11C18 14.87 14.87 18 11 18C8.5 18 6.3 16.72 5 14.78" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M17 4.5V7.5H14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 17.5V14.5H8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="servicebusiness.html">Business Rebranding</a></div>
-            <p class="svc-desc">Breathe new life into your business with a complete visual and strategic identity overhaul.</p>
+            <div class="svc-ico"><i class="fa-solid fa-palette"></i></div>
+            <div class="svc-lbl">Brand Identity Design</div>
+            <p class="svc-desc">
+              Logos, fonts, colors, and brand systems that make your business
+              impossible to forget.
+            </p>
           </div>
-
-          <!-- 06 Project Management & Consulting -->
           <div class="svc-card">
-            <div class="svc-n">06</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1.5" y="1.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
-                <rect x="12.5" y="1.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
-                <rect x="1.5" y="12.5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M12.5 16.5H20.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M16.5 12.5V20.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="svc-lbl"><a href="servicepmc.html">Project Management & Consulting</a></div>
-            <p class="svc-desc">Structured guidance to launch, manage, and scale your business projects effectively.</p>
+            <div class="svc-ico"><i class="fa-solid fa-display"></i></div>
+            <div class="svc-lbl">Web Design & Development</div>
+            <p class="svc-desc">
+              Sleek, responsive websites tailored to convert and impress your
+              target audience.
+            </p>
           </div>
-
-          <!-- 07 Media Production -->
           <div class="svc-card">
-            <div class="svc-n">07</div>
             <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1.5" y="4.5" width="13" height="13" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M14.5 8.5L20 6V16L14.5 13.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="7" cy="11" r="2" stroke="currentColor" stroke-width="1.1"/>
-              </svg>
+              <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
-            <div class="svc-lbl"><a href="servicemedia.html">Media Production</a></div>
-            <p class="svc-desc">Engaging short videos and brand stories that boost visibility and connect with your audience.</p>
+            <div class="svc-lbl">UI/UX & Graphics Design</div>
+            <p class="svc-desc">
+              High-quality interface visuals for web and app. Eye-catching
+              graphics that amplify your brand.
+            </p>
           </div>
-
-          <!-- 08 Cloud Hosting & DevOps -->
           <div class="svc-card">
-            <div class="svc-n">08</div>
-            <div class="svc-ico">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 15.5C3.8 15.5 2 13.7 2 11.5C2 9.5 3.5 7.8 5.4 7.55C5.8 5.6 7.5 4 9.6 4C11.4 4 12.9 5.1 13.6 6.6C13.9 6.55 14.2 6.5 14.5 6.5C16.9 6.5 18.9 8.3 19 10.7C19.5 11 20 11.7 20 12.5C20 13.9 18.9 15 17.5 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M11 12V19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M8.5 14.5L11 12L13.5 14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <div class="svc-ico"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="svc-lbl">Digital Marketing Strategy</div>
+            <p class="svc-desc">
+              Growing your online presence through smart social, email, and
+              content strategies.
+            </p>
+          </div>
+        </div>
+        <div class="reveal d2" style="margin-top: 2rem">
+          <a
+            href="services.html"
+            class="btn-outline"
+            style="padding: 0.7rem 1.6rem; font-size: 0.8rem"
+            >View All Services
+            <i class="fa-solid fa-arrow-right" style="margin-left: 0.35rem"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <span class="eyebrow reveal">Selected Work</span>
+          <h2 class="s-title reveal d1">
+            Products we've built. Businesses we've grown.
+          </h2>
+          <div class="proj-grid reveal d2">
+            <div class="proj">
+              <div class="proj-cat">Fintech · Crypto Platform</div>
+              <div class="proj-name">BBanking</div>
+              <p class="proj-desc">
+                Simplified crypto and borderless banking — clean, fast interface
+                for users who want financial tools without complexity.
+              </p>
+              <a
+                href="https://bbanking.capital"
+                target="_blank"
+                class="proj-lnk"
+                >View Project <i class="fa-solid fa-arrow-up-right"></i
+              ></a>
             </div>
-            <div class="svc-lbl">Cloud Hosting & DevOps</div>
-            <p class="svc-desc">Deploy, configure, and manage your infrastructure — fast, secure, and always online.</p>
+            <div class="proj">
+              <div class="proj-cat">SaaS · Point of Sale</div>
+              <div class="proj-name">KwiikPOS</div>
+              <p class="proj-desc">
+                Offline-first POS & inventory system. Record sales, track stock,
+                manage staff, with automatic cloud sync.
+              </p>
+              <a href="https://kwiikpos.com" target="_blank" class="proj-lnk"
+                >View Project <i class="fa-solid fa-arrow-up-right"></i
+              ></a>
+            </div>
+            <div class="proj">
+              <div class="proj-cat">Loan Management System</div>
+              <div class="proj-name">BOA Automate</div>
+              <p class="proj-desc">
+                Branch Operation Automation — the all-in-one platform for
+                savings and loans institutions.
+              </p>
+              <a href="https://boaautomate.com" target="_blank" class="proj-lnk"
+                >View Project <i class="fa-solid fa-arrow-up-right"></i
+              ></a>
+            </div>
           </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- WORK -->
-    <div class="panel" id="work" style="height:auto;min-height:calc(100vh - var(--nav-h));overflow:visible;">
-      <div class="s-inner" style="padding-top:2.5rem;padding-bottom:2.5rem;justify-content:flex-start;">
-        <div class="reveal">
-          <span class="eyebrow">Selected Work</span>
-          <h2 class="s-title" style="margin-bottom:0">PRODUCTS WE'VE BUILT.<br/><span class="ol">BUSINESSES WE'VE GROWN.</span></h2>
-        </div>
-        <div class="proj-grid reveal d1">
-          <div class="proj"><div class="proj-cat">Fintech · Crypto Platform</div><div class="proj-name">BBanking</div><p class="proj-desc">Simplified crypto and borderless banking — clean, fast interface designed for users who want financial tools without complexity.</p><a href="https://bbanking.capital" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
-          <div class="proj"><div class="proj-cat">Fintech · Payments</div><div class="proj-name">Apollo Pay</div><p class="proj-desc">A streamlined payment platform designed for simplicity and trust — users transact quickly with full confidence.</p><a href="https://apollopay.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
-          <div class="proj"><div class="proj-cat">SaaS · Social Platform</div><div class="proj-name">Companiox</div><p class="proj-desc">A social media SaaS platform in final stages — built for teams who want focused, distraction-free collaboration.</p><a href="projects.html" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
-          <div class="proj"><div class="proj-cat">WEB & Mobile App</div><div class="proj-name">Kwiikpos</div><p class="proj-desc">POS & inventory system that works 100% offline. Record sales, track stock, manage staff — with automatic cloud sync the moment you're back online.</p><a href="https://kwiikpos.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
-          <div class="proj"><div class="proj-cat">Loan Management System</div><div class="proj-name">BOAAUTOMATE</div><p class="proj-desc">Branch Operation Automation. Sign in. The all in one ultimate website for your savings and loans.</p><a href="https://boaautomate.com" target="_blank" class="proj-lnk">View Project <i class="fa-regular fa-arrow-up-right"></i></a></div>
-          <div class="proj"><div class="proj-cat">Project Management</div><div class="proj-name">Companiox PM</div><p class="proj-desc">End-to-end project management consultation that brought this SaaS from concept to production-ready launch.</p><a href="projects.html" target="_blank" class="proj-lnk">View Project <i class("fa-regular fa-arrow-up-right"></i></a></div>
-        </div>
-        <div class="reveal d2" style="margin-top:1.4rem">
-          <a href="projects.html" class="btn-ghost" style="font-size:.62rem">View All Projects <i class="fa-regular fa-arrow-right" style="margin-left:.35rem"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ABOUT -->
-    <div class="panel" id="about">
-      <div class="about-wrap">
-        <div class="a-left reveal">
-          <span class="eyebrow">Why OluJohn Digitals</span>
-          <h2 class="s-title" style="margin-bottom:1.6rem">WE DON'T JUST<br/>BUILD WEBSITES.<br/><span class="ol">WE BUILD BUSINESSES.</span></h2>
-          <div class="why-list">
-            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-layer-group"></i></div><div><div class="why-title">Full-Stack In-House</div><p class="why-desc">Design, development, SEO, and hosting — all under one roof. No handoffs, no delays.</p></div></div>
-            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-rocket-launch"></i></div><div><div class="why-title">Founder-Level Thinking</div><p class="why-desc">We think about your product like owners, not contractors. Strategy first, execution always.</p></div></div>
-            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-globe"></i></div><div><div class="why-title">Global Standards, African Roots</div><p class="why-desc">Based in Lagos. Delivering to clients across Africa, UK, Canada, and beyond.</p></div></div>
-            <div class="why-row"><div class="why-ico"><i class="fa-regular fa-handshake"></i></div><div><div class="why-title">Long-Term Partnership</div><p class="why-desc">Ongoing maintenance, feature updates, and growth support. Our clients don't leave.</p></div></div>
+          <div class="reveal d2" style="margin-top: 2rem">
+            <a
+              href="projects.html"
+              class="btn-outline"
+              style="padding: 0.7rem 1.6rem; font-size: 0.8rem"
+              >View All Projects
+              <i
+                class="fa-solid fa-arrow-right"
+                style="margin-left: 0.35rem"
+              ></i
+            ></a>
           </div>
         </div>
-        <div class="a-right reveal d1">
-          <div class="a-stat"><div class="a-num">20<em>+</em></div><div class="a-lbl">Projects Delivered</div></div>
-          <div class="a-stat"><div class="a-num">5<em>+</em></div><div class="a-lbl">Years of Experience</div></div>
-          <div class="a-stat"><div class="a-num">100<em>%</em></div><div class="a-lbl">Client Satisfaction</div></div>
-          <div style="padding-top:1.4rem;border-top:1px solid var(--border)">
-            <p style="font-size:.78rem;color:var(--gray-light);line-height:1.75;font-style:italic;font-weight:300">"From branding to production-grade SaaS — OluJohn Digitals is the agency we wish we'd found sooner."</p>
-            <p style="font-size:.68rem;color:var(--red);margin-top:.65rem;font-family:var(--font-sub);letter-spacing:.08em">— CEO, BorderlessBanking</p>
+      </section>
+
+      <!-- MEET THE TEAM -->
+      <section class="section">
+        <span class="eyebrow reveal">The People</span>
+        <h2 class="s-title reveal d1">Meet the team behind the work.</h2>
+        <p class="s-sub reveal d1">
+          A team of six designers, engineers, and strategists. Full bios on the
+          <a
+            href="about.html"
+            style="color: var(--red); text-decoration: underline"
+            >About page</a
+          >.
+        </p>
+        <div class="team-grid reveal d2">
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/ceo-john-olumoye.jpg" alt="John Olumoye" />
+            </div>
+            <div class="team-name">John Olumoye</div>
+            <div class="team-role">Co-founder & CEO</div>
+            <p class="team-bio">
+              Full-stack engineer and brand strategist who has built and sold a
+              SaaS company.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img
+                src="img/co-founder-joshua-olumoye.jpg"
+                alt="Joshua Olumoye"
+              />
+            </div>
+            <div class="team-name">Joshua Olumoye</div>
+            <div class="team-role">Co-founder & Solutions Architect</div>
+            <p class="team-bio">
+              Architects scalable digital solutions bridging business goals with
+              robust engineering.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/daniel.png" alt="Daniel Oguniyi" />
+            </div>
+            <div class="team-name">Daniel Oguniyi</div>
+            <div class="team-role">Lead, Mobile App Development</div>
+            <p class="team-bio">
+              Specialist in React Native and cross-platform mobile app
+              development.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/Timipicture.jpg" alt="Timi Oyewale" />
+            </div>
+            <div class="team-name">Timi Oyewale</div>
+            <div class="team-role">Lead, UI/UX Design</div>
+            <p class="team-bio">
+              Leads interface and experience design across client projects and
+              the Academy.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/midegrapgics.jpg" alt="Ayomide Adefela" />
+            </div>
+            <div class="team-name">Ayomide Adefela</div>
+            <div class="team-role">Lead, Graphics Design</div>
+            <p class="team-bio">
+              Leads visual and graphics design work, from brand assets to
+              marketing creatives.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-img">
+              <img src="img/victor image.png" alt="Victor Oyedeji" />
+            </div>
+            <div class="team-name">Victor Oyedeji</div>
+            <div class="team-role">Lead, Social Media/Digital Marketing</div>
+            <p class="team-bio">
+              Leads social media and digital marketing strategy across client
+              accounts.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- TESTIMONIALS -->
-    <div class="panel" id="testimonials">
-      <div class="s-inner">
-        <div class="reveal">
-          <span class="eyebrow">Client Testimonials</span>
-          <h2 class="s-title" style="margin-bottom:0">TRUSTED BY FOUNDERS<br/><span class="ol">ACROSS INDUSTRIES.</span></h2>
-        </div>
-        <div class="test-grid reveal d1">
-          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">OluJohn Digitals took my idea and turned it into reality. They built a professional and user-friendly web app where people can buy virtual cards and access financial services seamlessly. The journey from concept to launch was handled with excellence.</p><div class="test-auth"><div class="test-name">Colibrie</div><div class="test-role">CEO, BorderlessBanking</div></div></div>
-          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">I wanted my footwear brand to stand out, and OluJohn Digitals delivered beyond expectations. From designing my logo to developing a consistent brand identity, their creativity and professionalism brought Simi Footwear to life.</p><div class="test-auth"><div class="test-name">Simi</div><div class="test-role">CEO, Simi Footwear</div></div></div>
-          <div class="test-card"><div class="test-q">&ldquo;</div><p class="test-body">Starting a brand from scratch can be overwhelming, but OluJohn Digitals made it effortless. They built my brand identity and successfully developed both the web and mobile app for Owlist. Truly a top-notch experience.</p><div class="test-auth"><div class="test-name">Ola</div><div class="test-role">CEO, Owlist</div></div></div>
-        </div>
-        <div class="reveal d2" style="margin-top:1.8rem">
-          <a href="https://calendly.com/olumoyepelumi1" target="_blank" class="btn-ghost" style="font-size:.62rem">Schedule a Meeting <i class="fa-regular fa-calendar" style="margin-left:.35rem"></i></a>
-        </div>
-      </div>
-    </div>
+      <!-- ABOUT / WHY US -->
+      <section class="section-alt-wrap">
+        <div class="section">
+          <div class="about-wrap">
+            <div class="reveal">
+              <span class="eyebrow">Why OLUJOHN DIGITALS</span>
+              <h2 class="s-title" style="margin-bottom: 1.6rem">
+                We don't just build websites.<br />We build businesses.
+              </h2>
+              <div class="why-list">
+                <div class="why-row">
+                  <div class="why-ico">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div>
+                  <div>
+                    <div class="why-title">Full-Stack In-House</div>
+                    <p class="why-desc">
+                      Design, development, SEO, and hosting. All under one roof.
+                      No handoffs, no delays.
+                    </p>
+                  </div>
+                </div>
+                <div class="why-row">
+                  <div class="why-ico"><i class="fa-solid fa-rocket"></i></div>
+                  <div>
+                    <div class="why-title">Founder-Level Thinking</div>
+                    <p class="why-desc">
+                      We think about your product like owners, not contractors.
+                      Strategy first, execution always.
+                    </p>
+                  </div>
+                </div>
+                <div class="why-row">
+                  <div class="why-ico">
+                    <i class="fa-solid fa-earth-africa"></i>
+                  </div>
+                  <div>
+                    <div class="why-title">Global Standards, African Roots</div>
+                    <p class="why-desc">
+                      Based in Lagos. Delivering to clients across Africa, UK,
+                      Canada, and beyond.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="a-right reveal d1">
+              <div class="a-stat">
+                <div class="a-num">20<em>+</em></div>
+                <div class="a-lbl">Projects Delivered</div>
+              </div>
+              <div class="a-stat">
+                <div class="a-num">5<em>+</em></div>
+                <div class="a-lbl">Years of Experience</div>
+              </div>
+              <div class="a-stat">
+                <div class="a-num">100<em>%</em></div>
+                <div class="a-lbl">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
 
-    <!-- CTA -->
-    <div class="panel" id="cta">
-      <div class="cta-bg">TALK</div>
-      <h2 class="cta-hl reveal">READY TO<br/>BUILD SOMETHING<br/>GREAT?</h2>
-      <p class="cta-sub reveal d1">Tell us what you're building. We'll handle everything from design to deployment — and make sure it's done right.</p>
-      <div class="cta-btns reveal d2">
-        <a href="https://wa.me/2348180695247" class="btn-white">Start on WhatsApp</a>
-        <a href="https://calendly.com/olumoyepelumi1" class="btn-outline-white" target="_blank">Schedule a Call</a>
-      </div>
-      <p class="cta-email reveal d3">Or email us at <a href="mailto:olujohndigitals@gmail.com">olujohndigitals@gmail.com</a></p>
-    </div>
+          <!-- ACADEMY TEASER -->
+          <div class="academy-teaser reveal d2">
+            <div>
+              <h3>Learn tech with the<br />OLUJOHN DIGITALS ACADEMY.</h3>
+              <p>
+                Frontend, Backend, and UI/UX tracks taught by the same team
+                building production software for real clients. Sign up as a tech
+                aspirant and learn by building.
+              </p>
+            </div>
+            <a href="academy.html" class="btn-white"
+              >Explore the Academy
+              <!-- <i
+                class="fa-regular fa-arrow-right"
+                style="margin-left: 0.4rem"
+              ></i> -->
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section">
+        <span class="eyebrow reveal">Client Testimonials</span>
+        <h2 class="s-title reveal d1">
+          Trusted by founders across industries.
+        </h2>
+        <div class="test-grid reveal d2">
+          <div class="test-card">
+            <p class="test-body">
+              "OluJohn Digitals took my idea and turned it into reality — a
+              professional, user-friendly web app handled with excellence from
+              concept to launch."
+            </p>
+            <div class="test-auth">
+              <div class="test-name">Colibrie</div>
+              <div class="test-role">CEO, BorderlessBanking</div>
+            </div>
+          </div>
+          <div class="test-card">
+            <p class="test-body">
+              "From designing my logo to developing a consistent brand identity,
+              their creativity and professionalism brought Simi Footwear to
+              life."
+            </p>
+            <div class="test-auth">
+              <div class="test-name">Simi</div>
+              <div class="test-role">CEO, Simi Footwear</div>
+            </div>
+          </div>
+          <div class="test-card">
+            <p class="test-body">
+              "Starting a brand from scratch can be overwhelming, but OluJohn
+              Digitals made it effortless — truly a top-notch experience."
+            </p>
+            <div class="test-auth">
+              <div class="test-name">Ola</div>
+              <div class="test-role">CEO, Owlist</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta">
+        <h2 class="cta-hl reveal">Ready to build<br />something great?</h2>
+        <p class="cta-sub reveal d1">
+          Tell us what you're building. We'll handle everything from design to
+          deployment, and make sure it's done right.
+        </p>
+        <div class="cta-btns reveal d2">
+          <a href="https://wa.me/2348180695247" class="btn-white"
+            >Start on WhatsApp</a
+          >
+          <a
+            href="https://calendly.com/olumoyepelumi1"
+            target="_blank"
+            class="btn-outline-white"
+            >Schedule a Call</a
+          >
+        </div>
+        <p class="cta-email reveal d2">
+          Or email us at
+          <a href="mailto:olujohndigitals@gmail.com"
+            >olujohndigitals@gmail.com</a
+          >
+        </p>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="footer">
+    <footer>
       <div class="ft-inner">
-        <div class="ft-brand">
-            <img src="img/olujohn-digitals-logo.png" style="height:35px;width:35px;" alt="OluJohn Digitals Logo"/>
-          <div>
-            <div class="ft-brand-text">OLUJOHN<em>.</em>DIGITALS</div>
-            <div class="ft-brand-sub">Full-Service Digital Agency</div>
+        <div style="flex: 1; min-width: 240px">
+          <div class="ft-brand">
+            <img src="img/white logo icon.png" alt="OluJohn Digitals Logo" />
+            <div>
+              <div class="ft-brand-text">OLUJOHN DIGITALS</div>
+              <div class="ft-brand-sub">
+                Branding & Software Solutions Agency
+              </div>
+            </div>
+          </div>
+          <div class="ft-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578561470869"
+              class="soc"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/olujohn_digitals/"
+              class="soc"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://x.com/olujohndigitals?s=09"
+              class="soc"
+              target="_blank"
+              aria-label="X (Twitter)"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/olujohndigitals/"
+              class="soc"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@olujohndigitals"
+              class="soc"
+              target="_blank"
+              aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
           </div>
         </div>
-        <ul class="ft-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Agency</a></li>
-          <li><a href="projects.html">Our Work</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="ft-social">
-          <a href="https://www.facebook.com/profile.php?id=61578561470869" class="soc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/olujohn_digitals/" class="soc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://x.com/olujohndigitals?s=09" class="soc" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/olujohndigitals/" class="soc" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <div>
+          <div class="ft-col-title">Navigate</div>
+          <ul class="ft-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="projects.html">Work</a></li>
+          </ul>
         </div>
-        <p class="ft-copy">© 2020 - 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving clients worldwide.</p>
+        <div>
+          <div class="ft-col-title">Company</div>
+          <ul class="ft-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partner.html">Partner With Us</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+      <p class="ft-copy">
+        © 2026 OluJohn Digitals. All rights reserved. Lagos, Nigeria — Serving
+        clients worldwide.
+      </p>
+    </footer>
 
-  </div><!-- /#fp -->
-</div><!-- /#site -->
-
-<script>
-/* ── PRELOADER ── */
-(function(){
-  const pre  = document.getElementById('preloader');
-  const site = document.getElementById('site');
-
-  function launch(){
-    pre.classList.add('exit');
-    setTimeout(()=>{ site.classList.add('visible'); }, 500);
-    setTimeout(()=>{
-      pre.style.display = 'none';
-      activatePanel(document.getElementById('hero'));
-      initScroll();
-    }, 1300);
-  }
-
-  if(document.fonts && document.fonts.ready){
-    document.fonts.ready.then(()=> setTimeout(launch, 2700));
-  } else {
-    setTimeout(launch, 2700);
-  }
-})();
-
-/* ── ACTIVATE PANEL ── */
-function activatePanel(el){
-  if(!el) return;
-  el.classList.add('in-view');
-}
-
-/* ── SCROLL ENGINE ── */
-function initScroll(){
-  const fp    = document.getElementById('fp');
-  const rail  = document.getElementById('scroll-rail');
-  const thumb = document.getElementById('scroll-thumb');
-  if(!fp || !rail || !thumb) return;
-
-  /* Thumb sizing & position */
-  function syncThumb(){
-    const sH = fp.scrollHeight, cH = fp.clientHeight, rH = rail.clientHeight;
-    if(sH <= cH) return;
-    const tH  = Math.max(32, (cH/sH)*rH);
-    const top = (fp.scrollTop/(sH-cH))*(rH-tH);
-    thumb.style.height = tH+'px';
-    thumb.style.top    = top+'px';
-  }
-  fp.addEventListener('scroll', syncThumb, {passive:true});
-  window.addEventListener('resize', syncThumb);
-  syncThumb();
-
-  /* Click rail */
-  rail.addEventListener('click', e=>{
-    if(e.target===thumb) return;
-    const r     = rail.getBoundingClientRect();
-    const ratio = (e.clientY - r.top) / rail.clientHeight;
-    fp.scrollTo({top: ratio*(fp.scrollHeight-fp.clientHeight), behavior:'smooth'});
-  });
-
-  /* Drag thumb */
-  let drag=false, sy=0, ss=0;
-  thumb.addEventListener('mousedown', e=>{
-    drag=true; sy=e.clientY; ss=fp.scrollTop;
-    document.body.style.userSelect='none'; e.preventDefault();
-  });
-  document.addEventListener('mousemove', e=>{
-    if(!drag) return;
-    const rH=rail.clientHeight, tH=parseFloat(thumb.style.height)||40;
-    fp.scrollTop = ss + ((e.clientY-sy)/(rH-tH))*(fp.scrollHeight-fp.clientHeight);
-  });
-  document.addEventListener('mouseup',()=>{ drag=false; document.body.style.userSelect=''; });
-
-  /* Touch drag */
-  thumb.addEventListener('touchstart', e=>{
-    drag=true; sy=e.touches[0].clientY; ss=fp.scrollTop; e.preventDefault();
-  },{passive:false});
-  document.addEventListener('touchmove', e=>{
-    if(!drag) return;
-    const rH=rail.clientHeight, tH=parseFloat(thumb.style.height)||40;
-    fp.scrollTop = ss + ((e.touches[0].clientY-sy)/(rH-tH))*(fp.scrollHeight-fp.clientHeight);
-  },{passive:true});
-  document.addEventListener('touchend',()=>{ drag=false; });
-
-  /* IntersectionObserver for reveals */
-  const allPanels = [...document.querySelectorAll('.panel, #footer')];
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting) activatePanel(e.target); });
-  },{root: fp, threshold:.3});
-  allPanels.forEach(p=>obs.observe(p));
-
-  /* Keyboard nav */
-  const snaps = ['hero','ticker','services','work','about','testimonials','cta','footer']
-    .map(id=>document.getElementById(id)).filter(Boolean);
-  let ci = 0;
-  document.addEventListener('keydown', e=>{
-    if(e.key==='ArrowDown'||e.key==='PageDown'){
-      e.preventDefault(); ci=Math.min(ci+1,snaps.length-1);
-      snaps[ci].scrollIntoView({behavior:'smooth'});
-    } else if(e.key==='ArrowUp'||e.key==='PageUp'){
-      e.preventDefault(); ci=Math.max(ci-1,0);
-      snaps[ci].scrollIntoView({behavior:'smooth'});
-    }
-  });
-
-  /* Track current section for keyboard index */
-  fp.addEventListener('scroll',()=>{
-    const mid = fp.scrollTop + fp.clientHeight/2;
-    snaps.forEach((s,i)=>{
-      if(s.offsetTop<=mid) ci=i;
-    });
-    syncThumb();
-  },{passive:true});
-}
-</script>
-</body>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      reveals.forEach((r) => obs.observe(r));
+    </script>
+  </body>
 </html>

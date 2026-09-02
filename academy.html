@@ -139,6 +139,9 @@
         background: var(--red);
         border-radius: 2px;
       }
+      .nav-links.is-open {
+        display: flex;
+      }
       .nav-actions {
         display: flex;
         align-items: center;
@@ -873,6 +876,20 @@
         }
         .nav-links {
           display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid var(--border);
+          padding: 1rem 1.2rem 1.4rem;
+          box-shadow: 0 16px 30px rgba(15, 31, 77, 0.08);
+        }
+        .nav-links.is-open {
+          display: flex;
         }
         .nav-toggle {
           display: block;
@@ -991,7 +1008,12 @@
           >Start a Project</a
         >
       </div>
-      <button class="nav-toggle" aria-label="Open menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -1034,8 +1056,8 @@
               <div class="process-ico"><i class="fa-solid fa-compass"></i></div>
               <div class="process-title">Choose Your Track</div>
               <p class="process-desc">
-                Pick Frontend, Backend, or UI/UX based on where you want to go —
-                no prior experience required for beginner tracks.
+                Pick Frontend, Backend, or UI/UX based on where you want to go.
+                No prior experience required for beginner tracks.
               </p>
             </div>
             <div class="process-card">
@@ -1043,7 +1065,7 @@
               <div class="process-title">Build Real Projects</div>
               <p class="process-desc">
                 Work through structured modules and hands-on projects modeled on
-                real client work — not toy exercises.
+                real client work, not toy exercises.
               </p>
             </div>
             <div class="process-card">
@@ -1065,7 +1087,7 @@
           Start with the fundamentals that matter.
         </h2>
         <p class="s-sub reveal d1">
-          We're launching with three focused tracks — more are on the way as the
+          We're launching with three focused tracks More are on the way as the
           Academy grows.
         </p>
         <div class="track-grid reveal d2">
@@ -1083,7 +1105,7 @@
               ><span class="track-tag">Frameworks</span>
             </div>
             <a href="#signup" class="track-link"
-              >Apply for Frontend <i class="fa-regular fa-arrow-right"></i
+              >Apply for Frontend <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <div class="track-card">
@@ -1099,7 +1121,7 @@
               ><span class="track-tag">Server Logic</span>
             </div>
             <a href="#signup" class="track-link"
-              >Apply for Backend <i class="fa-regular fa-arrow-right"></i
+              >Apply for Backend <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <div class="track-card">
@@ -1115,7 +1137,7 @@
               ><span class="track-tag">Design Systems</span>
             </div>
             <a href="#signup" class="track-link"
-              >Apply for UI/UX <i class="fa-regular fa-arrow-right"></i
+              >Apply for UI/UX <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
         </div>
@@ -1275,7 +1297,8 @@
                 ></textarea>
               </div>
               <button type="submit" class="btn-submit">
-                Submit Application <i class="fa-regular fa-arrow-right"></i>
+                Submit Application
+                <!-- <i class="fa-regular fa-arrow-right"></i> -->
               </button>
               <p class="form-status" id="a-form-status"></p>
             </form>
@@ -1456,6 +1479,32 @@
       );
       reveals.forEach((r) => obs.observe(r));
 
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+          navToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open menu");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
       document.querySelectorAll(".faq-q").forEach((q) => {
         q.addEventListener("click", () => {
           const item = q.parentElement;
@@ -1473,8 +1522,7 @@
         e.preventDefault();
         const btn = form.querySelector(".btn-submit");
         const origHTML = btn.innerHTML;
-        btn.innerHTML =
-          'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
+        btn.innerHTML = 'Sending… <i class="fa-solid fa-spinner fa-spin"></i>';
         btn.disabled = true;
         try {
           const res = await fetch(form.action, {

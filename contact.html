@@ -139,6 +139,9 @@
         background: var(--red);
         border-radius: 2px;
       }
+      .nav-links.is-open {
+        display: flex;
+      }
       .nav-actions {
         display: flex;
         align-items: center;
@@ -819,6 +822,20 @@
         }
         .nav-links {
           display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid var(--border);
+          padding: 1rem 1.2rem 1.4rem;
+          box-shadow: 0 16px 30px rgba(15, 31, 77, 0.08);
+        }
+        .nav-links.is-open {
+          display: flex;
         }
         .nav-toggle {
           display: block;
@@ -937,7 +954,12 @@
           >Start a Project</a
         >
       </div>
-      <button class="nav-toggle" aria-label="Open menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -951,7 +973,7 @@
         <h1 class="reveal d1">Let's build something great.</h1>
         <p class="reveal d1">
           Whether you're starting from scratch, rebranding, or scaling a
-          platform — we're ready to talk. Tell us what you need and we'll show
+          platform, we're ready to talk. Tell us what you need and we'll show
           you exactly how we'll deliver it.
         </p>
       </section>
@@ -1066,7 +1088,7 @@
                     <option>Media Production</option>
                     <option>Cloud Hosting & DevOps</option>
                     <option>Full-Package (Multiple Services)</option>
-                    <option>Not Sure Yet — Let's Talk</option>
+                    <option>Not Sure Yet, Let's Talk</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -1094,7 +1116,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="btn-submit">
-                  Send Message <i class="fa-regular fa-arrow-right"></i>
+                  Send Message <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 <p class="form-status" id="form-status"></p>
               </form>
@@ -1267,7 +1289,9 @@
       <section class="section-alt-wrap">
         <div class="section">
           <span class="eyebrow reveal">Common Questions</span>
-          <h2 class="s-title reveal d1">Before you reach out — read this.</h2>
+          <h2 class="s-title reveal d1">
+            Before you reach out, kindly read this.
+          </h2>
           <p class="s-sub reveal d1">
             We know you're busy. Here are the most common questions we get
             before a project starts.
@@ -1354,8 +1378,9 @@
               </div>
               <div class="faq-a">
                 <p class="faq-a-inner">
-                  Yes — through the OluJohn Academy, we teach Frontend, Backend,
-                  and UI/UX to tech aspirants. Visit the Academy page to apply.
+                  Yes, through the OluJohn Digitals Academy, we teach Frontend,
+                  Backend, and UI/UX to tech aspirants. Visit the Academy page
+                  to apply.
                 </p>
               </div>
             </div>
@@ -1474,6 +1499,32 @@
       );
       reveals.forEach((r) => obs.observe(r));
 
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+          navToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open menu");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
       document.querySelectorAll(".faq-q").forEach((q) => {
         q.addEventListener("click", () => {
           const item = q.parentElement;
@@ -1491,8 +1542,7 @@
         e.preventDefault();
         const btn = form.querySelector(".btn-submit");
         const origHTML = btn.innerHTML;
-        btn.innerHTML =
-          'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
+        btn.innerHTML = 'Sending… <i class="fa-solid fa-spinner fa-spin"></i>';
         btn.disabled = true;
         try {
           const res = await fetch(form.action, {

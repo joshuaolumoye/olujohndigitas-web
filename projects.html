@@ -139,6 +139,9 @@
         background: var(--red);
         border-radius: 2px;
       }
+      .nav-links.is-open {
+        display: flex;
+      }
       .nav-actions {
         display: flex;
         align-items: center;
@@ -570,6 +573,20 @@
         }
         .nav-links {
           display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid var(--border);
+          padding: 1rem 1.2rem 1.4rem;
+          box-shadow: 0 16px 30px rgba(15, 31, 77, 0.08);
+        }
+        .nav-links.is-open {
+          display: flex;
         }
         .nav-toggle {
           display: block;
@@ -684,7 +701,12 @@
           >Start a Project</a
         >
       </div>
-      <button class="nav-toggle" aria-label="Open menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -697,8 +719,9 @@
         >
         <h1 class="reveal d1">Products we've built.</h1>
         <p class="reveal d1">
-          From fintech platforms to brand identities — a full record of what
-          we've designed, built, and shipped for founders across industries.
+          From fintech platforms to brand identities, here's a full record of
+          what we've designed, built, and shipped for founders across
+          industries.
         </p>
       </section>
 
@@ -752,7 +775,7 @@
               ><span class="proj-tag">Payments</span>
             </div>
             <p class="proj-desc">
-              A streamlined payment platform built for simplicity and trust —
+              A streamlined payment platform built for simplicity and trust;
               full frontend and backend architecture for fast, confident
               transactions.
             </p>
@@ -825,9 +848,8 @@
               ><span class="proj-badge">Launching Soon</span>
             </div>
             <p class="proj-desc">
-              A social media SaaS platform in final stages before public launch
-              — built for teams who want focused, distraction-free
-              collaboration.
+              A social media SaaS platform in final stages before public launch,
+              built for teams who want focused, distraction-free collaboration.
             </p>
             <div class="proj-stack">
               <span class="stack-tag">React</span
@@ -1110,6 +1132,32 @@
         { threshold: 0.1 },
       );
       reveals.forEach((r) => obs.observe(r));
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+          navToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open menu");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
 
       const filterBtns = document.querySelectorAll(".filter-btn");
       const projCards = document.querySelectorAll(".proj-card");

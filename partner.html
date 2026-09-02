@@ -139,6 +139,9 @@
         background: var(--red);
         border-radius: 2px;
       }
+      .nav-links.is-open {
+        display: flex;
+      }
       .nav-actions {
         display: flex;
         align-items: center;
@@ -759,7 +762,12 @@
           >Start a Project</a
         >
       </div>
-      <button class="nav-toggle" aria-label="Open menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -830,15 +838,15 @@
             <div class="why-title">Built for Organizations</div>
             <p class="why-desc">
               We've delivered production systems for fintech, retail, and
-              financial institutions — not just startups and solo founders.
+              financial institutions, not just startups and solo founders.
             </p>
           </div>
           <div class="why-card">
             <div class="why-ico"><i class="fa-solid fa-chart-line"></i></div>
             <div class="why-title">Outcome-Focused</div>
             <p class="why-desc">
-              We scope around your business goals, not just deliverables —
-              strategy first, execution always.
+              We scope around your business goals, not just deliverables.
+              Strategy first, execution always.
             </p>
           </div>
         </div>
@@ -872,8 +880,8 @@
               <div class="process-num">03</div>
               <div class="process-title">Scoped Proposal</div>
               <p class="process-desc">
-                We come back with a clear proposal — scope, timeline, and
-                investment — tailored to your organization.
+                We come back with a clear proposal which include scope,
+                timeline, and investment, tailored to your organization.
               </p>
             </div>
             <div class="process-card">
@@ -1073,7 +1081,7 @@
               </div>
               <button type="submit" class="btn-submit">
                 Submit Partnership Inquiry
-                <i class="fa-regular fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
               <p class="form-status" id="p-form-status"></p>
             </form>
@@ -1168,14 +1176,39 @@
       );
       reveals.forEach((r) => obs.observe(r));
 
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+          navToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open menu");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
       const form = document.getElementById("partner-form-el");
       const status = document.getElementById("p-form-status");
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const btn = form.querySelector(".btn-submit");
         const origHTML = btn.innerHTML;
-        btn.innerHTML =
-          'Sending… <i class="fa-regular fa-spinner fa-spin"></i>';
+        btn.innerHTML = 'Sending… <i class="fa-solid fa-spinner fa-spin"></i>';
         btn.disabled = true;
         try {
           const res = await fetch(form.action, {

@@ -139,6 +139,9 @@
         background: var(--red);
         border-radius: 2px;
       }
+      .nav-links.is-open {
+        display: flex;
+      }
       .nav-actions {
         display: flex;
         align-items: center;
@@ -811,6 +814,20 @@
         }
         .nav-links {
           display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          background: rgba(255, 255, 255, 0.98);
+          border-bottom: 1px solid var(--border);
+          padding: 1rem 1.2rem 1.4rem;
+          box-shadow: 0 16px 30px rgba(15, 31, 77, 0.08);
+        }
+        .nav-links.is-open {
+          display: flex;
         }
         .nav-toggle {
           display: block;
@@ -935,7 +952,12 @@
           >Start a Project</a
         >
       </div>
-      <button class="nav-toggle" aria-label="Open menu">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -950,7 +972,7 @@
         <p class="reveal d1">
           We are a branding and software solutions agency committed to helping
           businesses, entrepreneurs, and organizations define, refine, and
-          elevate their digital presence — from Lagos to the world.
+          elevate their digital presence, from Lagos to the world.
         </p>
       </section>
 
@@ -1026,7 +1048,7 @@
               src="img/ceo-john-olumoye.jpg"
               alt="John Olumoye — CEO, OluJohn Digitals"
             />
-            <div class="story-img-tag">John Olumoye — Founder & CEO</div>
+            <div class="story-img-tag">John Olumoye — Co-founder & CEO</div>
           </div>
           <div class="reveal d1">
             <span class="eyebrow">Our Story</span>
@@ -1034,8 +1056,8 @@
               We started with one big idea.
             </h2>
             <p class="story-p">
-              OluJohn Digitals was founded on a simple but powerful belief —
-              that every business, no matter its size or stage, deserves a
+              OluJohn Digitals was founded on a simple but powerful belief that
+              every business, no matter its size or stage, deserves a
               world-class brand and digital presence. We started in Lagos,
               Nigeria with a team of creatives, strategists, and engineers who
               were tired of watching great businesses go unnoticed because of
@@ -1051,17 +1073,17 @@
             </p>
             <p class="story-p">
               Our work is rooted in innovation, excellence, and deeply
-              personalized service — because we treat every client's business
+              personalized service, because we treat every client's business
               like it's our own.
             </p>
             <div style="margin-top: 2rem">
               <a href="projects.html" class="btn-outline"
                 >See Our Work
-                <i
-                  class="fa-regular fa-arrow-right"
+                <!-- <i
+                  class="fa-solid fa-arrow-right"
                   style="margin-left: 0.4rem"
-                ></i
-              ></a>
+                ></i> -->
+              </a>
             </div>
           </div>
         </div>
@@ -1097,7 +1119,7 @@
               </div>
               <div class="value-name">Continuous Growth</div>
               <p class="value-desc">
-                The digital landscape never stops evolving, and neither do we —
+                The digital landscape never stops evolving, and neither do we
                 our clients always get the current best.
               </p>
             </div>
@@ -1107,7 +1129,7 @@
               </div>
               <div class="value-name">Full Ownership</div>
               <p class="value-desc">
-                When we take on a project, we own it completely — from strategy
+                When we take on a project, we own it completely, from strategy
                 through to post-launch support.
               </p>
             </div>
@@ -1115,7 +1137,7 @@
               <div class="value-ico"><i class="fa-solid fa-lightbulb"></i></div>
               <div class="value-name">Creative Courage</div>
               <p class="value-desc">
-                We push past the safe and expected — our best work happens when
+                We push past the safe and expected. Our best work happens when
                 we take creative risks on our clients' behalf.
               </p>
             </div>
@@ -1227,7 +1249,7 @@
               />
             </div>
             <div class="team-name">Joshua Olumoye</div>
-            <div class="team-role">Co-Founder & Solutions Architect</div>
+            <div class="team-role">Co-founder & Solutions Architect</div>
             <p class="team-bio">
               Architects scalable digital solutions bridging business goals with
               robust engineering.
@@ -1235,7 +1257,7 @@
           </div>
           <div class="team-card">
             <div class="team-img">
-              <img src="img/daniel.png" alt="Daniel Oguniyi" />
+              <img src="img/daniel.PNG" alt="Daniel Oguniyi" />
             </div>
             <div class="team-name">Daniel Oguniyi</div>
             <div class="team-role">Lead, Mobile App Development</div>
@@ -1246,7 +1268,7 @@
           </div>
           <div class="team-card">
             <div class="team-img">
-              <img src="img/myservicepics/Timipicture.jpg" alt="Timi Oyewale" />
+              <img src="img/Timipicture.jpg" alt="Timi Oyewale" />
             </div>
             <div class="team-name">Timi Oyewale</div>
             <div class="team-role">Lead, UI/UX Design</div>
@@ -1257,7 +1279,7 @@
           </div>
           <div class="team-card">
             <div class="team-img">
-              <img src="img/team/midegrapgics.jpg" alt="Ayomide Adefela" />
+              <img src="img/midegrapgics.jpg" alt="Ayomide Adefela" />
             </div>
             <div class="team-name">Ayomide Adefela</div>
             <div class="team-role">Lead, Graphics Design</div>
@@ -1482,6 +1504,32 @@
         { threshold: 0.1 },
       );
       reveals.forEach((r) => obs.observe(r));
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+          navToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open menu");
+            navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
     </script>
   </body>
 </html>
